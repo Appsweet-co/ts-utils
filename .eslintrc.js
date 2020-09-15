@@ -4,12 +4,16 @@
 module.exports = {
   root: true,
 
+  env: {
+    'es6': true
+  },
+
   settings: {
-    "import/resolver": {
+    'import/resolver': {
 
       node: {
-        extensions: [".ts", ".tsx"],
-        paths: ["./lib"],
+        extensions: ['.ts', '.tsx'],
+        paths: ['./lib'],
       },
 
       alias: [ ]
@@ -20,14 +24,20 @@ module.exports = {
 
   plugins: [
     '@typescript-eslint',
-    "fp",
+    'fp',
   ],
 
   extends: [
-    // 'eslint:recommended',
-    // 'plugin:@typescript-eslint/recommended',
-    "plugin:fp/recommended"
+    'plugin:@typescript-eslint/recommended',
+    'plugin:fp/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
 
-  rules: { },
+  rules: {
+    "@typescript-eslint/quotes": [ "error", "single", { avoidEscape: true, } ],
+    '@typescript-eslint/semi': ['error'],
+    'fp/no-rest-parameters': false,
+  },
 };
