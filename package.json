@@ -9,11 +9,12 @@
     "@typescript-eslint/parser": "4.1.1",
     "eslint": "7.9.0",
     "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-import": "2.22.0",
     "typescript": "4.0.2"
   },
   "scripts": {
     "build": "tsc",
-    "prebuild": "eslint",
+    "prebuild": "eslint **/*.ts",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map"
   },
   "repository": {
