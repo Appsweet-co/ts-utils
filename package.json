@@ -1,0 +1,22 @@
+{
+  "name": "@appsweet-co/utils",
+  "version": "1.1.0",
+  "description": "Small helper functions useful in many types of projects.",
+  "main": "index.js",
+  "dependencies": { },
+  "devDependencies": { },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Appsweet-co/utils.git"
+  },
+  "author": "Appsweet.co (http://a6t.co)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Appsweet-co/utils/issues"
+  },
+  "homepage": "https://github.com/Appsweet-co/utils#readme"
+}
