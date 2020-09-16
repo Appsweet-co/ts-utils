@@ -1,2 +1,2 @@
-declare const pipe: (...fns: unknown[]) => (init: unknown) => unknown;
+declare const pipe: (...fns: any[]) => (init: any) => any;
 export { pipe };
