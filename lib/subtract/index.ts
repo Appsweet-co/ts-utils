@@ -2,6 +2,7 @@ import { curry } from '../curry';
 
 /**
  * Subtract the second argument from the first.
+ * Same as `a - b`.
  *
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#subtract).
  *
