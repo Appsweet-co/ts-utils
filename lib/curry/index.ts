@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
  * Transforms a method of any arity into a curried function.
  *
@@ -13,7 +15,7 @@
  * // => 11
  * ```
  */
-const curry = (fn: (...args : unknown[]) => unknown, ...args: unknown[]) =>
-  (args.length >= fn.length) ? fn(...args) : (...more: unknown[]) => curry(fn, ...args, ...more);
+const curry = (fn: (...args : any[]) => any, ...args: any[]) =>
+  (args.length >= fn.length) ? fn(...args) : (...more: any[]) => curry(fn, ...args, ...more);
 
 export { curry };
