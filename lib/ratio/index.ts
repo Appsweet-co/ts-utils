@@ -10,6 +10,7 @@ import { subtract } from '../subtract';
  *
  * ratio(0, 10, 5);
  * // => 0.5
+ * ```
  */
 const ratio = (min: number, max: number, val: number) =>
   divide(subtract(val, min), subtract(max, min));
