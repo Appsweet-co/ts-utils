@@ -2,6 +2,7 @@ export * from './lib/clamp';
 export * from './lib/clone';
 export * from './lib/curry';
 export * from './lib/divide';
+export * from './lib/nil';
 export * from './lib/parse';
 export * from './lib/percent';
 export * from './lib/pipe';
