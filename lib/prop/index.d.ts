@@ -1,2 +1,5 @@
-declare const pipe: (...fns: unknown[]) => (init: unknown) => unknown;
-export { pipe };
+declare const prop: (key: string | number) => (obj: {
+    [x: string]: unknown;
+    [x: number]: unknown;
+}) => unknown;
+export { prop };
