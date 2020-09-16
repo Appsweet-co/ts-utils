@@ -36,7 +36,7 @@ module.exports = {
 
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': ['error', { ignoreRestArgs: true }],
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/quotes': [ 'error', 'single', { avoidEscape: true, } ],
     '@typescript-eslint/semi': ['error'],
     'fp/no-rest-parameters': 'off',
