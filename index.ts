@@ -6,3 +6,4 @@ export * from './lib/pipe';
 export * from './lib/prop';
 export * from './lib/ratio';
 export * from './lib/subtract';
+export * from './lib/type';
