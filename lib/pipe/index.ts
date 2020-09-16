@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 /**
  * Compose functions left-to-right.
  *
@@ -13,7 +15,7 @@
  * // => 5
  * ```
  */
-const pipe = (...fns: unknown[]) => (init: unknown) =>
-  fns.reduce((acc: unknown, fn: (...args: unknown[]) => unknown) => fn(acc), init);
+const pipe = (...fns: any[]) => (init: any) =>
+  fns.reduce((acc: any, fn: (...args: any[]) => any) => fn(acc), init);
 
 export { pipe };
