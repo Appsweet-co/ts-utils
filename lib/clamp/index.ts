@@ -22,7 +22,7 @@ const clamp = (min: number, max: number, val: number): number =>
   Math.max(min, Math.min(val, max));
 
 /**
- * Same as `clamp()`, but curried.
+ * Same as [[clamp]], but curried.
  *
  * ```
  * import { clampC } from '@appsweet-co/utils';

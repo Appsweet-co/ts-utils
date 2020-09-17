@@ -16,7 +16,7 @@ const type = (type: string, val: any) => typeof val === type;
 
 
 /**
- * Same as `type()`, but curried.
+ * Same as [[type]], but curried.
  *
  * ```
  * import { typeC } from '@appsweet-co/utils';

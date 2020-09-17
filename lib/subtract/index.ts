@@ -16,7 +16,7 @@ import { curry } from '../curry';
 const subtract = (a: number, b: number) => a - b;
 
 /**
- * Same as `subtract()`, but curried.
+ * Same as [[subtract]], but curried.
  *
  * ```
  * import { subtractC } from '@appsweet-co/utils';

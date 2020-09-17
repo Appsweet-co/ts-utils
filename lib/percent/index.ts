@@ -14,7 +14,7 @@ import { ratio } from '../ratio';
 const percent = (min: number, max: number, val: number) => ratio(min, max, val) * 100;
 
 /**
- * Same as `percent()`, but curried.
+ * Same as [[percent]], but curried.
  *
  * ```
  * import { percentC } from '@appsweet-co/utils';
