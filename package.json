@@ -15,9 +15,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "prebuild": "eslint **/*.ts",
-    "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map",
-    "docs": "open docs/index.html"
+    "build:docs": "typedoc",
+    "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
+    "docs": "open ./docs/index.html",
+    "prebuild": "eslint **/*.ts"
   },
   "repository": {
     "type": "git",
