@@ -16,7 +16,7 @@ import { curry } from '../curry';
 const divide = (a: number, b: number) => a / b;
 
 /**
- * Same as `divide()`, but curried.
+ * Same as [[divide]], but curried.
  *
  * ```
  * import { divideC } from '@appsweet-co/utils';

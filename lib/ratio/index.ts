@@ -16,7 +16,7 @@ const ratio = (min: number, max: number, val: number) =>
   divide(subtract(val, min), subtract(max, min));
 
 /**
- * Same as `ratio()`, but curried.
+ * Same as [[ratio]], but curried.
  *
  * ```
  * import { ratioC } from '@appsweet-co/utils';
