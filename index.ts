@@ -4,6 +4,7 @@ export * from './lib/curry';
 export * from './lib/divide';
 export * from './lib/nil';
 export * from './lib/parse';
+export * from './lib/partial';
 export * from './lib/percent';
 export * from './lib/pipe';
 export * from './lib/prop';
