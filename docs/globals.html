@@ -83,6 +83,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#clone" class="tsd-kind-icon">clone</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#curry" class="tsd-kind-icon">curry</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#divide" class="tsd-kind-icon">divide</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#map" class="tsd-kind-icon">map</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#nil" class="tsd-kind-icon">nil</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#parse" class="tsd-kind-icon">parse</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#partial" class="tsd-kind-icon">partial</a></li>
@@ -714,6 +715,58 @@ divide(<span class="hljs-number">10</span>, <span class="hljs-number">2</span>);
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="map" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> map</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/map/index.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Same as <code>Array.prototype.map()</code>, but curried.</p>
+								</div>
+								<pre><code><span class="hljs-keyword">import</span> { map } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-built_in">double</span> = map(x =&gt; x * x);
+
+<span class="hljs-built_in">double</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]);
+<span class="hljs-comment">// =&gt; [2, 4, 6, 0, 8, 10]</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>value: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="nil" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> nil</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -804,7 +857,7 @@ parse(<span class="hljs-string">&#x27;{&quot;hello&quot;: &quot;world&quot;}&#x2
 								<div class="lead">
 									<p>Binds arguments to any function. Same as <code>fn.bind(null, ...args)</code>.</p>
 								</div>
-								<p>Inspired by <a href="https://ramdajs.com/docs/#partial">Ramda.js</a></p>
+								<p>Inspired by <a href="https://ramdajs.com/docs/#partial">Ramda.js</a>.</p>
 								<pre><code>import { <span class="hljs-keyword">partial</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
 
 <span class="hljs-keyword">const</span> <span class="hljs-keyword">add</span> = (a, b) =&gt; a + b;
@@ -1144,6 +1197,9 @@ subtract(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>)
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#divide" class="tsd-kind-icon">divide</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#map" class="tsd-kind-icon">map</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#nil" class="tsd-kind-icon">nil</a>
