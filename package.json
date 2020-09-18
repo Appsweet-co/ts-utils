@@ -19,7 +19,7 @@
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
     "docs": "open ./docs/index.html",
     "gen": "./gen.sh",
-    "prebuild": "eslint **/*.ts"
+    "prebuild": "eslint **/*.ts && npm run build:docs"
   },
   "repository": {
     "type": "git",
