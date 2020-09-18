@@ -18,7 +18,7 @@
     "build:docs": "typedoc",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
     "docs": "open ./docs/index.html",
-    "gen": "./gen.sh",
+    "gen": "./bin/gen.sh",
     "prebuild": "eslint **/*.ts && npm run build:docs"
   },
   "repository": {
