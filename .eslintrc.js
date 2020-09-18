@@ -39,6 +39,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/quotes': [ 'error', 'single', { avoidEscape: true, } ],
     '@typescript-eslint/semi': ['error'],
+    'fp/no-nil': 'off',
     'fp/no-rest-parameters': 'off',
   },
 };
