@@ -85,6 +85,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#divide" class="tsd-kind-icon">divide</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#nil" class="tsd-kind-icon">nil</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#parse" class="tsd-kind-icon">parse</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#partial" class="tsd-kind-icon">partial</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#percent" class="tsd-kind-icon">percent</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#pipe" class="tsd-kind-icon">pipe</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#prop" class="tsd-kind-icon">prop</a></li>
@@ -787,6 +788,64 @@ parse(<span class="hljs-string">&#x27;{&quot;hello&quot;: &quot;world&quot;}&#x2
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="partial" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> partial</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">partial<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/partial/index.ts:17</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Binds arguments to any function. Same as <code>fn.bind(null, ...args)</code>.</p>
+								</div>
+								<p>Inspired by <a href="https://ramdajs.com/docs/#partial">Ramda.js</a></p>
+								<pre><code>import { <span class="hljs-keyword">partial</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">add</span> = (a, b) =&gt; a + b;
+
+<span class="hljs-keyword">const</span> add2 = <span class="hljs-keyword">partial</span>(<span class="hljs-keyword">add</span>, <span class="hljs-number">2</span>);
+
+add2(<span class="hljs-number">3</span>);
+<span class="hljs-comment">// =&gt; 5</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">unknown</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="percent" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> percent</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -1091,6 +1150,9 @@ subtract(<span class="hljs-number">5</span>, <span class="hljs-number">3</span>)
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#parse" class="tsd-kind-icon">parse</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#partial" class="tsd-kind-icon">partial</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#percent" class="tsd-kind-icon">percent</a>

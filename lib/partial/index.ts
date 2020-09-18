@@ -1,7 +1,7 @@
 /**
  * Binds arguments to any function. Same as `fn.bind(null, ...args)`.
  *
- * Inspired by [Ramda.js](https://ramdajs.com/docs/#partial)
+ * Inspired by [Ramda.js](https://ramdajs.com/docs/#partial).
  *
  * ```
  * import { partial } from '@appsweet-co/utils';
