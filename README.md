@@ -1,6 +1,8 @@
+<!--
 [![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg?style=for-the-badge)](https://github.com/dperuo/dev-utils/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/dperuo/dev-utils/blob/master/LICENSE)
 ![GitHub last commit](https://img.shields.io/github/last-commit/dperuo/dev-utils?style=for-the-badge)
+-->
 
 # Welcome to Appsweet's Dev Utils 👋
 
