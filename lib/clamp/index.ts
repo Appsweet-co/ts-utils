@@ -16,18 +16,8 @@ import { curry } from '../curry';
  *
  * clamp(3, 5, 12);
  * // => 5
- * ```
- */
-const clamp = (min: number, max: number, val: number): number =>
-  Math.max(min, Math.min(val, max));
-
-/**
- * Same as [[clamp]], but curried.
  *
- * ```
- * import { clampC } from '@appsweet-co/utils';
- *
- * const range = clampC(3, 5);
+ * const range = clamp(3, 5);
  *
  * range(1);
  * // => 3
@@ -42,12 +32,13 @@ const clamp = (min: number, max: number, val: number): number =>
  * The following are equivalent:
  *
  * ```
- * clampC(min)(max)(val);
- * clampC(min)(max, val);
- * clampC(min, max)(val);
- * clampC(min, max, val);
+ * clamp(min)(max)(val);
+ * clamp(min)(max, val);
+ * clamp(min, max)(val);
+ * clamp(min, max, val);
  * ```
  */
-const clampC: (min: number) => (max: number) => (val: number) => number = curry(clamp);
+const clamp = (...args: [min: number, max?: number, val?: number]) =>
+  (args.length >= 3) ? Math.max(args[0], Math.min(args[2], args[1])) : curry<number>(clamp, ...args);
 
-export { clamp, clampC };
+export { clamp };
