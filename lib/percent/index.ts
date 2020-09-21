@@ -9,15 +9,6 @@ import { ratio } from '../ratio';
  *
  * percent(0, 10, 5);
  * // => 50
- * ```
- */
-const percent = (min: number, max: number, val: number) => ratio(min, max, val) * 100;
-
-/**
- * Same as [[percent]], but curried.
- *
- * ```
- * import { percentC } from '@appsweet-co/utils';
  *
  * const scale = percentC(0, 10);
  *
@@ -28,12 +19,13 @@ const percent = (min: number, max: number, val: number) => ratio(min, max, val) 
  * The following are equivalent:
  *
  * ```
- * percentC(min)(max)(val);
- * percentC(min)(max, val);
- * percentC(min, max)(val);
- * percentC(min, max, val);
+ * percent(min)(max)(val);
+ * percent(min)(max, val);
+ * percent(min, max)(val);
+ * percent(min, max, val);
  * ```
  */
-const percentC: (min: number) => (max: number) => (val: number) => number = curry(percent);
+const percent = (...args: [min: number, max?: number, val?: number]) =>
+  (args.length >= 3) ? ratio(...args) * 100 : curry<number>(percent, ...args);
 
-export { percent, percentC };
+export { percent };
