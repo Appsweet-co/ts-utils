@@ -1,2 +1,2 @@
-declare const curry: (fn: (...args: any[]) => any, ...args: any[]) => any;
+declare const curry: <T = any>(fn: (...args: any[]) => any, ...args: any[]) => T;
 export { curry };

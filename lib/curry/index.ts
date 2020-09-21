@@ -6,14 +6,21 @@
  * ```
  * import { curry } from '@appsweet-co/utils';
  *
- * const add = (a, b) => a + b;
- * const add6 = curry(add, 6);
+ * const add = (a, b, c) => a + b + c;
  *
- * add6(5)
- * // => 11
+ * const add9 = curry(add, 3, 6);
+ *
+ * add9(5)
+ * // => 14
+ * ```
+ *
+ * `curry()` accepts an optional generic return type:
+ *
+ * ```
+ * const add9 = curry<number>(add, 3, 6);
  * ```
  */
-const curry = (fn: (...args : any[]) => any, ...args: any[]) =>
+const curry = <T = any>(fn: (...args : any[]) => any, ...args: any[]): T =>
   (args.length >= fn.length) ? fn(...args) : (...more: any[]) => curry(fn, ...args, ...more);
 
 export { curry };
