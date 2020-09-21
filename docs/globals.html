@@ -73,9 +73,12 @@
 								<li class="tsd-kind-function"><a href="globals.html#clamp" class="tsd-kind-icon">clamp</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#clone" class="tsd-kind-icon">clone</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#curry" class="tsd-kind-icon">curry</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#dec" class="tsd-kind-icon">dec</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#divide" class="tsd-kind-icon">divide</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#inc" class="tsd-kind-icon">inc</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#max" class="tsd-kind-icon">max</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#min" class="tsd-kind-icon">min</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#nil" class="tsd-kind-icon">nil</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#parse" class="tsd-kind-icon">parse</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#percent" class="tsd-kind-icon">percent</a></li>
@@ -349,6 +352,39 @@ add9(<span class="hljs-number">5</span>)
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="dec" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> dec</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">dec<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/dec/index.ts:13</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decrements a value by one. Same as <code>val - 1</code>.</p>
+								</div>
+								<p>Inspried by <a href="https://ramdajs.com/docs/#dec">Ramda.js</a></p>
+								<pre><code><span class="hljs-keyword">import</span> { <span class="hljs-type">dec</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+<span class="hljs-type">dec</span>(<span class="hljs-number">10</span>);
+// =&gt; <span class="hljs-number">9</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="divide" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> divide</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -485,6 +521,97 @@ map(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span><
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="max" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> max</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">max<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>more<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/max/index.ts:30</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the largest of zero or more numbers given as input. Same as <code>Math.max()</code>.</p>
+								</div>
+								<p>Return a curried function by passing only one parameter in the initial call.</p>
+								<pre><code><span class="hljs-keyword">import</span> { max } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+max(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>);
+<span class="hljs-comment">// =&gt; 9</span>
+
+<span class="hljs-keyword">const</span> max9 = max(<span class="hljs-number">9</span>);
+
+max9(<span class="hljs-number">3</span>, <span class="hljs-number">12</span>);
+<span class="hljs-comment">// =&gt; 12</span>
+
+max9(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>);
+<span class="hljs-comment">// =&gt; 9</span></code></pre>
+								<p>The following are equivalent:</p>
+								<pre><code><span class="hljs-function"><span class="hljs-title">max</span>(<span class="hljs-params">a</span>)(<span class="hljs-params">...more</span>)</span>;
+<span class="hljs-function"><span class="hljs-title">max</span>(<span class="hljs-params">a, ...more</span>)</span>;</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>more: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="min" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> min</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">min<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>more<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/min/index.ts:27</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the largest of zero or more numbers given as input. Same as <code>Math.min()</code>.</p>
+								</div>
+								<p>Return a curried function by passing only one parameter in the initial call.</p>
+								<pre><code><span class="hljs-keyword">import</span> { min } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+min(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>);
+<span class="hljs-comment">// =&gt; 3</span>
+
+<span class="hljs-keyword">const</span> min9 = min(<span class="hljs-number">9</span>);
+
+min9(<span class="hljs-number">3</span>, <span class="hljs-number">12</span>);
+<span class="hljs-comment">// =&gt; 3</span></code></pre>
+								<p>The following are equivalent:</p>
+								<pre><code><span class="hljs-function"><span class="hljs-title">min</span>(<span class="hljs-params">a</span>)(<span class="hljs-params">...more</span>)</span>;
+<span class="hljs-function"><span class="hljs-title">min</span>(<span class="hljs-params">a, ...more</span>)</span>;</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>a: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>more: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -880,6 +1007,9 @@ const <span class="hljs-built_in">isNumber</span> = <span class="hljs-built_in">
 						<a href="globals.html#curry" class="tsd-kind-icon">curry</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#dec" class="tsd-kind-icon">dec</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#divide" class="tsd-kind-icon">divide</a>
 					</li>
 					<li class=" tsd-kind-function">
@@ -887,6 +1017,12 @@ const <span class="hljs-built_in">isNumber</span> = <span class="hljs-built_in">
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#map" class="tsd-kind-icon">map</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#max" class="tsd-kind-icon">max</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#min" class="tsd-kind-icon">min</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#nil" class="tsd-kind-icon">nil</a>
