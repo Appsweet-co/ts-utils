@@ -1,7 +1,7 @@
 import { curry } from '../curry';
 
 /**
- * Subtracts two numbers. Same as `b - a`.
+ * Subtract the first argument from the second. Same as `b - a`.
  *
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#subtract)
  *
