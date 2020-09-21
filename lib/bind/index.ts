@@ -4,16 +4,16 @@
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#partial).
  *
  * ```
- * import { partial } from '@appsweet-co/utils';
+ * import { bind } from '@appsweet-co/utils';
  *
  * const add = (a, b) => a + b;
  *
- * const add2 = partial(add, 2);
+ * const add2 = bind(add, 2);
  *
  * add2(3);
  * // => 5
  * ```
  */
-const partial = (fn: (...args: unknown[]) => unknown, ...args: unknown[]): unknown => fn.bind(null, ...args);
+const bind = (fn: (...args: unknown[]) => unknown, ...args: unknown[]): unknown => fn.bind(null, ...args);
 
-export { partial };
+export { bind };
