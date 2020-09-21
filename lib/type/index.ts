@@ -1,7 +1,7 @@
 import { curry } from '../curry';
 
 /**
- * Compares `val` against a given `type`. Same as `typeof arg === type`.
+ * Compares a value against a given type. Same as `typeof val === kind`.
  *
  * Inspried by [Ramda.js](https://ramdajs.com/docs/#type).
  *
@@ -10,30 +10,20 @@ import { curry } from '../curry';
  *
  * type('string', 'foobar');
  * // => true
- * ```
- */
-const type = (type: string, val: any) => typeof val === type;
-
-
-/**
- * Same as [[type]], but curried.
  *
- * ```
- * import { typeC } from '@appsweet-co/utils';
+ * const isNumber = type('number');
  *
- * const isString = typeC('string');
- *
- * isString('foobar');
- * // => true
+ * isNumber('foobar');
+ * // => false
  * ```
  *
  * The following are equivalent:
  *
  * ```
- * typeC(type)(val)
- * typeC(type, val);
+ * type(kind)(val);
+ * type(kind, val);
  * ```
  */
-const typeC: (type: string) => (val: any) => boolean = curry(type);
+const type = (kind: string, val?: unknown) => (val) ? typeof val === kind : curry<boolean>(type, kind);
 
-export { type, typeC };
+export { type };
