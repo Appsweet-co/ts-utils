@@ -1,8 +1,7 @@
 import { curry } from '../curry';
 
 /**
- * Divide the first argument by the second.
- * Same as `a / b`.
+ * Divide the first argument by the second. Same as `a / b`.
  *
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#divide).
  *
@@ -11,22 +10,20 @@ import { curry } from '../curry';
  *
  * divide(10, 2);
  * // => 5
- * ```
- */
-const divide = (a: number, b: number) => a / b;
-
-/**
- * Same as [[divide]], but curried.
  *
- * ```
- * import { divideC } from '@appsweet-co/utils';
+ * const div10 = divide(10);
  *
- * const divideBy10 = divideC(10);
- *
- * divideBy10(2);
+ * div10(2);
  * // => 5
  * ```
+ *
+ * The following are equivalent:
+ *
+ * ```
+ * divide(a)(b);
+ * divide(a, b);
+ * ```
  */
-const divideC: (a: number) => (b: number) => number = curry(divide);
+const divide = (a: number, b?: number) => (b) ? a / b : curry<number>(divide, a);
 
-export { divide, divideC };
+export { divide };
