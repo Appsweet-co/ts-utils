@@ -1,5 +1,6 @@
 export * from './lib/add';
 export * from './lib/all';
+export * from './lib/any';
 export * from './lib/bind';
 export * from './lib/clamp';
 export * from './lib/clone';
@@ -19,4 +20,3 @@ export * from './lib/ratio';
 export * from './lib/stringify';
 export * from './lib/subtract';
 export * from './lib/type';
-

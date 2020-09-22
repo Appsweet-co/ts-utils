@@ -1,5 +1,6 @@
 export * from './lib/add';
 export * from './lib/all';
+export * from './lib/any';
 export * from './lib/bind';
 export * from './lib/clamp';
 export * from './lib/clone';
