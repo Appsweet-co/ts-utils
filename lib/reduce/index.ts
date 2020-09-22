@@ -17,6 +17,13 @@ import { curry } from '../curry';
  * sum([1, 2, 3]);
  * // => 6
  * ```
+ *
+ * The following are equivalent:
+ *
+ * ```
+ * reduce(fn)(list);
+ * reduce(fn, list);
+ * ```
  */
 const reduce = (fn: (acc: unknown, cur: unknown) => unknown, list?: unknown[]) => (list) ? list.reduce(fn) : curry<unknown>(reduce, fn);
 
