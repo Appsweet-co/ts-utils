@@ -22,9 +22,17 @@ Import utilities directly into your files:
 import { clamp, map, subtract } from '@appsweet-co/utils';
 ```
 
+## Documentation
+
+We generate function documentation using [TypeDoc](http://typedoc.org/). View `documentation` locally using this `npm` command:
+
+```sh
+npm run docs
+```
+
 ## Author
 
-👤 **Derek Peruo**
+👤 **Appsweet.co**
 
 * Website: http://a6t.co
 * Github: [@appsweet-co](https://github.com/appsweet-co)
