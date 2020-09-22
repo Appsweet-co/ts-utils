@@ -4,7 +4,7 @@ import { curry } from '../curry';
  * Returns `true` if at least one element in the list matches the predicate.
  * Same as `list.some(fn)`.
  *
- * Inspired by [Ramda.js](https://ramdajs.com/docs/#any)
+ * Inspired by [Ramda.js](https://ramdajs.com/docs/#any).
  *
  * ```
  * import { any } from '@appsweet-co/utils';

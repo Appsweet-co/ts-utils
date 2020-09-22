@@ -12,6 +12,7 @@ export * from './lib/map';
 export * from './lib/max';
 export * from './lib/min';
 export * from './lib/nil';
+export * from './lib/none';
 export * from './lib/parse';
 export * from './lib/percent';
 export * from './lib/pipe';
