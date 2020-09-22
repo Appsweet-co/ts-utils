@@ -38,7 +38,9 @@ import { curry } from '../curry';
  * clamp(min, max, val);
  * ```
  */
-const clamp = (...args: [min: number, max?: number, val?: number]) =>
-  (args.length >= 3) ? Math.max(args[0], Math.min(args[2], args[1])) : curry<number>(clamp, ...args);
+const clamp = (...args: [min: number, max?: number, val?: number]) => {
+  const [ min, max, val ] = args;
+  return (val) ? Math.max(min, Math.min(val, max)) : curry<number>(clamp, ...args);
+};
 
 export { clamp };
