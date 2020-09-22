@@ -18,6 +18,7 @@ export * from './lib/percent';
 export * from './lib/pipe';
 export * from './lib/prop';
 export * from './lib/ratio';
+export * from './lib/reduce';
 export * from './lib/stringify';
 export * from './lib/subtract';
 export * from './lib/type';
