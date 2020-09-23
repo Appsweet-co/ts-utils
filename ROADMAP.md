@@ -10,6 +10,6 @@
 
 - [x] `first = (n, list) => list.slice(0, n);` (b62d538)
 
-- [ ] `last = (n, list) => list.slice(neg(n));` [Haskell](http://book.realworldhaskell.org/read/types-and-functions.html)
+- [x] `last = (n, list) => list.slice(neg(n));` (d0513c3)
 
 - [x] `neg = (n) => -Math.abs(n);` (fb9be4a)

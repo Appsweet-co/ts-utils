@@ -9,6 +9,7 @@ export * from './lib/dec';
 export * from './lib/divide';
 export * from './lib/first';
 export * from './lib/inc';
+export * from './lib/last';
 export * from './lib/map';
 export * from './lib/max';
 export * from './lib/min';
