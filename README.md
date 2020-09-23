@@ -24,7 +24,7 @@ import { clamp, map, subtract } from '@appsweet-co/utils';
 
 ## Documentation
 
-We generate function documentation using [TypeDoc](http://typedoc.org/). View `documentation` locally using this `npm` command:
+We generate function documentation using [TypeDoc](http://typedoc.org/). View documentation locally using this `npm` command:
 
 ```sh
 npm run docs
