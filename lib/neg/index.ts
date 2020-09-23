@@ -1,6 +1,6 @@
 
 /**
- * Negates a value.
+ * Negates a value or an array of values.
  *
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#negate).
  *
@@ -10,10 +10,10 @@
  * neg(9);
  * // => -9
  *
- * neg(-13);
- * // => 13
+ * neg([9, -13]);
+ * // => [-9, 13]
  * ```
  */
-const neg = (n: number) => -n;
+const neg = (arg: number | number[]) => (Array.isArray(arg)) ? arg.map(n => -n) : -arg;
 
 export { neg };

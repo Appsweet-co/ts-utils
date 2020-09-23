@@ -1,2 +1,2 @@
-declare const neg: (n: number) => number;
+declare const neg: (arg: number | number[]) => number | number[];
 export { neg };
