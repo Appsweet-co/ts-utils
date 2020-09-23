@@ -8,7 +8,7 @@
 
 - [ ] `int = (val) => (n << 0) === n;`
 
-- [x] `first = (n, list) => list.slice(0, n);` [Haskell](http://book.realworldhaskell.org/read/types-and-functions.html) (b62d538)
+- [x] `first = (n, list) => list.slice(0, n);` (b62d538)
 
 - [ ] `last = (n, list) => list.slice(neg(n));` [Haskell](http://book.realworldhaskell.org/read/types-and-functions.html)
 
