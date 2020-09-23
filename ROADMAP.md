@@ -12,4 +12,4 @@
 
 - [ ] `last = (n, list) => list.slice(neg(n));` [Haskell](http://book.realworldhaskell.org/read/types-and-functions.html)
 
-- [ ] `neg = (n) => -Math.abs(n);`
+- [x] `neg = (n) => -Math.abs(n);` ()

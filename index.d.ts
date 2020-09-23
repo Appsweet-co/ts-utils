@@ -11,6 +11,7 @@ export * from './lib/inc';
 export * from './lib/map';
 export * from './lib/max';
 export * from './lib/min';
+export * from './lib/neg';
 export * from './lib/nil';
 export * from './lib/none';
 export * from './lib/parse';
