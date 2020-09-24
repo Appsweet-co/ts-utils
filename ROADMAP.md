@@ -13,3 +13,5 @@
 - [x] `last = (n, list) => list.slice(neg(n));` (d0513c3)
 
 - [x] `neg = (n) => -Math.abs(n);` (fb9be4a)
+
+- [ ] `unzip => (fn, list) => [ filter(fn, list), filter(!fn, list) ];`
