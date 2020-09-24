@@ -15,3 +15,5 @@
 - [x] `neg = (n) => -Math.abs(n);` (fb9be4a)
 
 - [ ] `unzip => (fn, list) => [ filter(fn, list), filter(!fn, list) ];`
+
+- [ ] Unit tests
