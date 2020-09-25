@@ -26,3 +26,4 @@ export * from './lib/reduce';
 export * from './lib/stringify';
 export * from './lib/subtract';
 export * from './lib/type';
+export * from './lib/unzip';
