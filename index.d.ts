@@ -25,5 +25,6 @@ export * from './lib/ratio';
 export * from './lib/reduce';
 export * from './lib/stringify';
 export * from './lib/subtract';
+export * from './lib/timeout';
 export * from './lib/type';
 export * from './lib/unzip';

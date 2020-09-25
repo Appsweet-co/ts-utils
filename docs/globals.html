@@ -95,6 +95,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#reduce" class="tsd-kind-icon">reduce</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#stringify" class="tsd-kind-icon">stringify</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#subtract" class="tsd-kind-icon">subtract</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#timeout" class="tsd-kind-icon">timeout</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#type" class="tsd-kind-icon">type</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#unzip" class="tsd-kind-icon">unzip</a></li>
 							</ul>
@@ -1388,6 +1389,50 @@ subtract(<span class="hljs-name">a</span>, b)<span class="hljs-comment">;</span>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> timeout</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">(</span>delay<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TimerHandler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/timeout/index.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a timer that executes a function once the timer expires.
+									Same as <code>setTimeout(fn, delay)</code>.</p>
+								</div>
+								<pre><code><span class="hljs-keyword">import</span> { timeout } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;
+
+timeout(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;click&#x27;</span>)});
+<span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">&#x27;click&#x27;</span>
+
+const click = timeout(<span class="hljs-number">3000</span>);
+
+click(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;click&#x27;</span>)});
+<span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">&#x27;click&#x27;</span></code></pre>
+								<p>The following are equivalent:</p>
+								<pre><code>click(<span class="hljs-name">delay</span>)(<span class="hljs-name">fn</span>)<span class="hljs-comment">;</span>
+click(<span class="hljs-name">delay</span>, fn)<span class="hljs-comment">;</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>delay: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>fn: <span class="tsd-signature-type">TimerHandler</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="type" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> type</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -1585,6 +1630,9 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#subtract" class="tsd-kind-icon">subtract</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#timeout" class="tsd-kind-icon">timeout</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#type" class="tsd-kind-icon">type</a>
