@@ -18,4 +18,8 @@
 
 - [ ] Unit tests
 
-- [ ] `debounce = (fn, delay, immediate) => { /* ... */ };` [Pareto.js](https://github.com/concretesolutions/pareto.js/#debounce) | [David Walsh](https://davidwalsh.name/javascript-debounce-function) | [Juan Vega](https://www.freecodecamp.org/news/debounce-explained-how-to-make-your-javascript-wait-for-your-user-to-finish-typing-2/)
+- [ ] `debounce = (delay, immediate, fn) => { /* ... */ };` [Pareto.js](https://github.com/concretesolutions/pareto.js/#debounce) | [David Walsh](https://davidwalsh.name/javascript-debounce-function) | [Juan Vega](https://www.freecodecamp.org/news/debounce-explained-how-to-make-your-javascript-wait-for-your-user-to-finish-typing-2/)
+
+- [ ] `timeout = (delay, fn) => (fn) ? setTimeout(fn, delay) : curry(timeout, delay)`
+
+- [ ] Add philosophy to README
