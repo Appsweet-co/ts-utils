@@ -1,6 +1,6 @@
 # ROADMAP
 
-- [ ] `filter = (fn, list) => list.filter(fn)`
+- [x] `filter = (fn, list) => list.filter(fn)` (6facafd)
 
 - [ ] `modulo = (mod, val) => val % mod;` [Ramda.js](https://ramdajs.com/docs/#modulo)
 
