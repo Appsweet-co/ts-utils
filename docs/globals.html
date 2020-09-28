@@ -83,6 +83,7 @@
 								<li class="tsd-kind-function"><a href="globals.html#last" class="tsd-kind-icon">last</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#map" class="tsd-kind-icon">map</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#max" class="tsd-kind-icon">max</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#maybe" class="tsd-kind-icon">maybe</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#min" class="tsd-kind-icon">min</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#neg" class="tsd-kind-icon">neg</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#nil" class="tsd-kind-icon">nil</a></li>
@@ -860,6 +861,53 @@ max9(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>);
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="maybe" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> maybe</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">maybe<span class="tsd-signature-symbol">(</span>fallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, val<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/maybe/index.ts:26</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>val</code> if <code>fallback</code> and <code>val</code> are of the same type.
+									Otherwise, returns <code>fallback</code>.</p>
+								</div>
+								<pre><code><span class="hljs-string">import</span> { <span class="hljs-string">maybe</span> } <span class="hljs-string">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span><span class="hljs-string">;</span>
+
+<span class="hljs-string">maybe([],</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<span class="hljs-string">);</span>
+<span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+
+<span class="hljs-string">const</span> <span class="hljs-string">maybeArray</span> <span class="hljs-string">=</span> <span class="hljs-string">maybe([]);</span>
+
+<span class="hljs-string">maybeArray(true);</span>
+<span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> []<span class="hljs-string">;</span>
+
+<span class="hljs-attr">The following are equivalent:</span>
+</code></pre>
+								<p>maybe(fallback)(val);
+								maybe(fallback, val);</p>
+								<pre><code></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fallback: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> val: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="min" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> min</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -1594,6 +1642,9 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#max" class="tsd-kind-icon">max</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#maybe" class="tsd-kind-icon">maybe</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#min" class="tsd-kind-icon">min</a>
