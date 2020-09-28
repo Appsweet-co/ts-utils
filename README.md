@@ -1,8 +1,6 @@
-<!--
-[![Version](https://img.shields.io/badge/Version-1.1.0-blue.svg?style=for-the-badge)](https://github.com/dperuo/dev-utils/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/dperuo/dev-utils/blob/master/LICENSE)
-![GitHub last commit](https://img.shields.io/github/last-commit/dperuo/dev-utils?style=for-the-badge)
--->
+[![Version](https://img.shields.io/npm/v/@appsweet-co/utils.svg?style=for-the-badge)](https://www.npmjs.com/package/@appsweet-co/utils)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge)](https://github.com/appsweet-co/utils/blob/main/README.md#documentation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://github.com/appsweet-co/utils/blob/main/LICENSE)
 
 # Welcome to Appsweet's Dev Utils 👋
 
@@ -52,7 +50,7 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2020 [Appsweet](http://a6t.co).
 
-This project is [MIT](https://github.com/appsweet-co/utils/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/appsweet-co/utils/blob/main/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

@@ -17,9 +17,12 @@
     "build": "tsc",
     "build:docs": "typedoc",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
+    "deploy": "npm run publish:npm && npm run publish:github",
     "docs": "open ./docs/index.html",
     "gen": "./bin/gen.sh",
-    "prebuild": "eslint **/*.ts && npm run build:docs"
+    "prebuild": "eslint **/*.ts && npm run build:docs",
+    "publish:github": "npm publish --registry='https://npm.pkg.github.com/'",
+    "publish:npm": "npm publish --registry='https://registry.npmjs.org/'"
   },
   "repository": {
     "type": "git",
