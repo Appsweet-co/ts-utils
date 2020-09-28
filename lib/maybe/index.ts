@@ -1,9 +1,14 @@
 import { curry } from '../curry';
+import { nil } from '../nil';
 import { type } from '../type';
 
 /**
- * Returns `val` if `fallback` and `val` are of the same type.
- * Otherwise, returns `fallback`.
+ * Returns `val` if and only if:
+ *
+ * 1. `val` is not null or undefined; and
+ * 2. `val` and `fallback` are of the same type.
+ *
+ * Returns `fallback` otherwise.
  *
  * ```
  * import { maybe } from '@appsweet-co/utils';
@@ -23,9 +28,13 @@ import { type } from '../type';
  * maybe(fallback, val);
  * ```
  */
-const maybe = (fallback: any, val?: any) =>
-  (val) ?
-    type(typeof fallback, val) ? val : fallback :
+const maybe = (...args: [fallback: any, val?: any]) => {
+  const [ fallback, val ] = args;
+  const success = !nil(val) && type(typeof fallback, val);
+
+  return (args.length >= 2) ?
+    (success) ? val : fallback :
     curry(maybe, fallback);
+};
 
 export { maybe };
