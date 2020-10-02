@@ -1,6 +1,6 @@
 {
   "name": "@appsweet-co/utils",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Small helper functions useful in many types of projects.",
   "main": "index.js",
   "dependencies": {},
