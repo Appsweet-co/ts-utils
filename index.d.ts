@@ -13,6 +13,7 @@ export * from './lib/inc';
 export * from './lib/last';
 export * from './lib/map';
 export * from './lib/max';
+export * from './lib/Maybe';
 export * from './lib/min';
 export * from './lib/neg';
 export * from './lib/nil';
