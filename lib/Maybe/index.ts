@@ -51,7 +51,7 @@ const Maybe = {
      *  .map(x => x * 2)
      *  .map(x => x * 100)
      *  .get();
-     * // => 2500
+     * // => 1000
      * ```
      */
     map: (fn: (arg: any) => any) => {

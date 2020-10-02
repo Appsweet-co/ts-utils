@@ -1616,7 +1616,7 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 						<a name="maybe.of" class="tsd-anchor"></a>
 						<h3>of</h3>
 						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
-							<li class="tsd-signature tsd-kind-icon">of<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>emit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+							<li class="tsd-signature tsd-kind-icon">of<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getOrElse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
 						</ul>
 						<ul class="tsd-descriptions">
 							<li class="tsd-description">
@@ -1639,12 +1639,12 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 										<h5><span class="tsd-flag ts-flagOptional">Optional</span> value: <span class="tsd-signature-type">unknown</span></h5>
 									</li>
 								</ul>
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>emit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getOrElse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter">
-										<h5>emit<span class="tsd-signature-symbol">: </span>function</h5>
+										<h5>get<span class="tsd-signature-symbol">: </span>function</h5>
 										<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
+											<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
@@ -1655,12 +1655,41 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 												</aside>
 												<div class="tsd-comment tsd-typography">
 													<div class="lead">
-														<p>Emit the <code>value</code>.</p>
+														<p>Return the <code>value</code>.</p>
 													</div>
-													<pre><code>maybeFive.emit();
-<span class="hljs-regexp">//</span> =&gt; <span class="hljs-number">5</span></code></pre>
+													<pre><code>maybeFive.<span class="hljs-built_in">get</span>();
+<span class="hljs-comment">// =&gt; 5</span></code></pre>
 												</div>
 												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>get<wbr>OrElse<span class="tsd-signature-symbol">: </span>function</h5>
+										<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon">get<wbr>OrElse<span class="tsd-signature-symbol">(</span>fallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<aside class="tsd-sources">
+													<ul>
+														<li>Defined in lib/Maybe/index.ts:40</li>
+													</ul>
+												</aside>
+												<div class="tsd-comment tsd-typography">
+													<div class="lead">
+														<p>Return the <code>value</code> if it exists. Otherwise, return the <code>fallback</code>.</p>
+													</div>
+													<pre><code>maybeFive.get<span class="hljs-constructor">OrElse(<span class="hljs-params">null</span>)</span>;
+<span class="hljs-comment">// =&gt; 5</span></code></pre>
+												</div>
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>fallback: <span class="tsd-signature-type">any</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 											</li>
 										</ul>
 									</li>
@@ -1673,7 +1702,7 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 											<li class="tsd-description">
 												<aside class="tsd-sources">
 													<ul>
-														<li>Defined in lib/Maybe/index.ts:45</li>
+														<li>Defined in lib/Maybe/index.ts:57</li>
 													</ul>
 												</aside>
 												<div class="tsd-comment tsd-typography">
@@ -1684,8 +1713,8 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 													<pre><code>maybeFive
  <span class="hljs-string">.map</span><span class="hljs-params">(<span class="hljs-attr">x</span> =&gt; x * 2)</span>
  <span class="hljs-string">.map</span><span class="hljs-params">(<span class="hljs-attr">x</span> =&gt; x * 100)</span>
- <span class="hljs-string">.emit</span><span class="hljs-params">()</span>;
-<span class="hljs-string">//</span> =&gt; 2500</code></pre>
+ <span class="hljs-string">.get</span><span class="hljs-params">()</span>;
+<span class="hljs-string">//</span> =&gt; 1000</code></pre>
 												</div>
 												<h4 class="tsd-parameters-title">Parameters</h4>
 												<ul class="tsd-parameters">

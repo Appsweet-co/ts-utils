@@ -1,6 +1,7 @@
 declare const Maybe: {
     of: (value?: unknown) => {
-        emit: () => unknown;
+        get: () => unknown;
+        getOrElse: (fallback: any) => any;
         map: (fn: (arg: any) => any) => any;
     };
 };
