@@ -55,7 +55,7 @@ const Maybe = {
      * ```
      */
     map: (fn: (arg: any) => any) => {
-      return (nil(value)) ? Maybe.of() : Maybe.of(fn(value));
+      return nil(value) ? Maybe.of() : Maybe.of(fn(value));
     }
   })
 };
