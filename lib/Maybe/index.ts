@@ -30,6 +30,18 @@ const Maybe = {
     emit: () => value,
 
     /**
+     * Return the `value` if it exists. Otherwise, return the `fallback`.
+     *
+     * ```
+     * maybeFive.getOrElse(null)
+     * // => 5
+     * ```
+     */
+    getOrElse: (fallback: any) => {
+      return nil(value) ? fallback : value;
+    },
+
+    /**
      * Map the `value` to a new value and return a new monad.
      *
      * Ignores `value`s that are `null` or `undefined`.
