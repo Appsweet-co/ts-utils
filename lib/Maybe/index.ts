@@ -20,20 +20,20 @@ const Maybe = {
   of: (value?: unknown) => ({
 
     /**
-     * Emit the `value`.
+     * Return the `value`.
      *
      * ```
-     * maybeFive.emit();
+     * maybeFive.get();
      * // => 5
      * ```
      */
-    emit: () => value,
+    get: () => value,
 
     /**
      * Return the `value` if it exists. Otherwise, return the `fallback`.
      *
      * ```
-     * maybeFive.getOrElse(null)
+     * maybeFive.getOrElse(null);
      * // => 5
      * ```
      */
@@ -50,7 +50,7 @@ const Maybe = {
      * maybeFive
      *  .map(x => x * 2)
      *  .map(x => x * 100)
-     *  .emit();
+     *  .get();
      * // => 2500
      * ```
      */
