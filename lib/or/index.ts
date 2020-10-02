@@ -11,30 +11,30 @@ import { type } from '../type';
  * Returns `fallback` otherwise.
  *
  * ```
- * import { maybe } from '@appsweet-co/utils';
+ * import { or } from '@appsweet-co/utils';
  *
- * maybe([], [1, 2, 3, 0, 4, 5]);
+ * or([], [1, 2, 3, 0, 4, 5]);
  * // => [1, 2, 3, 0, 4, 5]
  *
- * const maybeArray = maybe([]);
+ * const orArray = or([]);
  *
- * maybeArray(true);
+ * orArray(true);
  * // => [];
  *
  * The following are equivalent:
  *
  * ```
- * maybe(fallback)(val);
- * maybe(fallback, val);
+ * or(fallback)(val);
+ * or(fallback, val);
  * ```
  */
-const maybe = (...args: [fallback: any, val?: any]) => {
+const or = (...args: [fallback: any, val?: any]) => {
   const [ fallback, val ] = args;
   const success = !nil(val) && type(typeof fallback, val);
 
   return (args.length >= 2) ?
     (success) ? val : fallback :
-    curry(maybe, fallback);
+    curry(or, fallback);
 };
 
-export { maybe };
+export { or };

@@ -19,3 +19,7 @@
 - [ ] `pow = (exp, val) => Math.pow(val, exp);`
 
 - [ ] `yes = () => true;`
+
+- [ ] `even = (args: number[]) => args.filter(val => val % 2 === 0)`
+
+- [ ] `odd = (args: number[]) => args.filter(val => val % 2 !== 0)`
