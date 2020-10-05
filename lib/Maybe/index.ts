@@ -1,8 +1,8 @@
 /* eslint-disable fp/no-unused-expression */
 
 import { nil } from '../nil';
+import { MaybeType } from './interface';
 import { filtered, reduced } from './service';
-import { MaybeType } from './type';
 
 /**
  * A [monad](https://en.wikipedia.org/wiki/Monad_(functional_programming)) for

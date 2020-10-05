@@ -66,8 +66,15 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/maybetype.html" class="tsd-kind-icon">Maybe<wbr>Type</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#maybe" class="tsd-kind-icon">Maybe</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#add" class="tsd-kind-icon">add</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#all" class="tsd-kind-icon">all</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#any" class="tsd-kind-icon">any</a></li>
@@ -101,17 +108,253 @@
 								<li class="tsd-kind-function"><a href="globals.html#unzip" class="tsd-kind-icon">unzip</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
-							<h3>Object literals</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-object-literal"><a href="globals.html#maybe" class="tsd-kind-icon">Maybe</a></li>
-							</ul>
-						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="maybe" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> Maybe</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">Maybe&lt;T&gt;<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>chain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>else<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>pipe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in lib/Maybe/index.ts:18</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>A <a href="https://en.wikipedia.org/wiki/Monad_(functional_programming)">monad</a> for
+									working with values that may or may not be <code>null</code> or <code>undefined</code>.</p>
+								</div>
+								<p>Inspired by <a href="https://jrsinclair.com/articles/2016/marvellously-mysterious-javascript-maybe-monad/">James Sinclair</a>,
+								<a href="https://github.com/apantle/pratica">Pratica</a> and <a href="https://medium.com/javascript-scene/javascript-monads-made-simple-7856be57bfe8">Eric Elliott</a>.</p>
+								<pre><code><span class="hljs-section">import</span> { <span class="hljs-attribute">Maybe</span> } from <span class="hljs-string">&#x27;<span class="hljs-variable">@appsweet</span>-co/utils&#x27;</span>;</code></pre>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T = <span class="tsd-signature-type">any</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> val: <span class="tsd-signature-type">T</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>chain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>else<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>filter<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>pipe<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>chain<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">chain<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/maybetype.html" class="tsd-signature-type">MaybeType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:59</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Return a new monad from inside the first. This is a clean way to work with
+													a second value that may or may not be <code>null</code> or <code>undefined</code>.</p>
+												</div>
+												<pre><code>Maybe(<span class="hljs-number">6</span>).chain(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> Maybe(<span class="hljs-literal">null</span>))
+<span class="hljs-comment">// =&gt; Maybe(null)</span></code></pre>
+												<p>Chain as many monads as you need:</p>
+												<pre><code>Maybe<span class="hljs-params">(6)</span>
+ <span class="hljs-string">.chain</span><span class="hljs-params">(<span class="hljs-attr">x</span> =&gt; Maybe(x + 1)</span>) <span class="hljs-string">//</span> =&gt; Maybe<span class="hljs-params">(7)</span>
+ <span class="hljs-string">.chain</span><span class="hljs-params">(<span class="hljs-attr">y</span> =&gt; Maybe(y + 1)</span>) <span class="hljs-string">//</span> =&gt; Maybe<span class="hljs-params">(8)</span>
+ <span class="hljs-string">//</span> etc.<span class="hljs-string">..</span></code></pre>
+											</div>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>fn: <span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="interfaces/maybetype.html" class="tsd-signature-type">MaybeType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5>
+													<ul class="tsd-parameters">
+														<li class="tsd-parameter-signature">
+															<ul class="tsd-signatures tsd-kind-type-literal">
+																<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/maybetype.html" class="tsd-signature-type">MaybeType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+															</ul>
+															<ul class="tsd-descriptions">
+																<li class="tsd-description">
+																	<h4 class="tsd-parameters-title">Parameters</h4>
+																	<ul class="tsd-parameters">
+																		<li>
+																			<h5>arg: <span class="tsd-signature-type">T</span></h5>
+																		</li>
+																	</ul>
+																	<h4 class="tsd-returns-title">Returns <a href="interfaces/maybetype.html" class="tsd-signature-type">MaybeType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+																</li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>else<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">else<span class="tsd-signature-symbol">(</span>fallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:39</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Return a monad with the fallback value. This is a clean way to guarantee
+													a default value.</p>
+												</div>
+												<pre><code><span class="hljs-function"><span class="hljs-title">Maybe</span><span class="hljs-params">(null)</span></span>.<span class="hljs-keyword">else</span>(<span class="hljs-number">6</span>)
+<span class="hljs-comment">// =&gt; Maybe(6)</span></code></pre>
+											</div>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>fallback: <span class="tsd-signature-type">T</span></h5>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>filter<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">filter<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>fns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:118</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Test the value against one or more predicates. Returns a monad with the value
+													if and only if all predicates return true.</p>
+												</div>
+												<p>Functions are composed left-to-right.</p>
+												<pre><code>Maybe(<span class="hljs-number">6</span>).filter(x =&gt; x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>, x &lt; <span class="hljs-number">10</span>)
+<span class="hljs-comment">// =&gt; Maybe(6)</span>
+
+Maybe(<span class="hljs-number">6</span>).filter(x =&gt; x % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>, x &lt; <span class="hljs-number">5</span>)
+<span class="hljs-comment">// =&gt; Maybe(undefined)</span></code></pre>
+											</div>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>fns: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>map<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>fns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:72</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Transform the value inside the monad using one or more transformation
+													functions.</p>
+												</div>
+												<p>Functions are composed left-to-right.</p>
+												<pre><code>Maybe(<span class="hljs-number">6</span>).map(<span class="hljs-symbol">x</span> =&gt; <span class="hljs-symbol">x</span> * <span class="hljs-number">2</span>, <span class="hljs-symbol">y</span> =&gt; <span class="hljs-symbol">y</span> + <span class="hljs-number">5</span>)
+<span class="hljs-comment">// =&gt; Maybe(17)</span></code></pre>
+											</div>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>fns: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>pipe<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">pipe<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>fns<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:94</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Send the value to one or more functions and return the original value. This
+													is a clean way to cause side effects.</p>
+												</div>
+												<p>Functions are composed left-to-right.</p>
+												<pre><code>Maybe(<span class="hljs-number">6</span>)
+ .pipe(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x * <span class="hljs-number">2</span>, <span class="hljs-built_in">console</span>.log) <span class="hljs-comment">// =&gt; 12</span>
+ .map(<span class="hljs-function"><span class="hljs-params">x</span> =&gt;</span> x + <span class="hljs-number">2</span>)
+ .pipe(<span class="hljs-built_in">console</span>.log) <span class="hljs-comment">// =&gt; 8</span></code></pre>
+											</div>
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>fns: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+										</li>
+									</ul>
+								</li>
+								<li class="tsd-parameter">
+									<h5>value<span class="tsd-signature-symbol">: </span>function</h5>
+									<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
+										<li class="tsd-signature tsd-kind-icon">value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<aside class="tsd-sources">
+												<ul>
+													<li>Defined in lib/Maybe/index.ts:28</li>
+												</ul>
+											</aside>
+											<div class="tsd-comment tsd-typography">
+												<div class="lead">
+													<p>Unwrap the value from the monad and returns the value in its raw form.</p>
+												</div>
+												<pre><code>Maybe<span class="hljs-comment">(6)</span>.value<span class="hljs-comment">()</span>;
+<span class="hljs-comment">// =&gt; 6</span></code></pre>
+											</div>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="add" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> add</h3>
@@ -1594,161 +1837,6 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Object literals</h2>
-				<section class="tsd-panel tsd-member tsd-kind-object-literal">
-					<a name="maybe" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> Maybe</h3>
-					<div class="tsd-signature tsd-kind-icon">Maybe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in lib/Maybe/index.ts:9</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>A <a href="https://en.wikipedia.org/wiki/Monad_(functional_programming)">monad</a> for
-							working with values that may exist, or may be <code>null</code> or <code>undefined</code>.</p>
-						</div>
-						<p>Inspired by <a href="https://jrsinclair.com/articles/2016/marvellously-mysterious-javascript-maybe-monad/">James Sinclair</a>.</p>
-					</div>
-					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
-						<a name="maybe.of" class="tsd-anchor"></a>
-						<h3>of</h3>
-						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
-							<li class="tsd-signature tsd-kind-icon">of<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getOrElse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></li>
-						</ul>
-						<ul class="tsd-descriptions">
-							<li class="tsd-description">
-								<aside class="tsd-sources">
-									<ul>
-										<li>Defined in lib/Maybe/index.ts:20</li>
-									</ul>
-								</aside>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>Create a new object, passing in the <code>value</code>.</p>
-									</div>
-									<pre><code><span class="hljs-section">import</span> { <span class="hljs-attribute">Maybe</span> } from <span class="hljs-string">&#x27;<span class="hljs-variable">@appsweet</span>-co/utils&#x27;</span>;
-
-<span class="hljs-attribute">const</span> maybeFive = Maybe.of(<span class="hljs-number">5</span>);</code></pre>
-								</div>
-								<h4 class="tsd-parameters-title">Parameters</h4>
-								<ul class="tsd-parameters">
-									<li>
-										<h5><span class="tsd-flag ts-flagOptional">Optional</span> value: <span class="tsd-signature-type">unknown</span></h5>
-									</li>
-								</ul>
-								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>get<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>getOrElse<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>map<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h4>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter">
-										<h5>get<span class="tsd-signature-symbol">: </span>function</h5>
-										<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<aside class="tsd-sources">
-													<ul>
-														<li>Defined in lib/Maybe/index.ts:30</li>
-													</ul>
-												</aside>
-												<div class="tsd-comment tsd-typography">
-													<div class="lead">
-														<p>Return the <code>value</code>.</p>
-													</div>
-													<pre><code>maybeFive.<span class="hljs-built_in">get</span>();
-<span class="hljs-comment">// =&gt; 5</span></code></pre>
-												</div>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">unknown</span></h4>
-											</li>
-										</ul>
-									</li>
-									<li class="tsd-parameter">
-										<h5>get<wbr>OrElse<span class="tsd-signature-symbol">: </span>function</h5>
-										<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon">get<wbr>OrElse<span class="tsd-signature-symbol">(</span>fallback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<aside class="tsd-sources">
-													<ul>
-														<li>Defined in lib/Maybe/index.ts:40</li>
-													</ul>
-												</aside>
-												<div class="tsd-comment tsd-typography">
-													<div class="lead">
-														<p>Return the <code>value</code> if it exists. Otherwise, return the <code>fallback</code>.</p>
-													</div>
-													<pre><code>maybeFive.get<span class="hljs-constructor">OrElse(<span class="hljs-params">null</span>)</span>;
-<span class="hljs-comment">// =&gt; 5</span></code></pre>
-												</div>
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>fallback: <span class="tsd-signature-type">any</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-											</li>
-										</ul>
-									</li>
-									<li class="tsd-parameter">
-										<h5>map<span class="tsd-signature-symbol">: </span>function</h5>
-										<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<aside class="tsd-sources">
-													<ul>
-														<li>Defined in lib/Maybe/index.ts:57</li>
-													</ul>
-												</aside>
-												<div class="tsd-comment tsd-typography">
-													<div class="lead">
-														<p>Map the <code>value</code> to a new value and return a new monad.</p>
-													</div>
-													<p>Ignores <code>value</code>s that are <code>null</code> or <code>undefined</code>.</p>
-													<pre><code>maybeFive
- <span class="hljs-string">.map</span><span class="hljs-params">(<span class="hljs-attr">x</span> =&gt; x * 2)</span>
- <span class="hljs-string">.map</span><span class="hljs-params">(<span class="hljs-attr">x</span> =&gt; x * 100)</span>
- <span class="hljs-string">.get</span><span class="hljs-params">()</span>;
-<span class="hljs-string">//</span> =&gt; 1000</code></pre>
-												</div>
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>fn: <span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
-														<ul class="tsd-parameters">
-															<li class="tsd-parameter-signature">
-																<ul class="tsd-signatures tsd-kind-type-literal">
-																	<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-																</ul>
-																<ul class="tsd-descriptions">
-																	<li class="tsd-description">
-																		<h4 class="tsd-parameters-title">Parameters</h4>
-																		<ul class="tsd-parameters">
-																			<li>
-																				<h5>arg: <span class="tsd-signature-type">any</span></h5>
-																			</li>
-																		</ul>
-																		<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-																	</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</section>
-			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
@@ -1760,6 +1848,12 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/maybetype.html" class="tsd-kind-icon">Maybe<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="globals.html#maybe" class="tsd-kind-icon">Maybe</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#add" class="tsd-kind-icon">add</a>
 					</li>
@@ -1853,9 +1947,6 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 					<li class=" tsd-kind-function">
 						<a href="globals.html#unzip" class="tsd-kind-icon">unzip</a>
 					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#maybe" class="tsd-kind-icon">Maybe</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -1865,6 +1956,9 @@ unzip(<span class="hljs-name">fn</span>, list)<span class="hljs-comment">;</span
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
