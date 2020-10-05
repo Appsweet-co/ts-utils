@@ -7,6 +7,7 @@ export * from './lib/clone';
 export * from './lib/curry';
 export * from './lib/dec';
 export * from './lib/divide';
+export * from './lib/Either';
 export * from './lib/filter';
 export * from './lib/first';
 export * from './lib/inc';
@@ -30,3 +31,4 @@ export * from './lib/subtract';
 export * from './lib/timeout';
 export * from './lib/type';
 export * from './lib/unzip';
+
