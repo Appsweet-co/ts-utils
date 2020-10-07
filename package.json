@@ -1,7 +1,7 @@
 {
   "name": "@appsweet-co/utils",
   "version": "0.7.0",
-  "description": "Small helper functions useful in many types of projects.",
+  "description": "Small helper functions useful in many types of projects",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -17,12 +17,9 @@
     "build": "tsc",
     "build:docs": "typedoc",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
-    "deploy": "npm run publish:npm && npm run publish:github",
     "docs": "open ./docs/index.html",
     "gen": "./bin/gen.sh",
-    "prebuild": "eslint **/*.ts && npm run build:docs",
-    "publish:github": "npm publish --registry='https://npm.pkg.github.com/'",
-    "publish:npm": "npm publish --registry='https://registry.npmjs.org/'"
+    "prebuild": "eslint **/*.ts && npm run build:docs"
   },
   "repository": {
     "type": "git",
