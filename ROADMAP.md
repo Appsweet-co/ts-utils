@@ -10,13 +10,13 @@
 
 - [ ] `modulo = (mod, val) => val % mod;` [Ramda.js](https://ramdajs.com/docs/#modulo)
 
-- [ ] `no = () => false;`
+- [x] `no = () => false;`
 
-- [ ] `noop = () => {};`
+- [x] `noop = () => {};`
 
 - [ ] `pow = (exp, val) => Math.pow(val, exp);`
 
-- [ ] `yes = () => true;`
+- [x] `yes = () => true;`
 
 - [ ] `even = (arg: number) => arg % 2 === 0`
 
