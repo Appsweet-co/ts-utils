@@ -1,2 +1,2 @@
-declare const unzip: (fn: (value: any) => unknown, list: unknown[]) => unknown;
+declare const unzip: (fn: (value: any) => any, list: any[]) => unknown;
 export { unzip };

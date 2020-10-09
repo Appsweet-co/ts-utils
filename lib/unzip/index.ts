@@ -24,7 +24,7 @@ import { filter } from '../filter';
  * unzip(fn, list);
  * ```
  */
-const unzip = (fn: (value: any) => unknown, list: unknown[]) =>
-  (list) ? [ filter(fn, list), filter(v => !fn(v), list) ] : curry<unknown>(unzip, fn);
+const unzip = (fn: (value: any) => any, list: any[]) =>
+  (list) ? [ filter(fn)(list), filter(v => !fn(v))(list) ] : curry<unknown>(unzip, fn);
 
 export { unzip };
