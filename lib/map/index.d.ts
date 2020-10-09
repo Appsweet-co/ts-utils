@@ -1,2 +1,2 @@
-declare const map: (fn: (value: any) => unknown, list?: unknown[]) => unknown;
+declare const map: (...fns: ((arg: any) => any)[]) => (init: any) => any;
 export { map };

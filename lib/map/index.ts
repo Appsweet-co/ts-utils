@@ -1,30 +1,22 @@
-import { curry } from '../curry';
-
 /**
- * Applies a function to each of item in a list and returns a list of the same
- * shape. Same as `list.map(fn)`.
+ * Applies one or more transformation functions to each item in a list.
+ *
+ * Functions are composed left-to-right.
  *
  * Inspired by [Ramda.js](https://ramdajs.com/docs/#map).
  *
  * ```
  * import { map } from '@appsweet-co/utils';
  *
- * map(x => x * x, [1, 2, 3]);
- * // => [2, 4, 6]
+ * const add4 = map(x => x + 1, y => y + 3);
  *
- * const double = map(x => x * x);
- *
- * double([1, 2, 3]);
- * // => [2, 4, 6]
+ * add4([1, 2, 3])
+ * // => [5, 6, 7]
  * ```
  *
- * The following are equivalent:
- *
- * ```
- * map(fn)(list);
- * map(fn, list);
- * ```
+ * This function works very well with [[pipe]].
  */
-const map = (fn: (value: any) => unknown, list?: unknown[]) => (list) ? list.map(fn) : curry<unknown>(map, fn);
+const map = (...fns: ((arg: any) => any)[]) => (init: any) =>
+  fns.reduce((acc: any, fn: (arg: any) => any) => acc.map(fn), init);
 
 export { map };
