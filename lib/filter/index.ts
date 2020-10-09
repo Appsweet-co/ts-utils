@@ -1,28 +1,20 @@
-import { curry } from '../curry';
-
 /**
- * Creates a new array with all elements that pass the predicate.
- * Same as `list.fitler(fn)`.
+ * Applies one or more predicates to each item in a list.
+ *
+ * Functions are composed left-to-right.
  *
  * ```
  * import { filter } from '@appsweet-co/utils';
  *
- * filter(x => x % 2 === 0, [1, 2, 3, 4]);
- * // => [2, 4]
+ * const evens = filter(x => x !== 0, y => y % 2 ===0);
  *
- * const evens = filter(x => x % 2 === 0);
- *
- * double([1, 2, 3, 4]);
+ * evens([1, 2, 3, 0, 4, 5]);
  * // => [2, 4]
  * ```
  *
- * The following are equivalent:
- *
- * ```
- * filter(fn)(list);
- * filter(fn, list);
- * ```
+ * This function works very well with [[pipe]].
  */
-const filter = (fn: (value: any) => unknown, list?: unknown[]) => (list) ? list.filter(fn) : curry<unknown>(filter, fn);
+const filter = (...fns: ((arg: any) => any)[]) => (init: any) =>
+  fns.reduce((acc: any, fn: (arg: any) => any) => acc.filter(fn), init);
 
 export { filter };

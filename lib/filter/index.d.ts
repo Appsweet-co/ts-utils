@@ -1,2 +1,2 @@
-declare const filter: (fn: (value: any) => unknown, list?: unknown[]) => unknown;
+declare const filter: (...fns: ((arg: any) => any)[]) => (init: any) => any;
 export { filter };
