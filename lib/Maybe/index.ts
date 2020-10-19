@@ -36,7 +36,7 @@ const Maybe = <T = any>(val?: T) => ({
    * // => Maybe(6)
    * ```
    */
-  else: (fallback: T) => Maybe(fallback),
+  else: (fallback: T) => nil(val) ? Maybe(fallback) : Maybe(val),
 
   /**
    * Return a new monad from inside the first. This is a clean way to work with
