@@ -10,14 +10,20 @@
 
 - [ ] `modulo = (mod, val) => val % mod;` [Ramda.js](https://ramdajs.com/docs/#modulo)
 
-- [x] `no = () => false;`
-
-- [x] `noop = () => {};`
+- [ ] `noop = () => {};`
 
 - [ ] `pow = (exp, val) => Math.pow(val, exp);`
-
-- [x] `yes = () => true;`
 
 - [ ] `even = (arg: number) => arg % 2 === 0`
 
 - [ ] `odd = (arg: number) => arg % 2 !== 0`
+
+- [ ] `equals = (test: any, val?: any) => (val) ? val === test : curry<boolean>(test)`
+
+- [ ] `always = (arg: any) => arg`
+
+- [ ] `gte = (test: number, val?: number) => (val) ? val >= test : curry<boolean>(test)`
+
+- [ ] `lte = (test: number, val?: number) => (val) ? val <= test : curry<boolean>(test)`
+
+- [ ] Rename `or()` to `else()`?
