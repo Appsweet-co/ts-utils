@@ -26,4 +26,6 @@
 
 - [ ] `lte = (test: number, val?: number) => (val) ? val <= test : curry<boolean>(test)`
 
+- [ ] `unary = (fn: (arg0: any) => any) => (x: any) => fn(x)`
+
 - [ ] Rename `or()` to `else()`?
