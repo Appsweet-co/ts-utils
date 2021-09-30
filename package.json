@@ -1,7 +1,7 @@
 {
-  "name": "@appsweet-co/utils",
+  "name": "@appsweet-co/ts-utils",
   "version": "0.9.0",
-  "description": "Small helper functions useful in many types of projects",
+  "description": "Utility functions for TypeScript",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -19,16 +19,17 @@
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
     "docs": "open ./docs/index.html",
     "gen": "./bin/gen.sh",
-    "prebuild": "eslint **/*.ts && npm run build:docs"
+    "prebuild": "eslint **/*.ts && npm run build:docs",
+    "readme": "npx @appnest/readme generate"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Appsweet-co/utils.git"
   },
-  "author": "Appsweet.co (http://a6t.co)",
+  "author": "Appsweet.co (http://appsweet.co)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Appsweet-co/utils/issues"
+    "url": "https://github.com/Appsweet-co/ts-utils/issues"
   },
-  "homepage": "https://appsweet-co.github.io/utils/"
+  "homepage": "https://appsweet-co.github.io/ts-utils/"
 }
