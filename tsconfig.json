@@ -11,16 +11,17 @@
     "sourceMap": false,
     "target": "es2015",
   },
-
-  "include": ["**/*.ts"],
-
+  "include": [
+    "**/*.ts"
+  ],
   "typedocOptions": {
-      "entryPint": "index",
-      "excludeNotExported": true,
-      "excludePrivate": true,
-      "gitRemote": "https://github.com/Appsweet-co/utils.git",
-      "mode": "file",
-      "out": "docs",
-      "stripInternal": true
+    "entryPoints": [
+      "index.ts"
+    ],
+    "excludeExternals": true,
+    "excludeInternal": true,
+    "excludePrivate": true,
+    "gitRemote": "https://github.com/Appsweet-co/utils.git",
+    "out": "docs"
   }
 }
