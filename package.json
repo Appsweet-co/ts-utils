@@ -15,9 +15,9 @@
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc",
+    "build:index": "./bin/gen-index.sh",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
-    "docs": "open ./docs/index.html",
-    "gen": "./bin/gen.sh",
+    "docs": "npx http-server ./docs -c-1",
     "prebuild": "eslint **/*.ts && npm run build:docs",
     "readme": "npx @appnest/readme generate"
   },
