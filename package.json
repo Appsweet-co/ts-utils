@@ -30,5 +30,9 @@
   "bugs": {
     "url": "https://github.com/Appsweet-co/ts-utils/issues"
   },
-  "homepage": "https://appsweet-co.github.io/ts-utils/"
+  "homepage": "https://appsweet-co.github.io/ts-utils/",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
