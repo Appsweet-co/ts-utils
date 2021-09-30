@@ -1,275 +1,114 @@
-<!doctype html>
-<html class="default no-js">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@appsweet-co/utils</title>
-	<meta name="description" content="Documentation for @appsweet-co/utils">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
-<header>
-	<div class="tsd-page-toolbar">
-		<div class="container">
-			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
-					<div class="field">
-						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-						<input id="tsd-search-field" type="text" />
-					</div>
-					<ul class="results">
-						<li class="state loading">Preparing search index...</li>
-						<li class="state failure">The search index is not available</li>
-					</ul>
-					<a href="index.html" class="title">@appsweet-co/utils</a>
-				</div>
-				<div class="table-cell" id="tsd-widgets">
-					<div id="tsd-filter">
-						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-						<div class="tsd-filter-group">
-							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
-								<ul class="tsd-select-list">
-									<li data-value="public">Public</li>
-									<li data-value="protected">Public/Protected</li>
-									<li data-value="private" class="selected">All</li>
-								</ul>
-							</div>
-							<input type="checkbox" id="tsd-filter-inherited" checked />
-							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-						</div>
-					</div>
-					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="tsd-page-title">
-		<div class="container">
-			<ul class="tsd-breadcrumb">
-				<li>
-					<a href="globals.html">Globals</a>
-				</li>
-			</ul>
-			<h1>@appsweet-co/utils</h1>
-		</div>
-	</div>
-</header>
-<div class="container container-main">
-	<div class="row">
-		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
-					<img src="./logo.png" alt="Logo" width="250" height="auto" />
-				</p>
-				<h1 align="center">@appsweet-co/utils</h1>
-				<p align="center">
-					<b>Small helper functions useful in many types of projects</b></br>
-					<sub><sub>
-				</p>
-				<br />
-				<p align="center">
-					<a href="https://www.npmjs.com/package/@appsweet-co/utils"><img alt="NPM" src="https://img.shields.io/npm/v/@appsweet-co/utils.svg?style=for-the-badge" height="20"/></a>
-					<a href="https://appsweet-co.github.io/utils/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge" height="20"/></a>
-					<a href="https://github.com/appsweet-co/utils/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" height="20"/></a>
-					<a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-4.0.2-blueviolet?style=for-the-badge" height="20"/></a>
-					<a href="http://typedoc.org/"><img alt="TypeDoc" src="https://img.shields.io/badge/TypeDoc-0.19.1-blueviolet?style=for-the-badge" height="20"/></a>
-				</p>
-				<p><a href="#table-of-contents"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-table-of-contents" id="➤-table-of-contents" style="color: inherit; text-decoration: none;">
-					<h2>➤ Table of Contents</h2>
-				</a>
-				<ul>
-					<li><a href="#-install">➤ Install</a></li>
-					<li><a href="#-usage">➤ Usage</a></li>
-					<li><a href="#-documentation">➤ Documentation</a></li>
-					<li><a href="#-author">➤ Author</a></li>
-					<li><a href="#--contributing">➤ 🤝 Contributing</a></li>
-					<li><a href="#-show-your-support">➤ Show your support</a></li>
-					<li><a href="#-license">➤ License</a></li>
-				</ul>
-				<p><a href="#install"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-install" id="➤-install" style="color: inherit; text-decoration: none;">
-					<h2>➤ Install</h2>
-				</a>
-				<pre><code class="language-sh">npm install @appsweet-co/utils</code></pre>
-				<p><a href="#usage"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-usage" id="➤-usage" style="color: inherit; text-decoration: none;">
-					<h2>➤ Usage</h2>
-				</a>
-				<p>Import utilities directly into your files:</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { clamp, map, subtract } <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@appsweet-co/utils&#x27;</span>;</code></pre>
-				<p><a href="#documentation"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-documentation" id="➤-documentation" style="color: inherit; text-decoration: none;">
-					<h2>➤ Documentation</h2>
-				</a>
-				<p>Visit the <a href="https://appsweet-co.github.io/utils/">docs website</a> for details. We use <a href="http://typedoc.org/">TypeDoc</a> to generate documentation.</p>
-				<p><a href="#author"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-author" id="➤-author" style="color: inherit; text-decoration: none;">
-					<h2>➤ Author</h2>
-				</a>
-				<p>👤 <strong>Appsweet.co</strong></p>
-				<ul>
-					<li>Website: <a href="http://a6t.co">http://a6t.co</a></li>
-					<li>Github: <a href="https://github.com/appsweet-co">@appsweet-co</a></li>
-				</ul>
-				<p><a href="#-contributing"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-🤝-contributing" id="➤-🤝-contributing" style="color: inherit; text-decoration: none;">
-					<h2>➤ 🤝 Contributing</h2>
-				</a>
-				<p>Contributions, issues and feature requests are welcome!</p>
-				<p>Feel free to check <a href="https://github.com/appsweet-co/utils/issues">issues page</a>.</p>
-				<p><a href="#show-your-support"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-show-your-support" id="➤-show-your-support" style="color: inherit; text-decoration: none;">
-					<h2>➤ Show your support</h2>
-				</a>
-				<p>Give a ⭐️ if this project helped you!</p>
-				<p><a href="#license"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-				<a href="#➤-license" id="➤-license" style="color: inherit; text-decoration: none;">
-					<h2>➤ License</h2>
-				</a>
-				<p>Licensed under <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
-				<hr>
-				<p>README generated with <a href="https://github.com/andreasbm/readme">@appnest/readme</a></p>
-			</div>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
-			<nav class="tsd-navigation primary">
-				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="tsd-navigation secondary menu-sticky">
-				<ul class="before-current">
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/eitherconfig.html" class="tsd-kind-icon">Either<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/maybetype.html" class="tsd-kind-icon">Maybe<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#either" class="tsd-kind-icon">Either</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#maybe" class="tsd-kind-icon">Maybe</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#add" class="tsd-kind-icon">add</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#all" class="tsd-kind-icon">all</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#any" class="tsd-kind-icon">any</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#bind" class="tsd-kind-icon">bind</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#clamp" class="tsd-kind-icon">clamp</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#clone" class="tsd-kind-icon">clone</a>
-					</li>
-					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="globals.html#curry" class="tsd-kind-icon">curry</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#dec" class="tsd-kind-icon">dec</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#divide" class="tsd-kind-icon">divide</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#filter" class="tsd-kind-icon">filter</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#first" class="tsd-kind-icon">first</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#inc" class="tsd-kind-icon">inc</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#last" class="tsd-kind-icon">last</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#map" class="tsd-kind-icon">map</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#max" class="tsd-kind-icon">max</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#min" class="tsd-kind-icon">min</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#neg" class="tsd-kind-icon">neg</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#nil" class="tsd-kind-icon">nil</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#none" class="tsd-kind-icon">none</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#or" class="tsd-kind-icon">or</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#parse" class="tsd-kind-icon">parse</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#percent" class="tsd-kind-icon">percent</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#pipe" class="tsd-kind-icon">pipe</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#prop" class="tsd-kind-icon">prop</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#ratio" class="tsd-kind-icon">ratio</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#reduce" class="tsd-kind-icon">reduce</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#stringify" class="tsd-kind-icon">stringify</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#subtract" class="tsd-kind-icon">subtract</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#timeout" class="tsd-kind-icon">timeout</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#type" class="tsd-kind-icon">type</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#unzip" class="tsd-kind-icon">unzip</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</div>
-<footer class="with-border-bottom">
-	<div class="container">
-		<h2>Legend</h2>
-		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-			</ul>
-		</div>
-	</div>
-</footer>
-<div class="container tsd-generator">
-	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
-</div>
-<div class="overlay"></div>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>@appsweet-co/ts-utils</title><meta name="description" content="Documentation for @appsweet-co/ts-utils"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">@appsweet-co/ts-utils</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1>@appsweet-co/ts-utils</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><p align="center">
+  <img src="./logo.png" alt="Logo" width="250" height="auto" />
+</p>
+<h1 align="center">@appsweet-co/ts-utils</h1>
+<p align="center">
+  <b>Utility functions for TypeScript</b></br>
+  <sub><sub>
+</p>
+
+<br />
+
+<p align="center">
+        <a href="https://www.npmjs.com/package/@appsweet-co/ts-utils"><img alt="NPM" src="https://img.shields.io/npm/v/@appsweet-co/ts-utils.svg?style=for-the-badge" height="20"/></a>
+<a href="https://appsweet-co.github.io/ts-utils/"><img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge" height="20"/></a>
+<a href="https://github.com/appsweet-co/ts-utils/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" height="20"/></a>
+<a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-4.4.3-blueviolet?style=for-the-badge" height="20"/></a>
+<a href="http://typedoc.org/"><img alt="TypeDoc" src="https://img.shields.io/badge/TypeDoc-0.22.4-blueviolet?style=for-the-badge" height="20"/></a>
+    </p>
+
+
+<p><a href="#table-of-contents"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#table-of-contents" id="table-of-contents" style="color: inherit; text-decoration: none;">
+  <h2>Table of Contents</h2>
+</a>
+<ul>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#api-docs">API Docs</a></li>
+<li><a href="#design-goals">Design Goals</a><ul>
+<li><a href="#immutable-data">Immutable Data</a></li>
+<li><a href="#pure-functions">Pure Functions</a></li>
+<li><a href="#data-first">Data First</a></li>
+</ul>
+</li>
+<li><a href="#author">Author</a></li>
+<li><a href="#-contributing">🤝 Contributing</a></li>
+<li><a href="#show-your-support">Show your support</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<p><a href="#install"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+  <h2>Install</h2>
+</a>
+<pre><code class="language-sh"><span class="hl-1">npm install @appsweet-co/ts-utils</span>
+</code></pre>
+<p><a href="#usage"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+  <h2>Usage</h2>
+</a>
+<p>Import utilities directly into your files:</p>
+<pre><code class="language-javascript"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">clamp</span><span class="hl-1">, </span><span class="hl-2">map</span><span class="hl-1">, </span><span class="hl-2">subtract</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@appsweet-co/ts-utils&#39;</span><span class="hl-1">;</span>
+</code></pre>
+<p><a href="#api-docs"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#api-docs" id="api-docs" style="color: inherit; text-decoration: none;">
+  <h2>API Docs</h2>
+</a>
+<p>Visit the <a href="https://appsweet-co.github.io/ts-utils/">docs website</a> for details. We use <a href="http://typedoc.org/">TypeDoc</a> to generate API documentation.</p>
+<p><a href="#design-goals"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#design-goals" id="design-goals" style="color: inherit; text-decoration: none;">
+  <h2>Design Goals</h2>
+</a>
+
+<a href="#immutable-data" id="immutable-data" style="color: inherit; text-decoration: none;">
+  <h3>Immutable Data</h3>
+</a>
+<p>Mutated data is hard to grok. We use <a href="https://en.wikipedia.org/wiki/Immutable_object">immutable data</a> when possible.</p>
+
+<a href="#pure-functions" id="pure-functions" style="color: inherit; text-decoration: none;">
+  <h3>Pure Functions</h3>
+</a>
+<p><a href="https://en.wikipedia.org/wiki/Pure_function">Pure functions</a> are easy to test and work well with immutable data. They&#39;re also easy to <a href="https://en.wikipedia.org/wiki/Function_composition">pipe</a> and <a href="https://en.wikipedia.org/wiki/Currying">curry</a>.</p>
+
+<a href="#data-first" id="data-first" style="color: inherit; text-decoration: none;">
+  <h3>Data First</h3>
+</a>
+<p>Passing data as the <a href="https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo">last argument</a> of a function is great for piping and currying, but TypeScript&#39;s typing system works best when we pass in data as the <a href="https://basarat.gitbook.io/typescript/type-system/type-inference">first argument</a>.</p>
+<p>We write Data-First functions when possible.</p>
+<p><a href="#author"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#author" id="author" style="color: inherit; text-decoration: none;">
+  <h2>Author</h2>
+</a>
+<p>👤 <strong>Appsweet.co</strong></p>
+<ul>
+<li>Website: <a href="http://a6t.co">http://a6t.co</a></li>
+<li>Github: <a href="https://github.com/appsweet-co">@appsweet-co</a></li>
+</ul>
+<p><a href="#-contributing"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#🤝-contributing" id="🤝-contributing" style="color: inherit; text-decoration: none;">
+  <h2>🤝 Contributing</h2>
+</a>
+<p>Contributions, issues and feature requests are welcome!</p>
+<p>Please check the <a href="https://github.com/appsweet-co/ts-utils/issues">issues page</a> and <a href="./ROADMAP.md">Roadmap</a>.</p>
+<p><a href="#show-your-support"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#show-your-support" id="show-your-support" style="color: inherit; text-decoration: none;">
+  <h2>Show your support</h2>
+</a>
+<p>Give a ⭐️ if this project helped you!</p>
+<p><a href="#license"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+  <h2>License</h2>
+</a>
+<p>Licensed under <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+<hr>
+<p>README generated with <a href="https://github.com/andreasbm/readme">@appnest/readme</a></p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Exports</a></li></ul></nav><nav class="tsd-navigation secondary menu-sticky"><ul><li class="tsd-kind-function"><a href="modules.html#Either" class="tsd-kind-icon">Either</a></li><li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#Maybe" class="tsd-kind-icon">Maybe</a></li><li class="tsd-kind-function"><a href="modules.html#add" class="tsd-kind-icon">add</a></li><li class="tsd-kind-function"><a href="modules.html#all" class="tsd-kind-icon">all</a></li><li class="tsd-kind-function"><a href="modules.html#any" class="tsd-kind-icon">any</a></li><li class="tsd-kind-function"><a href="modules.html#bind" class="tsd-kind-icon">bind</a></li><li class="tsd-kind-function"><a href="modules.html#clamp" class="tsd-kind-icon">clamp</a></li><li class="tsd-kind-function"><a href="modules.html#clone" class="tsd-kind-icon">clone</a></li><li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#curry" class="tsd-kind-icon">curry</a></li><li class="tsd-kind-function"><a href="modules.html#dec" class="tsd-kind-icon">dec</a></li><li class="tsd-kind-function"><a href="modules.html#divide" class="tsd-kind-icon">divide</a></li><li class="tsd-kind-function"><a href="modules.html#filter" class="tsd-kind-icon">filter</a></li><li class="tsd-kind-function"><a href="modules.html#first" class="tsd-kind-icon">first</a></li><li class="tsd-kind-function"><a href="modules.html#inc" class="tsd-kind-icon">inc</a></li><li class="tsd-kind-function"><a href="modules.html#last" class="tsd-kind-icon">last</a></li><li class="tsd-kind-function"><a href="modules.html#map" class="tsd-kind-icon">map</a></li><li class="tsd-kind-function"><a href="modules.html#max" class="tsd-kind-icon">max</a></li><li class="tsd-kind-function"><a href="modules.html#min" class="tsd-kind-icon">min</a></li><li class="tsd-kind-function"><a href="modules.html#neg" class="tsd-kind-icon">neg</a></li><li class="tsd-kind-function"><a href="modules.html#nil" class="tsd-kind-icon">nil</a></li><li class="tsd-kind-function"><a href="modules.html#none" class="tsd-kind-icon">none</a></li><li class="tsd-kind-function"><a href="modules.html#or" class="tsd-kind-icon">or</a></li><li class="tsd-kind-function"><a href="modules.html#parse" class="tsd-kind-icon">parse</a></li><li class="tsd-kind-function"><a href="modules.html#percent" class="tsd-kind-icon">percent</a></li><li class="tsd-kind-function"><a href="modules.html#pipe" class="tsd-kind-icon">pipe</a></li><li class="tsd-kind-function"><a href="modules.html#prop" class="tsd-kind-icon">prop</a></li><li class="tsd-kind-function"><a href="modules.html#ratio" class="tsd-kind-icon">ratio</a></li><li class="tsd-kind-function"><a href="modules.html#reduce" class="tsd-kind-icon">reduce</a></li><li class="tsd-kind-function"><a href="modules.html#stringify" class="tsd-kind-icon">stringify</a></li><li class="tsd-kind-function"><a href="modules.html#subtract" class="tsd-kind-icon">subtract</a></li><li class="tsd-kind-function"><a href="modules.html#timeout" class="tsd-kind-icon">timeout</a></li><li class="tsd-kind-function"><a href="modules.html#type" class="tsd-kind-icon">type</a></li><li class="tsd-kind-function"><a href="modules.html#unzip" class="tsd-kind-icon">unzip</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
