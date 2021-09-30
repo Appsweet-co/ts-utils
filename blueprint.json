@@ -1,38 +1,31 @@
 {
   "checkLinks": true,
-
   "line": "aqua",
-
   "logo": {
     "src": "./logo.png",
     "width": "250"
   },
-
   "badges": [
     {
       "alt": "NPM",
-      "url": "https://www.npmjs.com/package/@appsweet-co/utils",
-      "img": "https://img.shields.io/npm/v/@appsweet-co/utils.svg?style=for-the-badge"
+      "url": "https://www.npmjs.com/package/@appsweet-co/ts-utils",
+      "img": "https://img.shields.io/npm/v/@appsweet-co/ts-utils.svg?style=for-the-badge"
     },
-
     {
       "alt": "Documentation",
-      "url": "https://appsweet-co.github.io/utils/",
+      "url": "https://appsweet-co.github.io/ts-utils/",
       "img": "https://img.shields.io/badge/documentation-yes-brightgreen.svg?style=for-the-badge"
     },
-
     {
       "alt": "License: MIT",
-      "url": "https://github.com/appsweet-co/utils/blob/main/LICENSE",
+      "url": "https://github.com/appsweet-co/ts-utils/blob/main/LICENSE",
       "img": "https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"
     },
-
     {
       "alt": "TypeScript",
       "url": "https://www.typescriptlang.org/",
       "img": "https://img.shields.io/badge/TypeScript-{{ pkg.devDependencies.typescript }}-blueviolet?style=for-the-badge"
     },
-
     {
       "alt": "TypeDoc",
       "url": "http://typedoc.org/",
