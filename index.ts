@@ -1,4 +1,5 @@
 
+export * from './lib/fns/clamp';
 export * from './lib/fns/curry';
 export * from './lib/fns/head';
 export * from './lib/fns/is-empty-array';
