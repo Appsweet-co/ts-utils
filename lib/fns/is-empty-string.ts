@@ -4,16 +4,13 @@
  * @example
  *
  * ```ts
- * const empty = '';
- * isEmptyString(empty);
+ * isEmptyString('');
  * // => true
  *
- * const notEmpty = 'foo';
- * isEmptyString(notEmpty);
+ * isEmptyString('foo');
  * // => false
  *
- * const notString = {};
- * isEmptyString(notString);
+ * isEmptyString(['not', 'a', 'string']);
  * // => false
  * ```
  */

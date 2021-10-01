@@ -4,16 +4,13 @@
  * @example
  *
  * ```ts
- * const list = [];
- * isEmptyArray(list);
+ * isEmptyArray([]);
  * // => true
  *
- * const notEmpty = ['1', '2', '3', '0', '4', '5'];
- * isEmptyArray(notEmpty);
+ * isEmptyArray(['not', 'empty']);
  * // => false
  *
- * const notArray = 'foo';
- * isEmptyArray(notArray);
+ * isEmptyArray('not an array');
  * // => false
  * ```
  */

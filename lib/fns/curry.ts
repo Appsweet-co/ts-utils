@@ -10,7 +10,7 @@
  *
  * const add9 = curry<number>(add, 3, 6);
  *
- * add9(5)
+ * add9(5);
  * // => 14
  * ```
  */

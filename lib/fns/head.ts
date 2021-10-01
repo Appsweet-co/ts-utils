@@ -7,12 +7,10 @@ import { isEmptyArray } from './is-empty-array';
  * @example
  *
  * ```ts
- * const list = [1, 2, 3, 0, 4, 5];
- * const item = head(list);
+ * head([1, 2, 3, 0, 4, 5]);
  * // => 1
  *
- * const empty = [];
- * const item = head(empty);
+ * head([]);
  * // => []
  * ```
  */

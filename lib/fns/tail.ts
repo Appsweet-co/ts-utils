@@ -8,12 +8,10 @@ import { isEmptyArray } from './is-empty-array';
  * @example
  *
  * ```ts
- * const list = [1, 2, 3, 0, 4, 5];
- * const item = tail(list);
+ * tail([1, 2, 3, 0, 4, 5]);
  * // => [2, 3, 0, 4, 5]
  *
- * const empty = [];
- * const item = tail(empty);
+ * tail([]);
  * // => []
  * ```
  */

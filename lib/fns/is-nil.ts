@@ -4,16 +4,13 @@
  * @example
  *
  * ```ts
- * const item = null;
- * isNil(item);
- * // => true;
+ * isNil(null);
+ * // => true
  *
- * const item = undefined;
- * isNil(item);
- * // => true;
+ * isNil(undefined);
+ * // => true
  *
- * const item = 'anything else';
- * isNil(item);
+ * isNil('anything else');
  * // => false
  * ```
  */
