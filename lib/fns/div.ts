@@ -1,22 +1,24 @@
+import { isEmptyArray } from './is-empty-array';
+
 /**
- * Divides the first argument by the second.
+ * Returns the arithmetic quantity of an array of numbers.
  *
- * Inspired by [Ramda.js](https://ramdajs.com/docs/#divide).
+ * Numbers are divided left-to-right.
  *
  * @example
  *
  * ```ts
- * div(9 / 6);
+ * div([9, 6]);
  * // => 1.5
  *
- * div(6 / 9);
+ * div([6, 9]);
  * // => 0.666...
  *
- * div(0 / 9);
+ * div([0, 9]);
  * // => 0
  *
- * div(9 / 0);
+ * div([9, 0]);
  * // => Infinity
  * ```
  */
-export const div = (a: number, b: number) => a / b;
+export const div = (list: number[] | readonly number[]): number => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc / next);
