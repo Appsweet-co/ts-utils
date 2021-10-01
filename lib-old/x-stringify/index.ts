@@ -1,4 +1,4 @@
-import { type } from '../type';
+import { type } from '../x-type';
 
 /**
  * Stringify a value, or return the original.

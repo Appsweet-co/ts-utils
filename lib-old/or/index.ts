@@ -1,5 +1,5 @@
-import { nil } from '../nil';
-import { type } from '../type';
+import { nil } from '../x-nil';
+import { type } from '../x-type';
 import { curry } from '../x-curry';
 
 /**

@@ -1,4 +1,4 @@
-import { type } from '../type';
+import { type } from '../x-type';
 
 /**
  * Returns a deep copy of an object of any depth, if able.

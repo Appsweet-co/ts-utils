@@ -1,4 +1,4 @@
-import { type } from '../type';
+import { type } from '../x-type';
 
 /**
  * Parse a JSON string, or return the original.

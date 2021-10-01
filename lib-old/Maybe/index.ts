@@ -1,6 +1,6 @@
 /* eslint-disable fp/no-unused-expression */
 
-import { nil } from '../nil';
+import { nil } from '../x-nil';
 import { MaybeType } from './interface';
 import { filtered, reduced } from './service';
 
@@ -91,7 +91,7 @@ const Maybe = <T = any>(val?: T) => ({
    *  .pipe(console.log) // => 8
    * ```
    */
-   pipe: (...fns: any[]) => {
+  pipe: (...fns: any[]) => {
     if (nil(val)) {
       return Maybe();
     } else {
@@ -116,8 +116,8 @@ const Maybe = <T = any>(val?: T) => ({
    * ```
    */
   filter: (...fns: any[]) => {
-      const f = filtered(val);
-      return nil(val) ? Maybe() : f(fns) ? Maybe(val) : Maybe();
+    const f = filtered(val);
+    return nil(val) ? Maybe() : f(fns) ? Maybe(val) : Maybe();
   }
 
 });
