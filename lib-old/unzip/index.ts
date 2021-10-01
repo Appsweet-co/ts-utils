@@ -1,4 +1,4 @@
-import { filter } from '../filter';
+import { filter } from '../x-filter';
 import { curry } from '../x-curry';
 
 /**
