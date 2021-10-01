@@ -7,7 +7,7 @@
  *
  * ```ts
  * clamp({ min: 3, max: 5, val: 1 });
- * => 3
+ * // => 3
  *
  * clamp({ min: 3, max: 5, val: 4 });
  * // => 4
