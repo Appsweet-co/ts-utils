@@ -15,6 +15,7 @@ export * from './lib/fns/is-true';
 export * from './lib/fns/max';
 export * from './lib/fns/min';
 export * from './lib/fns/stringify';
+export * from './lib/fns/sub';
 export * from './lib/fns/tail';
 export * from './lib/types/flatten-array';
 export * from './lib/types/flatten-object';
