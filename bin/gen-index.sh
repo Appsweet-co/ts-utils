@@ -10,13 +10,17 @@ readonly PARENT_DIR="$(dirname "${PWD}")"
 ########
 
 main () {
-  local FILES=$(ls -1 ./lib)
+  local FOLDERS=$(ls -1 ./lib)
   local OUT_FILE="index.ts"
 
   echo "" > ${OUT_FILE}
 
-  for FILE in ${FILES[@]}; do
-    echo "export * from './lib/${FILE/\.ts/}';" >> ${OUT_FILE}
+  for FOLDER in ${FOLDERS[@]}; do
+    local FILES=$(ls -1 ./lib/${FOLDER})
+    
+    for FILE in ${FILES[@]}; do
+      echo "export * from './lib/${FOLDER}/${FILE/\.ts/}';" >> ${OUT_FILE}
+    done
   done
 }
 
