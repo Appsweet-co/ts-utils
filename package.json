@@ -19,6 +19,7 @@
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
     "docs": "npx http-server ./docs -c-1",
     "prebuild": "eslint **/*.ts && npm run build:docs",
+    "prebuild:docs": "npm run build:index",
     "readme": "npx @appnest/readme generate"
   },
   "repository": {
