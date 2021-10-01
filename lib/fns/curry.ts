@@ -14,5 +14,5 @@
  * // => 14
  * ```
  */
-export const curry = <T>(fn: (...args: any[]) => any, ...inits: any[]): T =>
-  (inits.length >= fn.length) ? fn(...inits) : (...more: any[]) => curry(fn, ...inits, ...more);
+export const curry = <T>(fn: (...args: any[]) => any, ...args: any[]): T =>
+  (args.length >= fn.length) ? fn(...args) : (...more: any[]) => curry(fn, ...args, ...more);
