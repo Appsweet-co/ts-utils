@@ -1,4 +1,4 @@
-import { curry } from '../curry';
+import { curry } from '../x-curry';
 
 /**
  * Returns `true` if and only if all elements of the list match the predicate.

@@ -1,5 +1,5 @@
-import { curry } from '../curry';
 import { filter } from '../filter';
+import { curry } from '../x-curry';
 
 /**
  * Returns an array of arrays. The first element is a list of items that
@@ -25,6 +25,6 @@ import { filter } from '../filter';
  * ```
  */
 const unzip = (fn: (value: any) => any, list: any[]) =>
-  (list) ? [ filter(fn)(list), filter(v => !fn(v))(list) ] : curry<unknown>(unzip, fn);
+  (list) ? [filter(fn)(list), filter(v => !fn(v))(list)] : curry<unknown>(unzip, fn);
 
 export { unzip };

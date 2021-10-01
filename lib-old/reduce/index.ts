@@ -1,4 +1,4 @@
-import { curry } from '../curry';
+import { curry } from '../x-curry';
 
 /**
  * Executes a reducer function on each element of an array and returns a single

@@ -1,4 +1,4 @@
-import { curry } from '../curry';
+import { curry } from '../x-curry';
 
 /**
  * Returns the first `n` values in a list.

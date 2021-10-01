@@ -1,4 +1,4 @@
-import { curry } from '../curry';
+import { curry } from '../x-curry';
 
 /**
  * Returns the largest of zero or more numbers given as input. Same as `Math.min()`.

@@ -1,5 +1,5 @@
-import { curry } from '../curry';
 import { neg } from '../neg';
+import { curry } from '../x-curry';
 
 /**
  * Returns the last `n` values in a list.

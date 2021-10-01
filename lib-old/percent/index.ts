@@ -1,5 +1,5 @@
-import { curry } from '../curry';
 import { ratio } from '../ratio';
+import { curry } from '../x-curry';
 
 /**
  * Get the numerical percentage of a value compared against `min` and `max` values.

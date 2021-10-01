@@ -1,4 +1,4 @@
-import { curry } from '../curry';
+import { curry } from '../x-curry';
 
 /**
  * Returns a number between `min` and `max` values.
@@ -39,7 +39,7 @@ import { curry } from '../curry';
  * ```
  */
 const clamp = (...args: [min: number, max?: number, val?: number]) => {
-  const [ min, max, val ] = args;
+  const [min, max, val] = args;
   return (val) ? Math.max(min, Math.min(val, max)) : curry<number>(clamp, ...args);
 };
 

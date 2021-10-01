@@ -1,6 +1,6 @@
-import { curry } from '../curry';
 import { divide } from '../divide';
 import { subtract } from '../subtract';
+import { curry } from '../x-curry';
 
 /**
  * Get the decimal fraction of a value compared against `min` and `max` values.

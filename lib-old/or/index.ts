@@ -1,6 +1,6 @@
-import { curry } from '../curry';
 import { nil } from '../nil';
 import { type } from '../type';
+import { curry } from '../x-curry';
 
 /**
  * Returns `val` if and only if:
@@ -29,7 +29,7 @@ import { type } from '../type';
  * ```
  */
 const or = (...args: [fallback: any, val?: any]) => {
-  const [ fallback, val ] = args;
+  const [fallback, val] = args;
   const success = !nil(val) && type(typeof fallback, val);
 
   return (args.length >= 2) ?
