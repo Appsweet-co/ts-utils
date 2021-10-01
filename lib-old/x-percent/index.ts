@@ -1,4 +1,4 @@
-import { ratio } from '../ratio';
+import { ratio } from '../x-ratio';
 import { curry } from '../x-curry';
 
 /**

@@ -1,5 +1,5 @@
 import { divide } from '../divide';
-import { subtract } from '../subtract';
+import { subtract } from '../x-subtract';
 import { curry } from '../x-curry';
 
 /**
@@ -30,3 +30,4 @@ const ratio = (...args: [min: number, max?: number, val?: number]) =>
   (args.length >= 3) ? divide(subtract(args[0], args[2]), subtract(args[0], args[1])) : curry<number>(ratio, ...args);
 
 export { ratio };
+
