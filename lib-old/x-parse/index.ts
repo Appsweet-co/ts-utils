@@ -13,7 +13,10 @@ import { type } from '../x-type';
  * // => { hello: 'world' }
  * ```
  */
-const parse = (val: any): string =>
-  type('string', val) ? JSON.parse(val) : val;
-
-export { parse };
+const parse = (val) => {
+  try {
+    return JSON.parse(val);
+  } catch () {
+    return val;
+  }
+};

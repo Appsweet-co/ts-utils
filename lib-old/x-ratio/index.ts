@@ -1,4 +1,4 @@
-import { divide } from '../divide';
+import { divide } from '../x-divide';
 import { subtract } from '../x-subtract';
 import { curry } from '../x-curry';
 

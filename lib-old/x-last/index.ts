@@ -1,4 +1,4 @@
-import { neg } from '../neg';
+import { neg } from '../x-neg';
 import { curry } from '../x-curry';
 
 /**
