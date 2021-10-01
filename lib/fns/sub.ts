@@ -18,4 +18,4 @@ import { isEmptyArray } from './is-empty-array';
  * // => 0
  * ```
  */
-export const sub = (list: number[] | readonly number[]) => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc - next);
+export const sub = (list: ReadonlyArray<number>) => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc - next);

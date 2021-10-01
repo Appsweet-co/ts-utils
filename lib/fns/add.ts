@@ -18,5 +18,5 @@
  * // => 0
  * ```
  */
-export const add = (list: number[] | readonly number[]): number => list.reduce((acc, next) => acc + next, 0);
+export const add = (list: ReadonlyArray<number>): number => list.reduce((acc, next) => acc + next, 0);
 

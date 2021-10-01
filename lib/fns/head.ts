@@ -14,4 +14,4 @@ import { isEmptyArray } from './is-empty-array';
  * // => []
  * ```
  */
-export const head = <T extends any[] | ReadonlyArray<any>>(list: T): T[number] => isEmptyArray(list) ? list : list[0];
+export const head = <T extends ReadonlyArray<any>>(list: T): T[number] => isEmptyArray(list) ? list : list[0];

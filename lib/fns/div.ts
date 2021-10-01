@@ -21,4 +21,4 @@ import { isEmptyArray } from './is-empty-array';
  * // => Infinity
  * ```
  */
-export const div = (list: number[] | readonly number[]): number => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc / next);
+export const div = (list: ReadonlyArray<number>): number => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc / next);

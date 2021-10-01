@@ -11,4 +11,4 @@
  * // => 0
  * ```
  */
-export const min = (list: number[] | readonly number[]) => Math.min(...list);
+export const min = (list: ReadonlyArray<number>) => Math.min(...list);

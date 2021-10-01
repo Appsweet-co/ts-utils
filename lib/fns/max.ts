@@ -11,4 +11,4 @@
  * // => 0
  * ```
  */
-export const max = (list: number[] | readonly number[]) => Math.max(...list);
+export const max = (list: ReadonlyArray<number>) => Math.max(...list);
