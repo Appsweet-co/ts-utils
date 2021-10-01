@@ -1,0 +1,11 @@
+bin/
+docs/
+node_modules/
+
+.eslintignore
+.eslintrc.js
+.gitignore
+blueprint.json
+blueprint.md
+logo.png
+tsconfig.json
