@@ -1,7 +1,10 @@
 
+export * from './lib/fns/add';
 export * from './lib/fns/clamp';
 export * from './lib/fns/curry';
+export * from './lib/fns/dec';
 export * from './lib/fns/head';
+export * from './lib/fns/inc';
 export * from './lib/fns/is-empty-array';
 export * from './lib/fns/is-empty-string';
 export * from './lib/fns/is-false';
