@@ -21,6 +21,7 @@ export * from './lib/fns/mult';
 export * from './lib/fns/neg';
 export * from './lib/fns/parse';
 export * from './lib/fns/percent';
+export * from './lib/fns/pipe';
 export * from './lib/fns/ratio';
 export * from './lib/fns/stringify';
 export * from './lib/fns/sub';
