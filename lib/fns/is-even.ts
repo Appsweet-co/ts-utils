@@ -1,6 +1,5 @@
-
 /**
- * Returns true of `x` is an even number.
+ * Returns true if `x` is an even number.
  *
  * @example
  *

@@ -1,5 +1,5 @@
 /**
- * Returns true of `x` is false.
+ * Returns true if `x` is false.
  *
  * @example
  *

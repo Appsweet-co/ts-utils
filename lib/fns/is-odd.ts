@@ -1,6 +1,5 @@
-
 /**
- * Returns true of `x` is an odd number.
+ * Returns true if `x` is an odd number.
  *
  * @example
  *
