@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">@appsweet-co/ts-utils</h1>
 <p align="center">
-  <b>Utility functions for TypeScript</b></br>
+  <b>A lightweight utility library for type script</b></br>
   <sub><sub>
 </p>
 
@@ -18,28 +18,12 @@
 	</p>
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#table-of-contents)
-
-## Table of Contents
-
-* [Install](#install)
-* [Usage](#usage)
-* [API Docs](#api-docs)
-* [Design Goals](#design-goals)
-	* [Immutable Data](#immutable-data)
-	* [Pure Functions](#pure-functions)
-	* [Data First](#data-first)
-* [Author](#author)
-* [🤝 Contributing](#-contributing)
-* [Show your support](#show-your-support)
-* [License](#license)
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#install)
 
 ## Install
 
-```sh
+```zsh
 npm install @appsweet-co/ts-utils
 ```
 
@@ -50,8 +34,8 @@ npm install @appsweet-co/ts-utils
 
 Import utilities directly into your files:
 
-```javascript
-import { clamp, map, subtract } from '@appsweet-co/ts-utils';
+```ts
+import { clamp, map, sub } from '@appsweet-co/ts-utils';
 ```
 
 
@@ -59,7 +43,7 @@ import { clamp, map, subtract } from '@appsweet-co/ts-utils';
 
 ## API Docs
 
-Visit the [docs website](https://appsweet-co.github.io/ts-utils/) for details. We use [TypeDoc](http://typedoc.org/) to generate API documentation.
+Visit the [docs website](https://appsweet-co.github.io/ts-utils/) for details. We use [TypeDoc](http://typedoc.org/) to generate API docs.
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#design-goals)
@@ -76,28 +60,14 @@ Mutated data is hard to grok. We use [immutable data](https://en.wikipedia.org/w
 
 ### Data First
 
+We write data-first functions when possible.
+
 Passing data as the [last argument](https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo) of a function is great for piping and currying, but TypeScript's typing system works best when we pass in data as the [first argument](https://basarat.gitbook.io/typescript/type-system/type-inference).
-
-We write Data-First functions when possible.
-
-
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#author)
-
-## Author
-
-👤 **Appsweet.co**
-
-* Website: http://a6t.co
-* Github: [@appsweet-co](https://github.com/appsweet-co)
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#-contributing)
 
 ## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) and [Roadmap](./ROADMAP.md).
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#show-your-support)
@@ -106,13 +76,13 @@ Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) a
 
 Give a ⭐️ if this project helped you!
 
+Contributions, issues and feature requests are welcome!
+
+Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) and [Roadmap](./ROADMAP.md).
+
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#license)
 
 ## License
 	
 Licensed under [MIT](https://opensource.org/licenses/MIT).
-
----
-
-README generated with [@appnest/readme](https://github.com/andreasbm/readme)

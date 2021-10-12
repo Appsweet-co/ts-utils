@@ -2,11 +2,10 @@
 {{ template:title }}
 {{ template:description }}
 {{ template:badges }}
-{{ template:toc }}
 
 ## Install
 
-```sh
+```zsh
 npm install @appsweet-co/ts-utils
 ```
 
@@ -14,13 +13,13 @@ npm install @appsweet-co/ts-utils
 
 Import utilities directly into your files:
 
-```javascript
-import { clamp, map, subtract } from '@appsweet-co/ts-utils';
+```ts
+import { clamp, map, sub } from '@appsweet-co/ts-utils';
 ```
 
 ## API Docs
 
-Visit the [docs website](https://appsweet-co.github.io/ts-utils/) for details. We use [TypeDoc](http://typedoc.org/) to generate API documentation.
+Visit the [docs website](https://appsweet-co.github.io/ts-utils/) for details. We use [TypeDoc](http://typedoc.org/) to generate API docs.
 
 ## Design Goals
 
@@ -34,29 +33,18 @@ Mutated data is hard to grok. We use [immutable data](https://en.wikipedia.org/w
 
 ### Data First
 
+We write data-first functions when possible.
+
 Passing data as the [last argument](https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo) of a function is great for piping and currying, but TypeScript's typing system works best when we pass in data as the [first argument](https://basarat.gitbook.io/typescript/type-system/type-inference).
 
-We write Data-First functions when possible.
-
-## Author
-
-👤 **Appsweet.co**
-
-* Website: http://a6t.co
-* Github: [@appsweet-co](https://github.com/appsweet-co)
-
 ## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) and [Roadmap](./ROADMAP.md).
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
 
+Contributions, issues and feature requests are welcome!
+
+Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) and [Roadmap](./ROADMAP.md).
+
 {{ template:license }}
-
----
-
-README generated with [@appnest/readme](https://github.com/andreasbm/readme)
