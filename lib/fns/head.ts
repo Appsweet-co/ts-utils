@@ -1,7 +1,7 @@
 import { isEmptyArray } from './is-empty-array';
 
 /**
- * Returns the first item of an array if the array has at least one item. Returns
+ * Returns the first item of a list if the array has at least one item. Returns
  * the original list otherwise.
  *
  * @example

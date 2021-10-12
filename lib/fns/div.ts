@@ -1,7 +1,7 @@
 import { isEmptyArray } from './is-empty-array';
 
 /**
- * Returns the arithmetic quantity of an array of numbers.
+ * Returns the arithmetic quotient of an array of numbers.
  *
  * Numbers are divided left-to-right.
  *
@@ -21,4 +21,4 @@ import { isEmptyArray } from './is-empty-array';
  * // => Infinity
  * ```
  */
-export const div = (list: ReadonlyArray<number>): number => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc / next);
+export const div = (list: ReadonlyArray<number>) => isEmptyArray(list) ? 0 : list.reduce((acc, next) => acc / next);
