@@ -16,7 +16,6 @@
     "build": "tsc",
     "build:docs": "typedoc",
     "build:index": "./bin/gen-index.sh",
-    "changelog": "npx auto-changelog",
     "clean": "rm -rf *.js *.js.map **/*.js **/*.js.map ./docs",
     "docs": "npx http-server ./docs -c-1",
     "lint": "eslint **/*.ts",
