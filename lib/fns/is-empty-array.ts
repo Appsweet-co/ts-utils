@@ -14,4 +14,4 @@
  * // => false
  * ```
  */
-export const isEmptyArray = (x: any) => Array.isArray(x) && x.length === 0;
+export const isEmptyArray = (x: unknown) => Array.isArray(x) && x.length === 0;

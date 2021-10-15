@@ -17,4 +17,4 @@ import { isPrimitive } from './is-primitive';
  * // => null
  * ```
  */
-export const clone = (x: any) => isPrimitive(x) ? x : JSON.parse(JSON.stringify(x));
+export const clone = <T>(x: T): T => isPrimitive(x) ? x : JSON.parse(JSON.stringify(x));

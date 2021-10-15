@@ -11,7 +11,7 @@
  * // => 'foobar'
  * ```
  */
-export const parse = (x: any) => {
+export const parse = (x: string) => {
   try {
     return JSON.parse(x);
   } catch (e) {

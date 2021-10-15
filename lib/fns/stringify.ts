@@ -11,4 +11,4 @@
  * // => 'foobar'
  * ```
  */
-export const stringify = (x: any): string => typeof x === 'string' ? x : JSON.stringify(x);
+export const stringify = (x: unknown) => typeof x === 'string' ? x : JSON.stringify(x);

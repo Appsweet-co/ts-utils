@@ -8,6 +8,4 @@
  * // => true
  * ```
  */
-export const isFalsy = (x: any) => !x;
-
-
+export const isFalsy = (x: unknown) => !x;

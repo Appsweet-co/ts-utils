@@ -8,4 +8,4 @@
  * // => true
  * ```
  */
-export const isTruthy = (x: any) => !!x;
+export const isTruthy = (x: unknown) => !!x;

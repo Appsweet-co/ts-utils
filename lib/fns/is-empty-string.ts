@@ -14,4 +14,4 @@
  * // => false
  * ```
  */
-export const isEmptyString = (x: any) => typeof x === 'string' && x.length === 0;
+export const isEmptyString = (x: unknown) => typeof x === 'string' && x.length === 0;

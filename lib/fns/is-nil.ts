@@ -14,4 +14,4 @@
  * // => false
  * ```
  */
-export const isNil = (x: any) => x === null || x === void 0;
+export const isNil = (x: unknown) => x === null || x === void 0;

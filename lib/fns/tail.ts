@@ -15,4 +15,4 @@ import { isEmptyArray } from './is-empty-array';
  * // => []
  * ```
  */
-export const tail = <T extends ReadonlyArray<any>>(list: T): ReadonlyArray<T[number]> => isEmptyArray(list) ? list : list.slice(1);
+export const tail = <T extends ReadonlyArray<unknown>>(list: T): ReadonlyArray<T[number]> => isEmptyArray(list) ? list : list.slice(1);

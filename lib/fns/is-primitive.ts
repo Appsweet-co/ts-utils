@@ -17,7 +17,7 @@ import { isTrue } from './is-true';
  * // => false
  * ```
  */
-export const isPrimitive = (x: any) => [
+export const isPrimitive = (x: unknown) => [
   typeof x === 'bigint',
   typeof x === 'boolean',
   typeof x === 'number',
