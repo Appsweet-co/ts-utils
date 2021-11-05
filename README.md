@@ -19,7 +19,7 @@
 
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#install)
+[](#install)
 
 ## Install
 
@@ -28,7 +28,7 @@ npm install @appsweet-co/ts-utils
 ```
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#usage)
+[](#usage)
 
 ## Usage
 
@@ -39,14 +39,14 @@ import { clamp, map, sub } from '@appsweet-co/ts-utils';
 ```
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#api-docs)
+[](#api-docs)
 
 ## API Docs
 
 Visit the [docs website](https://appsweet-co.github.io/ts-utils/) for details. We use [TypeDoc](http://typedoc.org/) to generate API docs.
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#design-goals)
+[](#design-goals)
 
 ## Design Goals
 
@@ -64,13 +64,27 @@ We write data-first functions when possible.
 
 Passing data as the [last argument](https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo) of a function is great for piping and currying, but TypeScript's typing system works best when we pass in data as the [first argument](https://basarat.gitbook.io/typescript/type-system/type-inference).
 
+### Single Input
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#-contributing)
+We write functions that take exactly one argument. We use arrays and objects to collect data into a single input when needed.
+
+We add a trailing `_` to all [curried functions](https://en.wikipedia.org/wiki/Currying). This makes it easy to tell the difference between curried and non-curried functions with the same name. Example:
+
+```ts
+// Curried 
+const add_ = (a: number) => (b: number) => a + b;
+
+// Non-curried
+const add = ([a, b]: [number, number]) => a + b;
+```
+
+
+[](#-contributing)
 
 ## 🤝 Contributing
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#show-your-support)
+[](#show-your-support)
 
 ## Show your support
 
@@ -81,7 +95,7 @@ Contributions, issues and feature requests are welcome!
 Please check the [issues page](https://github.com/appsweet-co/ts-utils/issues) and [Roadmap](./ROADMAP.md).
 
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)](#license)
+[](#license)
 
 ## License
 	
