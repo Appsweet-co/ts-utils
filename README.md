@@ -70,19 +70,6 @@ We write functions that take exactly one argument. We use arrays and objects to 
 
 We add a trailing `_` to all [curried functions](https://en.wikipedia.org/wiki/Currying). This makes it easy to tell the difference between curried and non-curried functions with the same name. Example:
 
-```ts
-// Curried 
-const add_ = (a: number) => (b: number) => a + b;
-
-// Non-curried
-const add = ([a, b]: [number, number]) => a + b;
-```
-
-
-[](#-contributing)
-
-## 🤝 Contributing
-
 
 [](#show-your-support)
 
