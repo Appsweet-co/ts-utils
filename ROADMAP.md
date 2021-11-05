@@ -2,7 +2,7 @@
 
 - [ ] Unit tests
 
-- [ ] Better README
+- [x] ~~Better README~~
 
 - [ ] debouce ([Ionic](https://github.com/ionic-team/ionic-docs/blob/master/src/utils.ts#L17))
 
