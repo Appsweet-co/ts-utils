@@ -28,7 +28,7 @@
   ],
   "checkLinks": true,
   "headingPrefix": {},
-  "line": "aqua",
+  "line": "none",
   "logo": {
     "src": "./logo.png",
     "width": "250"
