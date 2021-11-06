@@ -19,28 +19,39 @@
 
 
 
-<p><a href="#install"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
-
-<a href="#install" id="install" style="color: inherit; text-decoration: none;">
-  <h2>Install</h2>
-</a>
-<pre><code class="language-zsh"><span class="hl-1">npm install @appsweet-co/ts-utils</span>
-</code></pre>
-<p><a href="#usage"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+<p><a href="#usage"></a></p>
 
 <a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
   <h2>Usage</h2>
 </a>
-<p>Import utilities directly into your files:</p>
+
+<a href="#node" id="node" style="color: inherit; text-decoration: none;">
+  <h3>Node</h3>
+</a>
+<p>Use npm to install the <a href="https://www.npmjs.com/package/@appsweet-co/ts-utils">package</a> into your project.</p>
+<pre><code class="language-zsh"><span class="hl-1">npm install @appsweet-co/ts-utils</span>
+</code></pre>
+<p>Import utilities into your files as needed.</p>
 <pre><code class="language-ts"><span class="hl-9">import</span><span class="hl-1"> { </span><span class="hl-4">clamp</span><span class="hl-1">, </span><span class="hl-4">map</span><span class="hl-1">, </span><span class="hl-4">sub</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-5">&#39;@appsweet-co/ts-utils&#39;</span><span class="hl-1">;</span>
 </code></pre>
-<p><a href="#api-docs"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+
+<a href="#deno" id="deno" style="color: inherit; text-decoration: none;">
+  <h3>Deno</h3>
+</a>
+<p>:memo: <em><strong>NOTE: Support for Deno is a work in progress.</strong></em></p>
+<p>Add utilities to your <a href="https://deno.land/manual@v1.11.3/examples/manage_dependencies"><code>deps.ts</code></a> file directly from GitHub.</p>
+<pre><code class="language-ts"><span class="hl-9">export</span><span class="hl-1"> { </span><span class="hl-4">clamp</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-5">&quot;https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/clamp.ts&quot;</span><br/><span class="hl-9">export</span><span class="hl-1"> { </span><span class="hl-4">map</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-5">&quot;https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/map.ts&quot;</span><br/><span class="hl-9">export</span><span class="hl-1"> { </span><span class="hl-4">sub</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-5">&quot;https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/sub.ts&quot;</span>
+</code></pre>
+<p>Import utilities into your files as needed.</p>
+<pre><code class="language-ts"><span class="hl-9">import</span><span class="hl-1"> { </span><span class="hl-4">clamp</span><span class="hl-1">, </span><span class="hl-4">map</span><span class="hl-1">, </span><span class="hl-4">sub</span><span class="hl-1"> } </span><span class="hl-9">from</span><span class="hl-1"> </span><span class="hl-5">&quot;./deps.ts&quot;</span><span class="hl-1">;</span>
+</code></pre>
+<p><a href="#api-docs"></a></p>
 
 <a href="#api-docs" id="api-docs" style="color: inherit; text-decoration: none;">
   <h2>API Docs</h2>
 </a>
 <p>Visit the <a href="https://appsweet-co.github.io/ts-utils/">docs website</a> for details. We use <a href="http://typedoc.org/">TypeDoc</a> to generate API docs.</p>
-<p><a href="#design-goals"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+<p><a href="#design-goals"></a></p>
 
 <a href="#design-goals" id="design-goals" style="color: inherit; text-decoration: none;">
   <h2>Design Goals</h2>
@@ -61,12 +72,13 @@
 </a>
 <p>We write data-first functions when possible.</p>
 <p>Passing data as the <a href="https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo">last argument</a> of a function is great for piping and currying, but TypeScript&#39;s typing system works best when we pass in data as the <a href="https://basarat.gitbook.io/typescript/type-system/type-inference">first argument</a>.</p>
-<p><a href="#-contributing"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
 
-<a href="#🤝-contributing" id="🤝-contributing" style="color: inherit; text-decoration: none;">
-  <h2>🤝 Contributing</h2>
+<a href="#single-input" id="single-input" style="color: inherit; text-decoration: none;">
+  <h3>Single Input</h3>
 </a>
-<p><a href="#show-your-support"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+<p>We write functions that take exactly one argument. We use arrays and objects to collect data into a single input when needed.</p>
+<p>We add a trailing <code>_</code> to all <a href="https://en.wikipedia.org/wiki/Currying">curried functions</a>. This makes it easy to tell the difference between curried and non-curried functions with the same name.</p>
+<p><a href="#show-your-support"></a></p>
 
 <a href="#show-your-support" id="show-your-support" style="color: inherit; text-decoration: none;">
   <h2>Show your support</h2>
@@ -74,7 +86,7 @@
 <p>Give a ⭐️ if this project helped you!</p>
 <p>Contributions, issues and feature requests are welcome!</p>
 <p>Please check the <a href="https://github.com/appsweet-co/ts-utils/issues">issues page</a> and <a href="./ROADMAP.md">Roadmap</a>.</p>
-<p><a href="#license"><img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" alt="-----------------------------------------------------"></a></p>
+<p><a href="#license"></a></p>
 
 <a href="#license" id="license" style="color: inherit; text-decoration: none;">
   <h2>License</h2>
