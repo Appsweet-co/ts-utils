@@ -3,18 +3,38 @@
 {{ template:description }}
 {{ template:badges }}
 
-## Install
+## Usage
+
+### Node
+
+Use npm to install the [package](https://www.npmjs.com/package/@appsweet-co/ts-utils) into your project.
 
 ```zsh
 npm install @appsweet-co/ts-utils
 ```
 
-## Usage
-
-Import utilities directly into your files:
+Import utilities into your files as needed.
 
 ```ts
 import { clamp, map, sub } from '@appsweet-co/ts-utils';
+```
+
+### Deno
+
+:memo: ***NOTE: Support for Deno is a work in progress.***
+
+Add utilities to your [`deps.ts`](https://deno.land/manual@v1.11.3/examples/manage_dependencies) file directly from GitHub.
+
+```ts
+export { clamp } from "https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/clamp.ts"
+export { map } from "https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/map.ts"
+export { sub } from "https://raw.githubusercontent.com/Appsweet-co/ts-utils/main/lib/fns/sub.ts"
+```
+
+Import utilities into your files as needed.
+
+```ts
+import { clamp, map, sub } from "./deps.ts";
 ```
 
 ## API Docs
