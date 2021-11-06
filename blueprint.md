@@ -61,7 +61,7 @@ Passing data as the [last argument](https://dev.to/richytong/practical-functiona
 
 We write functions that take exactly one argument. We use arrays and objects to collect data into a single input when needed.
 
-We add a trailing `_` to all [curried functions](https://en.wikipedia.org/wiki/Currying). This makes it easy to tell the difference between curried and non-curried functions with the same name. Example:
+We add a trailing `_` to all [curried functions](https://en.wikipedia.org/wiki/Currying). This makes it easy to tell the difference between curried and non-curried functions with the same name.
 
 ## Show your support
 
