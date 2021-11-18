@@ -33,3 +33,4 @@ export * from './lib/fns/sub';
 export * from './lib/fns/tail';
 export * from './lib/types/flatten-array';
 export * from './lib/types/flatten-object';
+export * from './lib/types/nominal';
