@@ -1,6 +1,6 @@
 {
   "name": "@appsweet-co/ts-utils",
-  "version": "0.14.1",
+  "version": "0.15.0",
   "description": "A lightweight utility library for type script",
   "main": "index.js",
   "devDependencies": {
