@@ -5,10 +5,9 @@
  *
  * ```ts
  * type Foo = Nominal<'Foo', number>;
- * type Bar = Nominal<'Bar', number>;
  *
- * Foo === Bar
- * // => false
+ * const foo: Foo = 1;
+ * // => Error: Type 'number' is not assignable to type 'Foo'.
  * ```
  */
 export type NominalStrict<K, T> = T & {
