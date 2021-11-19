@@ -4,7 +4,7 @@
  * @example
  *
  * ```ts
- * type Foo = Nominal<'Foo', number>;
+ * type Foo = NominalStrict<'Foo', number>;
  *
  * const foo: Foo = 1;
  * // => Error: Type 'number' is not assignable to type 'Foo'.
