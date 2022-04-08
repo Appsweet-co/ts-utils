@@ -1,7 +1,7 @@
-import { isPrimitive } from './is-primitive';
+import { isPrimitive } from './logic';
 
 /**
- * Returns a deep copy of an object of any depth. Returns `x` unchanged
+ * Returns a deep copy of an object or array of any depth. Returns `x` unchanged
  * if it's a [JavaScript primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive).
  *
  * @example
