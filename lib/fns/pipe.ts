@@ -11,5 +11,5 @@
  * // => 5
  * ```
  */
-export const pipe = <T>(init: any, fns: any[]): T =>
+export const pipeFoo = <T>(init: any, fns: any[]): T =>
   fns.reduce((acc: any, fn: (...args: any[]) => any) => fn(acc), init);
