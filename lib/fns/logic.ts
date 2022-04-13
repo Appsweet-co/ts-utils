@@ -47,11 +47,11 @@ export const equals = (x: unknown) => (y: unknown): boolean => x === y;
  * @example
  *
  * ```ts
- * unequal(42)(420)
+ * unequals(42)(420)
  * // => true
  * ```
  */
-export const unequal = (x: unknown) => (y: unknown): boolean => x !== y;
+export const unequals = (x: unknown) => (y: unknown): boolean => x !== y;
 
 /**
  * Returns the result of `fn(x)` when the predicate is true, or `x` when the predicate is false.
