@@ -20,7 +20,7 @@
     "lint": "eslint **/*.ts",
     "postbuild": "npm run build:docs",
     "prebuild": "npm run lint",
-    "readme": "npx @appnest/readme generate"
+    "predocs": "npm run build:docs"
   },
   "repository": {
     "type": "git",
