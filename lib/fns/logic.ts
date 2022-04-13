@@ -1,4 +1,4 @@
-import { Unary } from '../types/arity';
+import { Predicate, Unary } from '../types/functions';
 import { some } from './arrays';
 
 /**
@@ -66,7 +66,7 @@ export const unequals = (x: unknown) => (y: unknown): boolean => x !== y;
  * // => 4
  * ```
  */
-export const when = <T>(predicate: (x: T) => boolean) => <U>(fn: Unary<T, U>) => (x: T): U | T => predicate(x) ? fn(x) : x;
+export const when = <T>(predicate: Predicate<T>) => <R>(fn: Unary<T, R>) => (x: T): T | R => predicate(x) ? fn(x) : x;
 
 /**
  * Returns `x` when the predicate is true, or the result of `fn(x)` when the predicate is false.
@@ -81,7 +81,7 @@ export const when = <T>(predicate: (x: T) => boolean) => <U>(fn: Unary<T, U>) =>
  * // => 6
  * ```
  */
-export const unless = <T>(predicate: (x: T) => boolean) => <U>(fn: (x: T) => U) => (x: T): T | U => predicate(x) ? x : fn(x);
+export const unless = <T>(predicate: Predicate<T>) => <R>(fn: Unary<T, R>) => (x: T): T | R => predicate(x) ? x : fn(x);
 
 /**
  * Returns true if `x` is an even number.
@@ -120,7 +120,7 @@ export const isOdd = (x: number) => x % 2 !== 0;
  * // => true
  * ```
  */
-export const isNil = (x: unknown) => x === null || x === void 0;
+export const isNil = (x: unknown): boolean => x === null || x === void 0;
 
 /**
  * Returns true if `x` is an array or string with a length of zero; or if `x` is an object with no keys.
