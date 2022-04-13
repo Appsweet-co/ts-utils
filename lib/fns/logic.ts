@@ -1,4 +1,4 @@
-import { Unary } from '../types/functions';
+import { Unary } from '../types/arity';
 import { some } from './arrays';
 
 /**
@@ -24,6 +24,34 @@ export const and = (a: boolean) => (b: boolean): boolean => a && b;
  * ```
  */
 export const or = (a: boolean) => (b: boolean): boolean => a || b;
+
+/**
+ * Returns true if `x` and `y` are
+ * [strictly equal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+ * Same as `y === x`.
+ *
+ * @example
+ *
+ * ```ts
+ * equals(42)(42)
+ * // => true
+ * ```
+ */
+export const equals = (x: unknown) => (y: unknown): boolean => x === y;
+
+/**
+ * Returns true if `x` and `y` are
+ * [strictly unequal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality).
+ * Same as `y !== x`.
+ *
+ * @example
+ *
+ * ```ts
+ * unequal(42)(420)
+ * // => true
+ * ```
+ */
+export const unequal = (x: unknown) => (y: unknown): boolean => x !== y;
 
 /**
  * Returns the result of `fn(x)` when the predicate is true, or `x` when the predicate is false.
