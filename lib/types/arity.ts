@@ -1,3 +1,6 @@
+/** A function that takes zero arguments. */
+export type Nullary<R> = () => R;
+
 /** A function that takes only one argument. */
 export type Unary<T, R> = (x: T) => R;
 

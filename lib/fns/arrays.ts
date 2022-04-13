@@ -1,4 +1,4 @@
-import { Unary } from '../types/functions';
+import { Unary } from '../types/arity';
 
 /**
  * Returns the first item in an array. Same as `list[0]`.
