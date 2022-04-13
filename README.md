@@ -5,7 +5,7 @@
 <h1 align="center">@appsweet-co/ts-utils</h1>
 
 <p align="center">
-  Strongly-typed functional utilties
+  A strongly-typed utility library for TypeScript
 </p>
 
 <br />
