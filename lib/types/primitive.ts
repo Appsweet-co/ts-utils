@@ -34,19 +34,19 @@ export type Seconds = Nominal<'Seconds', number>;
 export type Minutes = Nominal<'Minutes', number>;
 
 /** A duration measured in hours. */
-export type Hours = Nominal<'Minutes', number>;
+export type Hours = Nominal<'Hours', number>;
 
 /** A duration measured in days. */
-export type Days = Nominal<'Minutes', number>;
+export type Days = Nominal<'Days', number>;
 
 /** A duration measured in weeks. */
-export type Weeks = Nominal<'Minutes', number>;
+export type Weeks = Nominal<'Weeks', number>;
 
 /** A duration measured in months. */
-export type Months = Nominal<'Minutes', number>;
+export type Months = Nominal<'Months', number>;
 
 /** A duration measured in years. */
-export type Years = Nominal<'Minutes', number>;
+export type Years = Nominal<'Years', number>;
 
 /** A [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time) measured in milliseconds. */
 export type UnixMillis = Nominal<'UnixMillis', number>;
