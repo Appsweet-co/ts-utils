@@ -23,36 +23,3 @@ export type URLString = Nominal<'URLString', string>;
 
 /** A string formatted as [UUID v4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)). */
 export type UUIDString = Nominal<'UUIDString', string>;
-
-/** A duration measured in milliseconds. */
-export type Milliseconds = Nominal<'Milliseconds', number>;
-
-/** A duration measured in seconds. */
-export type Seconds = Nominal<'Seconds', number>;
-
-/** A duration measured in minutes. */
-export type Minutes = Nominal<'Minutes', number>;
-
-/** A duration measured in hours. */
-export type Hours = Nominal<'Hours', number>;
-
-/** A duration measured in days. */
-export type Days = Nominal<'Days', number>;
-
-/** A duration measured in weeks. */
-export type Weeks = Nominal<'Weeks', number>;
-
-/** A duration measured in months. */
-export type Months = Nominal<'Months', number>;
-
-/** A duration measured in years. */
-export type Years = Nominal<'Years', number>;
-
-/** A [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time) measured in milliseconds. */
-export type UnixMillis = Nominal<'UnixMillis', number>;
-
-/** A [Unix timestamp](https://en.wikipedia.org/wiki/Unix_time) measured in seconds. */
-export type UnixSeconds = Nominal<'UnixSeconds', number>;
-
-/** A string formatted as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).*/
-export type ISOString = Nominal<'ISOString', string>;
