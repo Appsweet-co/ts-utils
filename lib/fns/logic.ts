@@ -1,4 +1,4 @@
-import { Predicate, Unary } from '../types/functions';
+import { Predicate, Unary } from '../types/functional';
 import { some } from './arrays';
 
 /**
