@@ -9,3 +9,4 @@ export * from './lib/fns/math';
 export * from './lib/types/flatten';
 export * from './lib/types/functional';
 export * from './lib/types/nominal';
+export * from './lib/types/primitive';
