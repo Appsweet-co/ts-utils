@@ -1,5 +1,5 @@
 import { Predicate, Unary } from '../types/functional';
-import { some } from './arrays';
+import { some } from './array';
 
 /**
  * Returns true if and only if `a` and `b` are true. Same as `a && b`.
