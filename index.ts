@@ -6,6 +6,7 @@ export * from './lib/fns/curry';
 export * from './lib/fns/json';
 export * from './lib/fns/logic';
 export * from './lib/fns/math';
+export * from './lib/fns/string';
 export * from './lib/types/duration';
 export * from './lib/types/flatten';
 export * from './lib/types/functional';
