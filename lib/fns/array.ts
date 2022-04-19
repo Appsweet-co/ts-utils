@@ -1,4 +1,4 @@
-import { Unary } from '../types/functional';
+import { Predicate, Unary } from '../types/functional';
 
 /**
  * Returns the first item in an array. Same as `list[0]`.
@@ -58,7 +58,7 @@ export const init = <T>(list: T[]): T[] => list.slice(0, -1);
  * // => [3, 9]
  * ```
  */
-export const filter = <T>(predicate: Unary<T, boolean>) => (list: T[]): T[] => list.filter(predicate);
+export const filter = <T>(fn: Predicate<T>) => (list: T[]): T[] => list.filter(fn);
 
 /**
  * Returns a mapped array of items. Same as `list.map(fn)`.
@@ -70,7 +70,7 @@ export const filter = <T>(predicate: Unary<T, boolean>) => (list: T[]): T[] => l
  * // => [5, 8, 11]
  * ```
  */
-export const map = <T, U>(fn: (x: T) => U) => (list: T[]): U[] => list.map(fn);
+export const map = <T, U>(fn: Unary<T, U>) => (list: T[]): U[] => list.map(fn);
 
 /**
  * Returns true if the predicate returns true for every item in an array. Same as `list.every(predicate)`.
@@ -82,7 +82,7 @@ export const map = <T, U>(fn: (x: T) => U) => (list: T[]): U[] => list.map(fn);
  * // => false
  * ```
  */
-export const every = <T>(predicate: (x: T) => boolean) => (list: T[]): boolean => list.every(predicate);
+export const every = <T>(fn: Predicate<T>) => (list: T[]): boolean => list.every(fn);
 
 /**
  * Returns true if the predicate returns true for some items in an array. Same as `list.some(predicate)`.
@@ -94,7 +94,7 @@ export const every = <T>(predicate: (x: T) => boolean) => (list: T[]): boolean =
  * // => false
  * ```
  */
-export const some = <T>(predicate: (x: T) => boolean) => (list: T[]): boolean => list.some(predicate);
+export const some = <T>(fn: Predicate<T>) => (list: T[]): boolean => list.some(fn);
 
 /**
  * Returns true if the predicate returns false for every item in an array. Same as `!list.every(predicate)`.
@@ -106,7 +106,7 @@ export const some = <T>(predicate: (x: T) => boolean) => (list: T[]): boolean =>
  * // => false
  * ```
  */
-export const none = <T>(predicate: (x: T) => boolean) => (list: T[]): boolean => !list.every(predicate);
+export const none = <T>(fn: Predicate<T>) => (list: T[]): boolean => !list.every(fn);
 
 /**
  * Joins items in an array using `separator`. Same as `list.join(separator)`.
