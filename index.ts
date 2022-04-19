@@ -12,4 +12,4 @@ export * from './lib/types/flatten';
 export * from './lib/types/functional';
 export * from './lib/types/nominal';
 export * from './lib/types/primitive';
-export * from './lib/types/timestamps';
+export * from './lib/types/timestamp';
