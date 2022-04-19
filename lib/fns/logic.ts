@@ -53,6 +53,18 @@ export const equals = (x: unknown) => (y: unknown): boolean => x === y;
  */
 export const unequals = (x: unknown) => (y: unknown): boolean => x !== y;
 
+/** Returns true if `y` is less than `x`. Same as `y < x`. */
+export const lt = (x: number) => (y: number): boolean => y < x;
+
+/** Returns true if `y` is greater than `x`. Same as `y > x`. */
+export const gt = (x: number) => (y: number): boolean => y > x;
+
+/** Returns true if `y` is less than or equal to `x`. Same as `y <= x`. */
+export const lte = (x: number) => (y: number): boolean => y <= x;
+
+/** Returns true if `y` is greater than or equal to `x`. Same as `y >= x`. */
+export const gte = (x: number) => (y: number): boolean => y >= x;
+
 /**
  * Returns the result of `fn(x)` when the predicate is true, or `x` when the predicate is false.
  *
