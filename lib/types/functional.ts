@@ -22,6 +22,9 @@ export type Predicate2<T, U> = Binary<T, U, boolean>;
 /** A function that takes exactly three arguments and always returns a boolean. */
 export type Predicate3<T, U, V> = Ternary<T, U, V, boolean>;
 
+/** A function that takes any number of arguments and always returns a boolean. */
+export type PredicateN<T> = Nary<T, boolean>;
+
 /** A curried function that takes two arguments. */
 export type Curry2<T, U, R> = (x: T) => (y: U) => R;
 
