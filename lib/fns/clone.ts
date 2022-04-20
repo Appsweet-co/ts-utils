@@ -1,4 +1,4 @@
-import { isPrimitive } from './logic';
+import { isPrimitive } from './predicate';
 
 /**
  * Returns a deep copy of an object or array of any depth. Returns `x` unchanged
