@@ -1,8 +1,7 @@
 import { Predicate, Unary } from '../types/functional';
-import { some } from './array';
 
 /**
- * Returns true if and only if `a` and `b` are true. Same as `a && b`.
+ * Returns true if `x` and `y` are true. Same as `y && x`.
  *
  * @example
  *
@@ -11,10 +10,10 @@ import { some } from './array';
  * // => false
  * ```
 */
-export const and = (a: boolean) => (b: boolean): boolean => a && b;
+export const and = (x: boolean) => (y: boolean): boolean => y && x;
 
 /**
- * Returns true if `a` or `b` is true. Same as `a || b`.
+ * Returns true if `x` or `y` is true. Same as `y || x`.
  *
  * @example
  *
@@ -23,7 +22,25 @@ export const and = (a: boolean) => (b: boolean): boolean => a && b;
  * // => true
  * ```
  */
-export const or = (a: boolean) => (b: boolean): boolean => a || b;
+export const or = (x: boolean) => (y: boolean): boolean => y || x;
+
+/**
+ * Returns true if only `a` or `b` is true.
+ *
+ * @example
+ *
+ * ```ts
+ * xor(true)(true)
+ * // => false
+ *
+ * xor(false)(false)
+ * // => false
+ *
+ * xor(true)(false)
+ * // => true
+ * ```
+ */
+export const xor = (x: boolean) => (y: boolean): boolean => or(and(x === true)(y === false))(and(x === false)(y === true));
 
 /**
  * Returns true if `x` and `y` are
@@ -33,11 +50,11 @@ export const or = (a: boolean) => (b: boolean): boolean => a || b;
  * @example
  *
  * ```ts
- * equals(42)(42)
+ * equal(42)(42)
  * // => true
  * ```
  */
-export const equals = (x: unknown) => (y: unknown): boolean => x === y;
+export const equal = (x: unknown) => (y: unknown): boolean => y === x;
 
 /**
  * Returns true if `x` and `y` are
@@ -47,22 +64,58 @@ export const equals = (x: unknown) => (y: unknown): boolean => x === y;
  * @example
  *
  * ```ts
- * unequals(42)(420)
+ * unequal(42)(420)
  * // => true
  * ```
  */
-export const unequals = (x: unknown) => (y: unknown): boolean => x !== y;
+export const unequal = (x: unknown) => (y: unknown): boolean => y !== x;
 
-/** Returns true if `y` is less than `x`. Same as `y < x`. */
+/**
+ * Returns true if `y` is less than `x`. Same as `y < x`.
+ *
+ * @example
+ *
+ * ```ts
+ * lt(9)(3)
+ * // => true
+ * ```
+ */
 export const lt = (x: number) => (y: number): boolean => y < x;
 
-/** Returns true if `y` is greater than `x`. Same as `y > x`. */
+/**
+ * Returns true if `y` is greater than `x`. Same as `y > x`.
+ *
+ * @example
+ *
+ * ```ts
+ * gt(9)(3)
+ * // => false
+ * ```
+ */
 export const gt = (x: number) => (y: number): boolean => y > x;
 
-/** Returns true if `y` is less than or equal to `x`. Same as `y <= x`. */
+/**
+ * Returns true if `y` is less than or equal to `x`. Same as `y <= x`.
+ *
+ * @example
+ *
+ * ```ts
+ * lte(9)(3)
+ * // => true
+ * ```
+ */
 export const lte = (x: number) => (y: number): boolean => y <= x;
 
-/** Returns true if `y` is greater than or equal to `x`. Same as `y >= x`. */
+/**
+ * Returns true if `y` is greater than or equal to `x`. Same as `y >= x`.
+ *
+ * @example
+ *
+ * ```ts
+ * gte(9)(3)
+ * // => false
+ * ```
+ */
 export const gte = (x: number) => (y: number): boolean => y >= x;
 
 /**
@@ -96,80 +149,17 @@ export const when = <T>(predicate: Predicate<T>) => <R>(fn: Unary<T, R>) => (x: 
 export const unless = <T>(predicate: Predicate<T>) => <R>(fn: Unary<T, R>) => (x: T): T | R => predicate(x) ? x : fn(x);
 
 /**
- * Returns true if `x` is an even number.
+ * Returns a predicate function that negates the return value of `fn`.
+ * Same as `!fn(x)`.
  *
  * @example
  *
  * ```ts
  * isEven(3)
  * // => false
- * ```
- */
-export const isEven = (x: number) => x % 2 === 0;
-
-/**
- * Returns true if `x` is an odd number.
  *
- * @example
- *
- * ```ts
- * isOdd(3)
+ * not(isEven)(3)
  * // => true
  * ```
  */
-export const isOdd = (x: number) => x % 2 !== 0;
-
-/**
- * Returns true if `x` is null or undefined.
- *
- * @example
- *
- * ```ts
- * isNil(null)
- * // => true
- *
- * isNil(undefined)
- * // => true
- * ```
- */
-export const isNil = (x: unknown): boolean => x === null || x === void 0;
-
-/**
- * Returns true if `x` is an array or string with a length of zero; or if `x` is an object with no keys.
- *
- * @example
- *
- * ```ts
- * isEmpty([])
- * // => true
- *
- * isEmpty('')
- * // => true
- *
- * isEmpty({})
- * // => true
- * ```
- */
-export const isEmpty = (x: unknown): boolean => (typeof x === 'string') ? x.length === 0 : Object.keys(x).length === 0;
-
-/** Returns true if `x` is `true`. */
-export const isTrue = (x: boolean) => x === true;
-
-/** Returns true if `x` is `false`. */
-export const isFalse = (x: boolean) => x === false;
-
-/** Returns true if `x` is [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy). */
-export const isTruthy = (x: unknown) => !!x;
-
-/** Returns true if `x` is [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy). */
-export const isFalsy = (x: unknown) => !x;
-
-/** Returns true if `x` is a [JavaScript primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). */
-export const isPrimitive = (x: unknown) => some(isTrue)([
-  typeof x === 'bigint',
-  typeof x === 'boolean',
-  typeof x === 'number',
-  typeof x === 'string',
-  typeof x === 'symbol',
-  isNil(x)
-]);
+export const not = <T>(fn: Predicate<T>) => (x: T) => !fn(x);
