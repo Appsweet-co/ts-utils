@@ -1,4 +1,5 @@
-import { Predicate, Unary } from '../types/functional';
+import { Unary } from '../types/arity';
+import { Predicate } from '../types/predicate';
 
 /**
  * Returns true if `x` and `y` are true. Same as `y && x`.

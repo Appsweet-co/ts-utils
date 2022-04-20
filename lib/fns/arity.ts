@@ -1,4 +1,4 @@
-import { Nary } from '../types/functional';
+import { Nary } from '../types/arity';
 
 /**
  * Takes a funcation of any [arity](https://en.wikipedia.org/wiki/Arity)
