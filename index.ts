@@ -7,6 +7,7 @@ export * from './lib/fns/flip';
 export * from './lib/fns/json';
 export * from './lib/fns/logic';
 export * from './lib/fns/math';
+export * from './lib/fns/predicate';
 export * from './lib/fns/string';
 export * from './lib/types/duration';
 export * from './lib/types/flatten';
