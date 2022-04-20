@@ -7,8 +7,14 @@ export type Unary<T, R> = (x: T) => R;
 /** A function that takes exactly two arguments. */
 export type Binary<T, U, R> = (x: T, y: U) => R;
 
+/** A function that takes up to two arguments. */
+export type BinaryPartial<T, U, R> = (x: T, y?: U) => R;
+
 /** A function that takes exactly three arguments. */
 export type Ternary<T, U, V, R> = (x: T, y: U, z: V) => R;
+
+/** A function that takes up to three arguments. */
+export type TernaryPartial<T, U, V, R> = (x: T, y?: U, z?: V) => R;
 
 /** A function that takes any number of arguments. */
 export type Nary<T, R> = (...args: T[]) => R;
@@ -19,8 +25,14 @@ export type Predicate<T> = Unary<T, boolean>;
 /** A function that takes exactly two arguments and always returns a boolean. */
 export type Predicate2<T, U> = Binary<T, U, boolean>;
 
+/** A function that takes up to two arguments and always returns a boolean. */
+export type Predicate2Partial<T, U> = BinaryPartial<T, U, boolean>;
+
 /** A function that takes exactly three arguments and always returns a boolean. */
 export type Predicate3<T, U, V> = Ternary<T, U, V, boolean>;
+
+/** A function that takes up to three arguments and always returns a boolean. */
+export type Predicate3Partial<T, U, V> = TernaryPartial<T, U, V, boolean>;
 
 /** A function that takes any number of arguments and always returns a boolean. */
 export type PredicateN<T> = Nary<T, boolean>;
