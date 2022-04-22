@@ -71,7 +71,7 @@ export const filter = <T>(fn: Predicate<T>) => (list: T[]): T[] => list.filter(f
  * // => [5, 8, 11]
  * ```
  */
-export const map = <T, U>(fn: Unary<T, U>) => (list: T[]): U[] => list.map(fn);
+export const map = <T, R>(fn: Unary<T, R>) => (list: T[]): R[] => list.map(fn);
 
 /**
  * Returns true if the predicate returns true for every item in an array. Same as `list.every(predicate)`.
