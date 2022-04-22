@@ -10,7 +10,7 @@ import { Predicate } from '../types/predicate';
  * and(true)(false)
  * // => false
  * ```
-*/
+ */
 export const and = (x: boolean) => (y: boolean): boolean => y && x;
 
 /**
@@ -26,7 +26,7 @@ export const and = (x: boolean) => (y: boolean): boolean => y && x;
 export const or = (x: boolean) => (y: boolean): boolean => y || x;
 
 /**
- * Returns true if only `a` or `b` is true.
+ * Returns true if `a` or `b` is excessively true.
  *
  * @example
  *
@@ -42,6 +42,54 @@ export const or = (x: boolean) => (y: boolean): boolean => y || x;
  * ```
  */
 export const xor = (x: boolean) => (y: boolean): boolean => or(and(x === true)(y === false))(and(x === false)(y === true));
+
+/**
+ * Returns true if `fa(x)` and `fb(x)` are true. Same as `fb(x) && fa(x)`.
+ *
+ * @example
+ *
+ * ```ts
+ * both(isEven)(x => x !== 2)(2)
+ * // => false
+ *
+ * both(isEven)(x => x !== 2)(4)
+ * // => true
+ * ```
+ */
+export const both = <T>(fa: Predicate<T>) => (fb: Predicate<T>) => (x: T) => and(fa(x))(fb(x));
+
+/**
+ * Returns true if `fa(x)` or `fb(x)` are true. Same as `fb(x) || fa(x)`.
+ *
+ * @example
+ *
+ * ```ts
+ * only(isOdd)(x => x === 2)(2)
+ * // => true
+ *
+ * only(isOdd)(x => x === 2)(4)
+ * // => false
+ * ```
+ */
+export const only = <T>(fa: Predicate<T>) => (fb: Predicate<T>) => (x: T) => or(fa(x))(fb(x));
+
+/**
+ * Returns true if `fa(x)` or `fb(x)` is excessively true.
+ *
+ * @example
+ *
+ * ```ts
+ * xonly(isEven)(x => x === 2)(2)
+ * // => false
+ *
+ * xonly(isEven)(x => x === 2)(3)
+ * // => false
+ *
+ * xonly(isEven)(x => x === 2)(4)
+ * // => true
+ * ```
+ */
+export const xonly = <T>(fa: Predicate<T>) => (fb: Predicate<T>) => (x: T) => xor(fa(x))(fb(x));
 
 /**
  * Returns true if `x` and `y` are
