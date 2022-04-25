@@ -1,4 +1,5 @@
 import type { Unary } from '../types/arity';
+import type { Reducer } from '../types/functional';
 import type { Predicate } from '../types/predicate';
 
 /**
@@ -190,3 +191,16 @@ export const take = (count: number) => <T>(list: T[]): T[] =>
 */
 export const drop = (count: number) => <T>(list: T[]): T[] =>
   (count === 0) ? list : (count < 0) ? list.slice(0, count) : list.slice(count);
+
+/**
+ * Returns the accumulated result of calling `fn` on each item in an array.
+ * Same as `list.reduce(fn)`.
+ *
+ * @example
+ *
+ * ```ts
+ * reduce((acc, next) => acc + next)([3, 6, 9])
+ * // => 18
+ * ```
+ */
+export const reduce = <T>(fn: Reducer<T>) => (list: T[]): T => list.reduce(fn);
