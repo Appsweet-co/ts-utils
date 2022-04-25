@@ -50,7 +50,7 @@ export const last = <T>(list: T[]): T => list[list.length - 1];
 export const init = <T>(list: T[]): T[] => list.slice(0, -1);
 
 /**
- * Returns a filtered array of items. Same as `list.filter(predicate)`.
+ * Returns all items in an array that meet the predicate. Same as `list.filter(fn)`.
  *
  * @example
  *
