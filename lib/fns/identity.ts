@@ -4,8 +4,8 @@
  * @example
  *
  * ```ts
- * map(identity)([3, 6, 9])
- * // => [3, 6, 9]
+ * identity(42)
+ * // => 42
  * ```
  */
 export const identity = <T>(x: T) => x;
