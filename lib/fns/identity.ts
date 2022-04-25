@@ -8,4 +8,4 @@
  * // => 42
  * ```
  */
-export const identity = <T>(x: T) => x;
+export const identity = <T>(x: T): T => x;
