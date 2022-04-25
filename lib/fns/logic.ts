@@ -49,11 +49,11 @@ export const xor = (x: boolean) => (y: boolean): boolean => or(and(x === true)(y
  * @example
  *
  * ```ts
- * both(isEven)(x => x !== 2)(2)
- * // => false
- *
- * both(isEven)(x => x !== 2)(4)
+ * both(isEven)(x => x === 2)(2)
  * // => true
+ *
+ * both(isEven)(x => x === 2)(4)
+ * // => false
  * ```
  */
 export const both = <T>(fa: Predicate<T>) => (fb: Predicate<T>) => (x: T) => and(fa(x))(fb(x));
