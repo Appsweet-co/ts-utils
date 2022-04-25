@@ -1,4 +1,4 @@
-import { Nominal } from './nominal';
+import type { Nominal } from './nominal';
 
 /** A string formatted as [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).*/
 export type ISOString = Nominal<'ISOString', string>;

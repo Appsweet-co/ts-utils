@@ -1,4 +1,4 @@
-import { Nominal } from './nominal';
+import type { Nominal } from './nominal';
 
 /** A duration measured in milliseconds. */
 export type Milliseconds = Nominal<'Milliseconds', number>;

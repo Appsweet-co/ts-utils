@@ -1,4 +1,4 @@
-import { Nominal } from './nominal';
+import type { Nominal } from './nominal';
 
 /** A string formatted as a [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). */
 export type CSSString = Nominal<'CSSString', string>;

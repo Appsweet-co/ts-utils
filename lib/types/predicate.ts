@@ -1,4 +1,4 @@
-import { Unary, Binary, BinaryPartial, Ternary, TernaryPartial, Nary } from './arity';
+import type { Unary, Binary, BinaryPartial, Ternary, TernaryPartial, Nary } from './arity';
 
 /** A function that takes exactly one argument and always returns a boolean. */
 export type Predicate<T> = Unary<T, boolean>;
