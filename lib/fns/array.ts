@@ -1,5 +1,5 @@
-import { Unary } from '../types/arity';
-import { Predicate } from '../types/predicate';
+import type { Unary } from '../types/arity';
+import type { Predicate } from '../types/predicate';
 
 /**
  * Returns the first item in an array. Same as `list[0]`.

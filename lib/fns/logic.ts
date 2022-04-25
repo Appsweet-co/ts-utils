@@ -1,5 +1,5 @@
-import { Unary } from '../types/arity';
-import { Predicate } from '../types/predicate';
+import type { Unary } from '../types/arity';
+import type { Predicate } from '../types/predicate';
 
 /**
  * Returns true if `x` and `y` are true. Same as `y && x`.

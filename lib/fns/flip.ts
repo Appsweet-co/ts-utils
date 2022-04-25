@@ -1,4 +1,4 @@
-import { Binary } from '../types/arity';
+import type { Binary } from '../types/arity';
 
 /**
  * Returns a curried function that accepts arguments in reverse order.
