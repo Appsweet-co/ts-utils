@@ -19,6 +19,7 @@
     "docs": "npx http-server ./docs -c-1",
     "lint": "eslint **/*.ts",
     "postbuild": "npm run build:docs",
+    "postbuild:docs": "cp logo.png ./docs/logo.png",
     "prebuild": "npm run lint",
     "predocs": "npm run build:docs"
   },
