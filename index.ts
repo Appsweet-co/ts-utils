@@ -3,7 +3,6 @@ export * from './lib/fns/arity';
 export * from './lib/fns/array';
 export * from './lib/fns/clone';
 export * from './lib/fns/constant';
-export * from './lib/fns/curry';
 export * from './lib/fns/flip';
 export * from './lib/fns/identity';
 export * from './lib/fns/json';
