@@ -9,7 +9,7 @@
     "noImplicitAny": false,
     "removeComments": true,
     "sourceMap": false,
-    "target": "ES2017"
+    "target": "ES2019"
   },
   "include": [
     "**/*.ts"
