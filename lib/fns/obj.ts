@@ -1,3 +1,4 @@
+import { last, split } from './array';
 import { isNil } from './predicate';
 
 /**
@@ -38,3 +39,22 @@ export const propsOr = <R>(fallback: R) => (path: string) => <T>(data: T): R | T
   const value = props(path)(data);
   return isNil(value) ? fallback : value;
 };
+
+/**
+ * Returns a shallow object made of only the keys and values for each path.
+ *
+ * @example
+ *
+ * ```ts
+ * pick(['foo', 'foo.bar'])({
+ *   hello: "world",
+ *   foo: {
+ *     bar: "zip"
+ *   }
+ * })
+ * // => { hello: "world", bar: "zip" }
+ * ```
+ */
+export const pick = (paths: string[]) => <T>(data: T) => Object.fromEntries(
+  paths.map(path => [last(split('.')(path)), props(path)(data)])
+);
