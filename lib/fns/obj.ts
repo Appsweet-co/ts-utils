@@ -46,7 +46,7 @@ export const propsOr = <R>(fallback: R) => (path: string) => <T>(data: T): R | T
  * @example
  *
  * ```ts
- * pick(['foo', 'foo.bar'])({
+ * pick(['hello', 'foo.bar'])({
  *   hello: "world",
  *   foo: {
  *     bar: "zip"
