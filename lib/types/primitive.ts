@@ -18,6 +18,9 @@ export type NanoIdString = Nominal<'NanoIdString', string>;
 /** A string formatted as [RFC 5545](https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html). */
 export type RRuleString = Nominal<'RRuleString', string>;
 
+/** A string formatted as a [Semantic Version](https://semver.org/) number. */
+export type SemVer = Nominal<'SemVer', string>;
+
 /** A string formatted as an absolute or relative [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL). */
 export type URLString = Nominal<'URLString', string>;
 
