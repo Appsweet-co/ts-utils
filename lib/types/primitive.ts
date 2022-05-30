@@ -19,7 +19,7 @@ export type NanoIdString = Nominal<'NanoIdString', string>;
 export type RRuleString = Nominal<'RRuleString', string>;
 
 /** A string formatted as a [Semantic Version](https://semver.org/) number. */
-export type SemVer = Nominal<'SemVer', string>;
+export type SemVerString = Nominal<'SemVerString', string>;
 
 /** A string formatted as an absolute or relative [URL](https://developer.mozilla.org/en-US/docs/Web/API/URL). */
 export type URLString = Nominal<'URLString', string>;
