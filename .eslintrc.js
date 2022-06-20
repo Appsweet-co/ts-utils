@@ -1,5 +1,5 @@
-/* eslint-disable fp/no-mutation */
-/* eslint-disable no-undef */
+/* eslint-disable functional/immutable-data */
+/* eslint-disable functional/no-expression-statement */
 
 module.exports = {
   root: true,
@@ -15,31 +15,38 @@ module.exports = {
         paths: ['./lib'],
       },
 
-      alias: [ ]
+      alias: []
     },
   },
 
   parser: '@typescript-eslint/parser',
 
+  parserOptions: {
+    project: 'tsconfig.json'
+  },
+
   plugins: [
     '@typescript-eslint',
-    'fp',
+    'functional',
+    'import'
   ],
 
   extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:fp/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:functional/external-recommended',
+    'plugin:functional/recommended',
+    'plugin:functional/stylistic',
     'plugin:import/errors',
-    'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:import/warnings'
   ],
 
   rules: {
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/quotes': [ 'error', 'single', { avoidEscape: true, } ],
-    '@typescript-eslint/semi': ['error'],
-    'fp/no-nil': 'off',
-    'fp/no-rest-parameters': 'off',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'off',
+    'functional/functional-parameters': 'off',
+    'functional/prefer-readonly-type': 'off'
   },
 };
