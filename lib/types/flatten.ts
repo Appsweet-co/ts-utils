@@ -4,13 +4,13 @@
  * @example
  *
  * ```ts
- * type List = ReadonlyArray<number | boolean>;
+ * const list = [3, 6, 9, true];
  *
- * type Item = FlattenArray<List>
+ * type Item = FlattenArray<typeof list>
  * // => number | boolean;
  * ```
  */
-export type FlattenArray<T extends (any[] | ReadonlyArray<any>)> = T[number];
+export type FlattenArray<T extends (unknown[] | ReadonlyArray<unknown>)> = T[number];
 
 /**
  * Extracts the type info for properties inside an object.
@@ -18,14 +18,14 @@ export type FlattenArray<T extends (any[] | ReadonlyArray<any>)> = T[number];
  * @example
  *
  * ```ts
- * interface Config {
- *   logLevel: 'INFO' | 'WARN' | 'ERROR';
- *   silent: boolean;
- *   verbose: number;
+ * const config = {
+ *   logLevel: 'WARN',
+ *   silent: false,
+ *   verbose: 3,
  * }
  *
- * type Values = FlattenObject<Config>;
- * // => number | boolean | "INFO" | "WARN" | "ERROR"
+ * type Value = FlattenObject<typeof config>;
+ * // => string | number | boolean
  * ```
  */
-export type FlattenObject<T extends (Record<any, any> | Readonly<Record<any, any>>)> = T[keyof T];
+export type FlattenObject<T extends Record<string | number | symbol, unknown>> = T[keyof T];

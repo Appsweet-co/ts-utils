@@ -1,5 +1,4 @@
 import { last, split } from './array';
-import { isNil } from './predicate';
 
 /**
  * Returns the value for `path`, or undefined if there is no value.
@@ -18,7 +17,7 @@ import { isNil } from './predicate';
  */
 export const props = (path: string) => <T>(data: T): T[keyof T] => {
   const keys = path.split('.');
-  return keys.reduce((acc, key) => isNil(acc[key]) ? void 0 : acc[key], data);
+  return keys.reduce((acc, key) => (acc[key] ?? void 0) as unknown, data) as T[keyof T];
 };
 
 /**
@@ -37,7 +36,7 @@ export const props = (path: string) => <T>(data: T): T[keyof T] => {
  */
 export const propsOr = <R>(fallback: R) => (path: string) => <T>(data: T): R | T[keyof T] => {
   const value = props(path)(data);
-  return isNil(value) ? fallback : value;
+  return value ?? fallback;
 };
 
 /**
