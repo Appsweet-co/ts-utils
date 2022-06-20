@@ -7,9 +7,10 @@ import type { Nary } from '../types/arity';
 export const nullary = <T, R>(fn: Nary<T, R>) => (): R => fn();
 
 /**
- * Takes a funcation of any [arity](https://en.wikipedia.org/wiki/Arity)
+ * Takes a function of any [arity](https://en.wikipedia.org/wiki/Arity)
  * and returns a function that ignores all but the first parameter.
  */
+// eslint-disable-next-line functional/prefer-tacit
 export const unary = <T, R>(fn: Nary<T, R>) => (x: T): R => fn(x);
 
 /**

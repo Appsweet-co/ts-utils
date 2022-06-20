@@ -12,7 +12,7 @@
  * ```
  */
 export type Nominal<K, T> = T & {
-  __flavor?: K;
+  readonly __flavor?: K;
 };
 
 /**
@@ -28,5 +28,5 @@ export type Nominal<K, T> = T & {
  * ```
  */
 export type NominalStrict<K, T> = T & {
-  __brand: K;
+  readonly __brand: K;
 };
