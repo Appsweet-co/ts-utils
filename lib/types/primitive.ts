@@ -3,6 +3,9 @@ import type { Nominal } from './nominal';
 /** A string formatted as a [CSS Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors). */
 export type CSSString = Nominal<'CSSString', string>;
 
+/** A string formatted as a standard [IETF Email Address](https://en.wikipedia.org/wiki/Email_address#Syntax). */
+declare type EmailAddress = Nominal<'EmailAddress', string>;
+
 /** A floating point number. */
 export type Float = Nominal<'Float', number>;
 
