@@ -16,8 +16,9 @@
   ],
   "typedocOptions": {
     "entryPoints": [
-      "index.ts"
+      "./lib"
     ],
+    "entryPointStrategy": "expand",
     "excludeExternals": true,
     "excludeInternal": true,
     "excludePrivate": true,
