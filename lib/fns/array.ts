@@ -20,7 +20,7 @@ import { isNil } from './predicate';
 export const head = <T>(list: T[]): T => list[0];
 
 /**
- * Returns the first item in an array, or the fallback if the array is null
+ * Returns the first item in an array, or the fallback if `list` is null
  * or undefined.
  *
  * @category Arrays
@@ -54,8 +54,7 @@ export const headOr = <T>(fallback: T) => (list: T[]): T => maybe(head)(fallback
 export const tail = <T>(list: T[]): T[] => list.slice(1);
 
 /**
- * Returns all but the first item in an array, or the fallback if the array is
- * null or undefined.
+ * Returns all but the first item in an array, or the fallback `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode tail}
@@ -88,8 +87,7 @@ export const tailOr = <T>(fallback: T[]) => (list: T[]): T[] => maybe(tail)(fall
 export const last = <T>(list: T[]): T => list[list.length - 1];
 
 /**
- * Returns the last item in an array, or the fallback if the array is null
- * or undefined.
+ * Returns the last item in an array, or the fallback if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode last}
@@ -122,8 +120,7 @@ export const lastOr = <T>(fallback: T) => (list: T[]): T => maybe(last)(fallback
 export const init = <T>(list: T[]): T[] => list.slice(0, -1);
 
 /**
- * Returns all but the last item in an array, or the fallback if the array is
- * null or undefined.
+ * Returns all but the last item in an array, or the fallback `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode init}
@@ -156,8 +153,8 @@ export const initOr = <T>(fallback: T[]) => (list: T[]): T[] => maybe(init)(fall
 export const filter = <T>(fn: Predicate<T>) => (list: T[]): T[] => list.filter(fn);
 
 /**
- * Returns all items in an array that meet the predicate, or returns the fallback
- * if the array is null or undefined.
+ * Returns all items in an array that meet the predicate, or the fallback
+ * if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode filter}
@@ -191,8 +188,7 @@ export const filterOr = <T>(fallback: T[]) => (fn: Predicate<T>) => (list: T[]):
 export const map = <T, R>(fn: Unary<T, R>) => (list: T[]): R[] => list.map(fn);
 
 /**
- * Returns a mapped array of items, or the fallback if the array is
- * null or undefined.
+ * Returns a mapped array of items, or the fallback if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode map}
@@ -268,8 +264,7 @@ export const none = <T>(fn: Predicate<T>) => (list: T[]): boolean => !list.every
 export const join = (separator: string) => <T>(list: T[]): string => list.join(separator);
 
 /**
- * Joins items in an array using `separator`, or returns the fallback if `x` is
- * null or undefined.
+ * Joins items in an array using `separator`, or the fallback if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode join}
@@ -303,8 +298,7 @@ export const joinOr = (fallback: string) => (separator: string) => <T>(list: T[]
 export const split = (separator: string) => (x: string): string[] => x.split(separator);
 
 /**
- * Splits a string using `separator`, or returns the fallback if `x` is
- * null or undefined.
+ * Splits a string using `separator`, or returns the fallback if `x` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode split}
@@ -323,7 +317,9 @@ export const splitOr = (fallback: string[]) => (separator: string) => (x: string
   maybe(split(separator))(fallback)(x);
 
 /**
- * Adds a new item to the end of an array. Same as `[...list, x]`.
+ * Adds an item to the end of an array, or returns a new array if `list` is null or undefined.
+ *
+ * Same as `[...list, x]`.
  *
  * @category Arrays
  *
@@ -340,7 +336,9 @@ export const splitOr = (fallback: string[]) => (separator: string) => (x: string
 export const append = <T>(x: T) => <U>(list: U[]): Array<T | U> => isNil(list) ? [x] : [...list, x];
 
 /**
- * Adds a new item to the start of an array. Same as `[x, ...list]`.
+ * Adds a new item to the start of an array, or returns a new array if `list` is null or undefined.
+ *
+ * Same as `[x, ...list]`.
  *
  * @category Arrays
  *
@@ -380,7 +378,7 @@ export const take = (count: number) => <T>(list: T[]): T[] =>
 
 /**
  * Returns the first (or last) `count` of items from an array, or the fallback
- * if the array is null or undefined.
+ * if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode take}
@@ -421,7 +419,7 @@ export const drop = (count: number) => <T>(list: T[]): T[] =>
 
 /**
  * Returns all but the first (or last) `count` of items from an array, or the
- * fallback if the array is null or undefined.
+ * fallback if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode drop}
@@ -456,7 +454,7 @@ export const reduce = <T>(fn: Reducer<T>) => (list: T[]): T => list.reduce(fn);
 
 /**
  * Returns the accumulated result of calling `fn` on each item in an array,
- * or the fallback if the array is null or undefined.
+ * or the fallback if `list` is null or undefined.
  *
  * @category Arrays
  * @see {@linkcode reduce}
