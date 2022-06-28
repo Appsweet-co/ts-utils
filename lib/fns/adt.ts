@@ -7,8 +7,6 @@ import { isNil } from './predicate';
  * returns the result of `right(x)` if the predicate is true
  * or `left(x)` if the predicate is false.
  *
- * @category Sum Type
- *
  * @example
  *
  * ```ts
@@ -26,8 +24,6 @@ export const either = <T, R, L>(right: Unary<T, R>) => (left: Unary<T, L>) => (p
 /**
  * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
  * returns the result of `just(x)`, or the fallback if `x` is null or undefined.
- *
- * @category Sum Type
  *
  * @example
  *
@@ -48,8 +44,6 @@ export const maybe = <T, R>(just: Unary<T, R>) => (fallback: R) => (x: T): R => 
  * returns the result of `ok(x)`, or the result of `err()`
  * if `x` is null or undefined.
  *
- * @category Sum Type
- *
  * @example
  *
  * ```ts
@@ -67,8 +61,6 @@ export const result = <T, R, E>(ok: Unary<T, R>) => (err: Nullary<E>) => (x: T):
 /**
  * Wraps `fn` in a [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block
  * and returns the result of `fn(x)`, or returns the fallback if `fn(x)` throws an error.
- *
- * @category Sum Type
  *
  * @example
  *
