@@ -1,4 +1,4 @@
-import type { Nullary, Unary } from '../types/arity';
+import type { Nary, Nullary, Unary } from '../types/arity';
 import type { Predicate } from '../types/predicate';
 import { isNil } from './predicate';
 
@@ -62,4 +62,29 @@ export const maybe = <T, R>(just: Unary<T, R>) => (fallback: R) => (x: T): R => 
  */
 export const result = <T, R, E>(ok: Unary<T, R>) => (err: Nullary<E>) => (x: T): R | E => {
   return isNil(x) ? err() : ok(x);
+};
+
+/**
+ * Wraps `fn` in a [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block
+ * and returns the result of `fn(x)`, or returns the fallback if `fn(x)` throws an error.
+ *
+ * @category Sum Type
+ *
+ * @example
+ *
+ * ```ts
+ * throwable(JSON.parse)('fallback')('["Good","JSON"]')
+ * // => ['Good', 'JSON']
+ *
+ * throwable(JSON.parse)('fallback')('[Bad, JSON]')
+ * // => 'fallback'
+ * ```
+ */
+export const throwable = <T, R>(fn: Nary<T, R>) => (fallback: R) => (x: T): R => {
+  // eslint-disable-next-line functional/no-try-statement
+  try {
+    return fn(x);
+  } catch (_) {
+    return fallback;
+  }
 };
