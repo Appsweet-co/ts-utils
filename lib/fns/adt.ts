@@ -4,7 +4,8 @@ import { isNil } from './predicate';
 
 /**
  * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns `right(x)` if the predicate is true, or `left(x)` if the predicate is false.
+ * returns the result of `right(x)` if the predicate is true
+ * or `left(x)` if the predicate is false.
  *
  * @category Sum Type
  *
@@ -24,7 +25,7 @@ export const either = <T, R, L>(right: Unary<T, R>) => (left: Unary<T, L>) => (p
 
 /**
  * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns `just(x)`, or the fallback if `x` is null or undefined.
+ * returns the result of `just(x)`, or the fallback if `x` is null or undefined.
  *
  * @category Sum Type
  *
@@ -44,7 +45,8 @@ export const maybe = <T, R>(just: Unary<T, R>) => (fallback: R) => (x: T): R => 
 
 /**
  * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns `ok(x)`, or `err()` if `x` is null or undefined.
+ * returns the result of `ok(x)`, or the result of `err()`
+ * if `x` is null or undefined.
  *
  * @category Sum Type
  *
