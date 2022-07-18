@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "**/*.ts"
+  ],
+  "typedocOptions": {
+    "entryPoints": [
+      "./lib"
+    ],
+    "entryPointStrategy": "expand",
+    "excludeExternals": true,
+    "excludeInternal": true,
+    "excludePrivate": true,
+    "gitRemote": "https://github.com/Appsweet-co/utils.git",
+    "includeVersion": true,
+    "out": "docs"
+  }
+}

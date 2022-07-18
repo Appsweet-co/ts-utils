@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "./bin/gen-index.sh",
-    "build:docs": "typedoc",
+    "build:docs": "typedoc --tsconfig ./tsconfig.docs.json",
     "clean": "rm -rf ./docs",
     "docs": "npx http-server ./docs -c-1",
     "lint": "eslint **/*.ts",
