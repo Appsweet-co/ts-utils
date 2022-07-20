@@ -1,5 +1,5 @@
 /**
- * A function that takes zero arguments and returns nothing.
+ * A function that takes zero arguments and returns void.
  *
  * @example
  *
