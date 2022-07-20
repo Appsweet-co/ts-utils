@@ -1,11 +1,11 @@
 /**
- * A function that takes zero arguments and always returns undefined.
+ * A function that takes zero arguments and returns nothing.
  *
  * @example
  *
  * ```ts
  * noop()
- * // => undefined
+ * // => void
  * ```
  */
-export const noop = (): undefined => void 0;
+export function noop(): void { };
