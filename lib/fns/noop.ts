@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable functional/no-return-void */
+
 /**
  * A function that takes zero arguments and returns void.
  *
@@ -8,4 +11,4 @@
  * // => void
  * ```
  */
-export function noop(): void { };
+export function noop(): void { }
