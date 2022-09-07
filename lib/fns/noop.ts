@@ -8,7 +8,7 @@
  *
  * ```ts
  * noop()
- * // => void
+ * // => undefined
  * ```
  */
-export function noop(): void { }
+export const noop = (): void => { }
