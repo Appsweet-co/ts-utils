@@ -33,10 +33,3 @@ export type KeysOf<T> = T extends Record<string, unknown> ? keyof T : never;
  * ```
  */
 export type ValuesOf<T> = T extends Record<string, unknown> ? T[keyof T] : never;
-
-/**
- * @deprecated
- *
- * Use {@linkcode KeysOf} instead.
- */
-export type FlattenObject<T extends Record<string | number | symbol, unknown>> = T[keyof T];
