@@ -11,10 +11,3 @@
  * ```
  */
 export type ValuesInside<T> = T extends (unknown[] | readonly unknown[]) ? T[number] : never;
-
-/**
- * @deprecated
- *
- * Use {@linkcode ValuesInside} instead.
- */
-export type FlattenArray<T extends (unknown[] | ReadonlyArray<unknown>)> = T[number];
