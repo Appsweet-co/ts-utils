@@ -4,7 +4,7 @@ import type { Nominal } from './nominal';
 export type CSSString = Nominal<'CSSString', string>;
 
 /** A string formatted as a standard [IETF Email Address](https://en.wikipedia.org/wiki/Email_address#Syntax). */
-declare type EmailAddress = Nominal<'EmailAddress', string>;
+export type EmailAddress = Nominal<'EmailAddress', string>;
 
 /** A floating point number. */
 export type Float = Nominal<'Float', number>;
