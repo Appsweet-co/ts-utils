@@ -2,7 +2,7 @@
 /* eslint-disable functional/no-return-void */
 
 /**
- * A function that takes zero arguments and returns void.
+ * A function that takes zero arguments and returns undefined.
  *
  * @example
  *
