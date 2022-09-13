@@ -36,23 +36,20 @@ export const either = <T, R>(right: Unary<T, R>) => (left: Unary<T, R>) => (pred
 export const maybe = <R>(fallback: R) => <T>(just: Unary<T, R>) => (x: T): R => isNil(x) ? fallback : just(x);
 
 /**
- * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns the result of `ok(x)`, or the result of `err()`
+ * Returns the result of `ok(x)`, or the result of `err()`
  * if `x` is null or undefined.
  *
  * @example
  *
  * ```ts
- * result(add(2))(() => 'anything')(42)
+ * result(add(2))(() => 99)(42)
  * // => 44
  *
- * result(add(2))(() => 'anything')(null)
- * // => 'anything'
+ * result(add(2))(() => 99)(null)
+ * // => 99
  * ```
  */
-export const result = <T, R, E>(ok: Unary<T, R>) => (err: Nullary<E>) => (x: T): R | E => {
-  return isNil(x) ? err() : ok(x);
-};
+export const result = <T, R>(ok: Unary<T, R>) => (err: Nullary<R>) => (x: T): R => isNil(x) ? err() : ok(x);
 
 /**
  * Wraps `fn` in a [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block
