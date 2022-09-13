@@ -3,8 +3,7 @@ import type { Predicate } from '../types/predicate';
 import { isNil } from './predicate';
 
 /**
- * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns the result of `right(x)` if the predicate is true
+ * Returns the result of `right(x)` if the predicate is true,
  * or `left(x)` if the predicate is false.
  *
  * @example
@@ -17,7 +16,7 @@ import { isNil } from './predicate';
  * // => 41
  * ```
  */
-export const either = <T, R, L>(right: Unary<T, R>) => (left: Unary<T, L>) => (pred: Predicate<T>) => (x: T): R | L => {
+export const either = <T, R>(right: Unary<T, R>) => (left: Unary<T, R>) => (pred: Predicate<T>) => (x: T): R => {
   return pred(x) ? right(x) : left(x);
 };
 
