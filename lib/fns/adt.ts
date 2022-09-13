@@ -33,7 +33,7 @@ export const either = <T, R>(right: Unary<T, R>) => (left: Unary<T, R>) => (pred
  * // => 99
  * ```
  */
-export const maybe = <R>(fallback: R) => <T>(just: Unary<T, R>) => (x: T): R => isNil(x) ? fallback : just(x);
+export const maybe = <T, R>(just: Unary<T, R>) => (fallback: R) => (x: T): R => isNil(x) ? fallback : just(x);
 
 /**
  * Returns the result of `ok(x)`, or the result of `err()`
