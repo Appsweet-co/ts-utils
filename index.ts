@@ -26,4 +26,3 @@ export * from './lib/types/object';
 export * from './lib/types/predicate';
 export * from './lib/types/primitive';
 export * from './lib/types/timestamp';
-
