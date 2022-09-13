@@ -22,22 +22,19 @@ export const either = <T, R, L>(right: Unary<T, R>) => (left: Unary<T, L>) => (p
 };
 
 /**
- * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
- * returns the result of `just(x)`, or the fallback if `x` is null or undefined.
+ * Returns the result of `just(x)`, or the fallback if `x` is null or undefined.
  *
  * @example
  *
  * ```ts
- * maybe(add(2))(99)(42)
+ * maybe(99)(add(2))(42)
  * // => 44
  *
- * maybe(add(2))(99)(null)
+ * maybe(99)(add(2))(null)
  * // => 99
  * ```
  */
-export const maybe = <T, R>(just: Unary<T, R>) => (fallback: R) => (x: T): R => {
-  return isNil(x) ? fallback : just(x);
-};
+export const maybe = <R>(fallback: R) => <T>(just: Unary<T, R>) => (x: T): R => isNil(x) ? fallback : just(x);
 
 /**
  * A [Sum Type](https://wiki.haskell.org/Algebraic_data_type) that
