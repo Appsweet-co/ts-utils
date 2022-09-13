@@ -26,10 +26,10 @@ export const either = <T, R>(right: Unary<T, R>) => (left: Unary<T, R>) => (pred
  * @example
  *
  * ```ts
- * maybe(99)(add(2))(42)
+ * maybe(add(2))(99)(42)
  * // => 44
  *
- * maybe(99)(add(2))(null)
+ * maybe(add(2))(99)(null)
  * // => 99
  * ```
  */
