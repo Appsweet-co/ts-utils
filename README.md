@@ -49,19 +49,25 @@ We use [TypeDoc](http://typedoc.org/) to generate API docs. Visit the [docs webs
 
 ### Immutable Data
 
-Mutated data is hard to work with. We use [immutable data](https://en.wikipedia.org/wiki/Immutable_object) when possible.
+Mutated data is hard to work with. Use [immutable data](https://en.wikipedia.org/wiki/Immutable_object) instead.
 
 ### Pure Functions
 
-[Pure functions](https://en.wikipedia.org/wiki/Pure_function) are easy to test and work well with immutable data. They're also easy for [JavaScript engines to optimize](https://v8.dev/blog/turbofan-jit)!
+[Pure Functions](https://en.wikipedia.org/wiki/Pure_function) are easy to test and work well with immutable data. They're also [referentially transparent](https://www.yld.io/blog/the-not-so-scary-guide-to-functional-programming/) and easy for JavaScript engines to [optimize](https://v8.dev/blog/turbofan-jit).
 
 ### Single Input
 
 We write functions that take exactly [one argument](https://en.wikipedia.org/wiki/Unary_function). We [curry](https://en.wikipedia.org/wiki/Currying) all functions as needed.
 
-### Data Last
+### Graceful Fallbacks
 
-Data is always the [last argument](https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo). This makes them easy to [pipe](https://en.wikipedia.org/wiki/Function_composition).
+Return fallbacks instead of undefined or throwing errors.
+
+### Fallback First, Data Last
+
+Passing data as the [last argument](https://dev.to/richytong/practical-functional-programming-in-javascript-data-last-1gjo) of a function is great for piping and currying, but TypeScript's typing system works best when we pass in data as the [first argument](https://basarat.gitbook.io/typescript/type-system/type-inference).
+
+We pass [fallback values](#graceful-fallbacks) as the first argument and actual data as the last. This helps TypeScript understand the code while still allowing for piping and currying.
 
 ## Code Examples
 
