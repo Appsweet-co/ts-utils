@@ -4,23 +4,6 @@ import { throwable } from './adt';
 export const stringify = (x: unknown): string => typeof x === 'string' ? x : JSON.stringify(x);
 
 /**
- * Parse a JSON string, or return the original if it fails to parse.
- *
- * @see {@linkcode parseOr}
- *
- * @example
- *
- * ```ts
- * parse('["Good","JSON"]')
- * // => ['Good', 'JSON']
- *
- * parse('[Bad, JSON]')
- * // => '[Bad, JSON]'
- * ```
- */
-export const parse = <R = unknown>(x: string): string | R => throwable(JSON.parse)(x)(x) as R;
-
-/**
  * Parse a JSON string, or return the fallback if it fails to parse.
  *
  * @see {@linkcode parse}
