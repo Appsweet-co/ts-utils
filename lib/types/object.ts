@@ -4,13 +4,7 @@
  * @example
  *
  * ```ts
- * const config = {
- *   logLevel: 'WARN',
- *   silent: false,
- *   verbose: 3,
- * } as const;
- *
- * type Value = KeysOf<typeof config>;
+ * type Value = KeysOf<{ logLevel: 'WARN', silent: false, verbose: 3 }>;
  * // => "logLevel" | "silent" | "verbose"
  * ```
  */
@@ -22,13 +16,7 @@ export type KeysOf<T> = T extends Record<string, unknown> ? keyof T : never;
  * @example
  *
  * ```ts
- * const config = {
- *   logLevel: 'WARN',
- *   silent: false,
- *   verbose: 3,
- * } as const;
- *
- * type Value = ValuesOf<typeof config>;
+ * type Value = ValuesOf<{ logLevel: 'WARN', silent: false, verbose: 3 }>;
  * // => false | "WARN" | 3
  * ```
  */
