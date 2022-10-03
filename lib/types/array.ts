@@ -4,9 +4,7 @@
  * @example
  *
  * ```ts
- * const list = [1, '2', true] as const;
- *
- * type Values = ValuesInside<typeof list>;
+ * type Values = ValuesInside<[1, '2', true]>;
  * // => true | 1 | "2"
  * ```
  */
