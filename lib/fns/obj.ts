@@ -1,41 +1,27 @@
 import { last, split } from './array';
 
-/**
- * Returns the value for `path`, or undefined if there is no value.
- *
- * The `path` is a string of dot-separated keys (`foo.bar.baz`). The `data` is an object of any depth.
- *
- * @example
- *
- * ```ts
- * props('greeting')({ greeting: 'Hello World' })
- * // => "Hello World"
- *
- * props('salutation')({ greeting: 'Hello World' })
- * // => undefined
- * ```
- */
-export const props = (path: string) => <T>(data: T): T[keyof T] => {
+const _props = (path: string) => <T>(data: T): T[keyof T] => {
   const keys = path.split('.');
   return keys.reduce((acc, key) => (acc[key] ?? void 0) as unknown, data) as T[keyof T];
 };
 
 /**
  * Returns the value for `path`, or `fallback` if the value is null or undefined.
- * `path` is a string of dot-separated keys.
+ *
+ * The `path` is a string of dot-separated keys (`foo.bar.baz`). The `data` is an object of any depth.
  *
  * @example
  *
  * ```ts
- * propsOr('Hi there')('greeting')({ greeting: 'Hello World' })
+ * props('Fallback')('a.b')({ a { b: 'Hello World' } })
  * // => "Hello World"
  *
- * propsOr('Hi there')('salutation')({ greeting: 'Hello World' })
- * // => "Hi there"
+ * props('Fallback')('a.b.c')({ a { b: 'Hello World' } })
+ * // => "Fallback"
  * ```
  */
-export const propsOr = <R>(fallback: R) => (path: string) => <T>(data: T): R | T[keyof T] => {
-  const value = props(path)(data);
+export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
+  const value = _props(path)(data) as R;
   return value ?? fallback;
 };
 
@@ -55,5 +41,5 @@ export const propsOr = <R>(fallback: R) => (path: string) => <T>(data: T): R | T
  * ```
  */
 export const pick = (paths: string[]) => <T>(data: T) => Object.fromEntries(
-  paths.map(path => [last(split('.')(path)), props(path)(data)])
+  paths.map(path => [last(split('.')(path)), _props(path)(data)])
 );
