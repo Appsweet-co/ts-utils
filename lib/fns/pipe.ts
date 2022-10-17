@@ -7,7 +7,7 @@ import { isNil } from './predicate';
  *
  * Returns the `fallback` if `x` is null or undefined.
  *
- * @see {@linkcode pipe3}, {@linkcode _pipe4}
+ * @see {@linkcode pipe3}, {@linkcode pipe4}
  *
  * @example
  *
