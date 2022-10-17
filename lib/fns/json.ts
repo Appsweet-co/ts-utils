@@ -18,4 +18,4 @@ export const stringify = (x: unknown): string => typeof x === 'string' ? x : JSO
  * // => ['fallback']
  * ```
  */
-export const parseOr = <R>(fallback: R) => (x: string): R => throwable(JSON.parse)(fallback)(x) as R;
+export const parse = <R>(fallback: R) => (x: string): R => throwable(JSON.parse)(fallback)(x) as R;
