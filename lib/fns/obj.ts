@@ -1,4 +1,4 @@
-import { last, split } from './array';
+import { last } from './array';
 
 const _props = (path: string) => <T>(data: T): T[keyof T] => {
   const keys = path.split('.');
@@ -41,5 +41,5 @@ export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
  * ```
  */
 export const pick = (paths: string[]) => <T>(data: T) => Object.fromEntries(
-  paths.map(path => [last(split('.')(path)), _props(path)(data)])
+  paths.map(path => [last('')(path.split('.')), _props(path)(data)])
 );
