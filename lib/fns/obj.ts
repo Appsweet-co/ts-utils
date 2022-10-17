@@ -21,7 +21,7 @@ const _props = (path: string) => <T>(data: T): T[keyof T] => {
  * ```
  */
 export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
-  const value = _props(path)(data) as R;
+  const value = _props(path)(data) as unknown as R;
   return value ?? fallback;
 };
 
