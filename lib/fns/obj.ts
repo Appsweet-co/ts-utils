@@ -13,11 +13,11 @@ const _props = (path: string) => <T>(data: T): T[keyof T] => {
  * @example
  *
  * ```ts
- * props('Fallback')('a.b')({ a { b: 'Hello World' } })
+ * props('fallback')('a.b')({ a { b: 'Hello World' } })
  * // => "Hello World"
  *
- * props('Fallback')('a.b.c')({ a { b: 'Hello World' } })
- * // => "Fallback"
+ * props('fallback')('a.b.c')({ a { b: 'Hello World' } })
+ * // => "fallback"
  * ```
  */
 export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
