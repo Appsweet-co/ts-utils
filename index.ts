@@ -20,6 +20,7 @@ export * from './lib/fns/string';
 export * from './lib/types/arity';
 export * from './lib/types/array';
 export * from './lib/types/duration';
+export * from './lib/types/either';
 export * from './lib/types/functional';
 export * from './lib/types/iso';
 export * from './lib/types/nominal';
@@ -28,4 +29,3 @@ export * from './lib/types/predicate';
 export * from './lib/types/primitive';
 export * from './lib/types/result';
 export * from './lib/types/timestamp';
-
