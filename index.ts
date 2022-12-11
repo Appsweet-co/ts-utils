@@ -26,4 +26,6 @@ export * from './lib/types/nominal';
 export * from './lib/types/object';
 export * from './lib/types/predicate';
 export * from './lib/types/primitive';
+export * from './lib/types/result';
 export * from './lib/types/timestamp';
+
