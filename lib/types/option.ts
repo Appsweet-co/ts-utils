@@ -16,6 +16,6 @@ export interface Some<T> {
  * Used in {@linkcode Option} to represent data that definitely does not exist.
  */
 export interface None {
-  none: undefined;
+  none?: undefined;
   some?: undefined;
 }
