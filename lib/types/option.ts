@@ -1,15 +1,11 @@
-import type { Maybe } from "./maybe";
-
 /**
  * A [Union Type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
- * that represents data that may ({@linkcode Some}) or may not ({@linkcode None}) be available.
- *
- * @see Similar to a {@linkcode Maybe}.
+ * that represents data that may ({@linkcode Some}) or may not ({@linkcode None}) exist.
  */
 export type Option<T> = Some<T> | None;
 
 /**
- * An interface that represents data that's available inside an {@linkcode Option}.
+ * Used in {@linkcode Option} to represent data that definitely exists.
  */
 export interface Some<T> {
   none?: undefined;
@@ -17,7 +13,7 @@ export interface Some<T> {
 }
 
 /**
- * An interface that represents data that's unavailable inside an {@linkcode Option}.
+ * Used in {@linkcode Option} to represent data that definitely does not exist.
  */
 export interface None {
   none: undefined;
