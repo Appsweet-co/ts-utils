@@ -1,4 +1,4 @@
-import { throwable } from './adt';
+import { throwable } from './throwable';
 
 /** Stringify a value, or return the original if it's already a string. */
 export const stringify = (x: unknown): string => typeof x === 'string' ? x : JSON.stringify(x);
