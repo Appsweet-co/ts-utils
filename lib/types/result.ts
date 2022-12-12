@@ -1,6 +1,8 @@
 /**
  * A [Union Type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
  * that represents either a success ({@linkcode Ok}) or error ({@linkcode Err}) state.
+ *
+ * @see {@linkcode Ok}, {@linkcode Err}
  */
 export type Result<T, E> = Ok<T> | Err<E>;
 

@@ -1,6 +1,8 @@
 /**
  * A [Union Type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types)
  * that represents one of two states ({@linkcode Right} or {@linkcode Left}).
+ *
+ * @see {@linkcode Right}, {@linkcode Left}
  */
 export type Either<R, L> = Right<R> | Left<L>;
 
