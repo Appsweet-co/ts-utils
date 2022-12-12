@@ -1,6 +1,6 @@
 {
   "name": "@appsweet-co/ts-utils",
-  "version": "0.35.1",
+  "version": "0.35.2",
   "description": "A strongly-typed utility library for TypeScript",
   "main": "index.js",
   "devDependencies": {
