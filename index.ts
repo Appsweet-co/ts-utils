@@ -25,6 +25,7 @@ export * from './lib/types/functional';
 export * from './lib/types/iso';
 export * from './lib/types/nominal';
 export * from './lib/types/object';
+export * from './lib/types/option';
 export * from './lib/types/predicate';
 export * from './lib/types/primitive';
 export * from './lib/types/result';
