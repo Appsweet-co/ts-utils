@@ -23,6 +23,7 @@ export * from './lib/types/duration';
 export * from './lib/types/either';
 export * from './lib/types/functional';
 export * from './lib/types/iso';
+export * from './lib/types/maybe';
 export * from './lib/types/nominal';
 export * from './lib/types/object';
 export * from './lib/types/option';
