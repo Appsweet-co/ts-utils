@@ -10,7 +10,7 @@ export const isOdd = (x: number) => x % 2 !== 0;
 export const isNil = (x: unknown): boolean => x === void 0 || x === null;
 
 /** Returns true if `x` is an array or string with a length of zero; or if `x` is an object with no keys. */
-export const isEmpty = (x: unknown): boolean => (typeof x === 'string') ? x.length === 0 : Object.keys(x).length === 0;
+export const isEmpty = (x: unknown): boolean => (typeof x === 'string') ? x.length === 0 : Object.keys(x as Record<string, unknown>).length === 0;
 
 /** Returns true if `x` is `true`. */
 export const isTrue = (x: boolean) => x === true;

@@ -1,8 +1,8 @@
 import { last } from './array';
 
-const _props = (path: string) => <T>(data: T): T[keyof T] => {
-  const keys = path.split('.');
-  return keys.reduce((acc, key) => (acc[key] ?? void 0) as unknown, data) as T[keyof T];
+const _props = (path: string) => <T extends Record<string, unknown>>(data: T) => {
+  const keys: ReadonlyArray<keyof T> = path.split('.');
+  return keys.reduce((acc, key) => (acc[key] ?? void 0) as T, data) as T[keyof T];
 };
 
 /**
@@ -20,8 +20,8 @@ const _props = (path: string) => <T>(data: T): T[keyof T] => {
  * // => "fallback"
  * ```
  */
-export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
-  const value = _props(path)(data) as unknown as R;
+export const props = <R>(fallback: R) => (path: string) => <T extends Record<string, unknown>>(data: T): R => {
+  const value = _props(path)(data) as R;
   return value ?? fallback;
 };
 
@@ -40,6 +40,6 @@ export const props = <R>(fallback: R) => (path: string) => <T>(data: T): R => {
  * // => { hello: "world", bar: "zip" }
  * ```
  */
-export const pick = (paths: string[]) => <T>(data: T) => Object.fromEntries(
+export const pick = (paths: string[]) => <T extends Record<string, unknown>>(data: T) => Object.fromEntries(
   paths.map(path => [last('')(path.split('.')), _props(path)(data)])
 );

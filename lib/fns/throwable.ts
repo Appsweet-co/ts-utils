@@ -1,4 +1,3 @@
-import { Nary } from '../types/arity';
 
 /**
  * Wraps `fn` in a [`try...catch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
@@ -14,11 +13,14 @@ import { Nary } from '../types/arity';
  * // => 'fallback'
  * ```
  */
-export const throwable = <T, R>(fn: Nary<T, R>) => (fallback: R) => (x: T): R => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const throwable = <F extends (...args: any) => any>(fn: F) => (fallback: ReturnType<F>) => (...args: Parameters<F>): ReturnType<F> => {
   // eslint-disable-next-line functional/no-try-statement
   try {
-    return fn(x);
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    return fn(args) as ReturnType<F>;
   } catch (_) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return fallback;
   }
 };
