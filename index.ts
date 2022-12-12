@@ -17,6 +17,7 @@ export * from './lib/fns/obj';
 export * from './lib/fns/pipe';
 export * from './lib/fns/predicate';
 export * from './lib/fns/string';
+export * from './lib/fns/throwable';
 export * from './lib/types/arity';
 export * from './lib/types/array';
 export * from './lib/types/duration';
