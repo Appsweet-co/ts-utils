@@ -6,6 +6,8 @@ export type Option<T> = Some<T> | None;
 
 /**
  * Used in {@linkcode Option} to represent data that definitely exists.
+ *
+ * @see {@linkcode Option}, {@linkcode None}
  */
 export interface Some<T> {
   none?: undefined;
@@ -14,6 +16,8 @@ export interface Some<T> {
 
 /**
  * Used in {@linkcode Option} to represent data that definitely does not exist.
+ *
+ * @see {@linkcode Option}, {@linkcode Some}
  */
 export interface None {
   none?: undefined;

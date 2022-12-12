@@ -8,6 +8,8 @@ export type Either<R, L> = Right<R> | Left<L>;
  * Used in {@linkcode Either} to represent one of two states.
  *
  * The {@linkcode Right} state usually represents a positive or successful state.
+ *
+ * @see {@linkcode Either}, {@linkcode Left}
  */
 export interface Right<T> {
   left?: undefined;
@@ -18,6 +20,8 @@ export interface Right<T> {
  * Used in {@linkcode Either} to represent one of two states.
  *
  * The {@linkcode Left} state usually represents a negative or unsuccessful state.
+ *
+ * @see {@linkcode Either}, {@linkcode Right}
  */
 export interface Left<T> {
   left: T;

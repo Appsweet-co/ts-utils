@@ -6,6 +6,8 @@ export type Result<T, E> = Ok<T> | Err<E>;
 
 /**
  * Used in {@linkcode Result} to represent a success state.
+ *
+ * @see {@linkcode Result}, {@linkcode Err}
  */
 export interface Ok<T> {
   error?: undefined;
@@ -14,6 +16,8 @@ export interface Ok<T> {
 
 /**
  * Used in {@linkcode Result} to represent an error state.
+ *
+ * @see {@linkcode Result}, {@linkcode Ok}
  */
 export interface Err<T> {
   error: T;
