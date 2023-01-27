@@ -4,8 +4,8 @@
  * @example
  *
  * ```ts
- * type Values = ValuesInside<[1, '2', true]>;
+ * type Values = ValuesInside<[true, 1, '2']>;
  * // => true | 1 | "2"
  * ```
  */
-export type ValuesInside<T> = T extends (unknown[] | readonly unknown[]) ? T[number] : never;
+export type ValuesInside<T extends readonly unknown[]> = T extends ReadonlyArray<infer U> ? U : never;
