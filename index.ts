@@ -21,6 +21,7 @@ export * from './lib/fns/throwable';
 export * from './lib/types/arity';
 export * from './lib/types/array';
 export * from './lib/types/duration';
+export * from './lib/types/effect';
 export * from './lib/types/either';
 export * from './lib/types/functional';
 export * from './lib/types/iso';
