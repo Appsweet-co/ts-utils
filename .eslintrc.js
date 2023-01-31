@@ -13,10 +13,8 @@ module.exports = {
       node: {
         extensions: ['.ts', '.tsx'],
         paths: ['./lib'],
-      },
-
-      alias: []
-    },
+      }
+    }
   },
 
   parser: '@typescript-eslint/parser',
