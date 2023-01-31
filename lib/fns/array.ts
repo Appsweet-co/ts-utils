@@ -1,7 +1,6 @@
 import { Unary } from '../types/arity';
 import { Reducer } from '../types/functional';
 import { Predicate } from '../types/predicate';
-import { maybe } from './adt';
 import { isNil } from './predicate';
 
 /**
@@ -18,7 +17,7 @@ import { isNil } from './predicate';
  * // => 99
  * ```
  */
-export const head = <T>(fallback: T) => (list: T[]): T => maybe(fallback)((list: T[]) => list[0])(list);
+export const head = <T>(fallback: T) => (list: T[]): T => isNil(list) ? fallback : list[0];
 
 /**
  * Returns all but the first item in an array, or the fallback `list` is null or undefined.
@@ -33,7 +32,7 @@ export const head = <T>(fallback: T) => (list: T[]): T => maybe(fallback)((list:
  * // => []
  * ```
  */
-export const tail = <T>(fallback: T[]) => (list: T[]): T[] => maybe(fallback)((list: T[]) => list.slice(1))(list);
+export const tail = <T>(fallback: T[]) => (list: T[]): T[] => isNil(list) ? fallback : list.slice(1);
 
 /**
  * Returns the last item in an array, or the fallback if `list` is null or undefined.
@@ -48,7 +47,7 @@ export const tail = <T>(fallback: T[]) => (list: T[]): T[] => maybe(fallback)((l
  * // => 99
  * ```
  */
-export const last = <T>(fallback: T) => (list: T[]): T => maybe(fallback)((list: T[]) => list[list.length - 1])(list);
+export const last = <T>(fallback: T) => (list: T[]): T => isNil(list) ? fallback : list[list.length - 1];
 
 /**
  * Returns all but the last item in an array, or the fallback `list` is null or undefined.
@@ -63,7 +62,7 @@ export const last = <T>(fallback: T) => (list: T[]): T => maybe(fallback)((list:
  * // => []
  * ```
  */
-export const init = <T>(fallback: T[]) => (list: T[]): T[] => maybe(fallback)((list: T[]) => list.slice(0, -1))(list);
+export const init = <T>(fallback: T[]) => (list: T[]): T[] => isNil(list) ? fallback : list.slice(0, -1);
 
 // /**
 //  * Returns all items in an array that meet the predicate. Same as `list.filter(fn)`.
@@ -93,8 +92,7 @@ export const init = <T>(fallback: T[]) => (list: T[]): T[] => maybe(fallback)((l
  * // => []
  * ```
  */
-export const filter = <T>(fallback: T[]) => (fn: Predicate<T>) => (list: T[]): T[] =>
-  maybe(fallback)((list: T[]) => list.filter(fn))(list);
+export const filter = <T>(fallback: T[]) => (fn: Predicate<T>) => (list: T[]): T[] => isNil(list) ? fallback : list.filter(fn);
 
 /**
  * Returns a mapped array of items, or the fallback if `list` is null or undefined.
@@ -109,8 +107,7 @@ export const filter = <T>(fallback: T[]) => (fn: Predicate<T>) => (list: T[]): T
  * // => []
  * ```
  */
-export const map = <R>(fallback: R[]) => <T>(fn: Unary<T, R>) => (list: T[]): R[] =>
-  maybe(fallback)((list: T[]) => list.map(fn))(list);
+export const map = <R>(fallback: R[]) => <T>(fn: Unary<T, R>) => (list: T[]): R[] => isNil(list) ? fallback : list.map(fn);
 
 /**
  * Returns true if the predicate returns true for every item in an array. Same as `list.every(predicate)`.
@@ -161,8 +158,7 @@ export const none = <T>(fn: Predicate<T>) => (list: T[]): boolean => !list.every
  * // => "fallback"
  * ```
  */
-export const join = (fallback: string) => (separator: string) => <T>(list: T[]): string =>
-  maybe(fallback)((list: T[]) => list.join(separator))(list);
+export const join = (fallback: string) => (separator: string) => <T>(list: T[]): string => isNil(list) ? fallback : list.join(separator);
 
 /**
  * Splits a string using `separator`, or returns the fallback if `x` is null or undefined.
@@ -179,8 +175,7 @@ export const join = (fallback: string) => (separator: string) => <T>(list: T[]):
  * // => ["fallback"]
  * ```
  */
-export const split = (fallback: string[]) => (separator: string) => (x: string): string[] =>
-  maybe(fallback)((x: string) => x.split(separator))(x);
+export const split = (fallback: string[]) => (separator: string) => (x: string): string[] => isNil(x) ? fallback : x.split(separator);
 
 /**
  * Adds an item to the end of an array, or returns a new array if `list` is null or undefined.
@@ -231,7 +226,7 @@ export const prepend = <T>(x: T) => <U>(list: U[]): Array<T | U> => isNil(list) 
  * ```
  */
 export const take = <T>(fallback: T[]) => (count: number) => (list: T[]): T[] =>
-  maybe(fallback)((list: T[]) => (count === 0) ? [] : (count < 0) ? list.slice(count) : list.slice(0, count))(list);
+  isNil(list) ? fallback : (count === 0) ? [] : (count < 0) ? list.slice(count) : list.slice(0, count);
 
 /**
  * Returns all but the first (or last) `count` of items from an array, or the
@@ -248,7 +243,7 @@ export const take = <T>(fallback: T[]) => (count: number) => (list: T[]): T[] =>
  * ```
  */
 export const drop = <T>(fallback: T[]) => (count: number) => (list: T[]): T[] =>
-  maybe(fallback)((list: T[]) => (count === 0) ? list : (count < 0) ? list.slice(0, count) : list.slice(count))(list);
+  isNil(list) ? fallback : (count === 0) ? list : (count < 0) ? list.slice(0, count) : list.slice(count);
 
 /**
  * Returns the accumulated result of calling `fn` on each item in an array,
@@ -264,5 +259,4 @@ export const drop = <T>(fallback: T[]) => (count: number) => (list: T[]): T[] =>
  * // => 99
  * ```
  */
-export const reduce = <T>(fallback: T) => (fn: Reducer<T>) => (list: T[]): T =>
-  maybe(fallback)((list: T[]) => list.reduce(fn))(list);
+export const reduce = <T>(fallback: T) => (fn: Reducer<T>) => (list: T[]): T => isNil(list) ? fallback : list.reduce(fn);
