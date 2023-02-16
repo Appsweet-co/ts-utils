@@ -1,16 +1,28 @@
 {
   "compilerOptions": {
-    "allowJs": true,
+    "allowJs": false,
+    "allowUnreachableCode": false,
     "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
+    "emitDeclarationOnly": true,
+    "emitDecoratorMetadata": false,
+    "exactOptionalPropertyTypes": false,
+    "experimentalDecorators": false,
+    "lib": [
+      "ES2020"
+    ],
+    "module": "ES2020",
+    "moduleResolution": "Node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "removeComments": true,
+    "skipLibCheck": true,
     "sourceMap": false,
-    "strict": true,
-    "target": "ES2019"
+    "target": "ES2020"
   },
   "include": [
     "index.ts"
