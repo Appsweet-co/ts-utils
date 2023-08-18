@@ -14,6 +14,7 @@ export * from './lib/fns/noop';
 export * from './lib/fns/obj';
 export * from './lib/fns/pipe';
 export * from './lib/fns/predicate';
+export * from './lib/fns/range';
 export * from './lib/fns/string';
 export * from './lib/fns/throwable';
 export * from './lib/types/arity';

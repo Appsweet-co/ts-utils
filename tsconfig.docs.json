@@ -11,7 +11,7 @@
     "excludeExternals": true,
     "excludeInternal": true,
     "excludePrivate": true,
-    "gitRemote": "https://github.com/Appsweet-co/utils.git",
+    "gitRemote": "github",
     "includeVersion": true,
     "out": "docs"
   }
