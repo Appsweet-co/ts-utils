@@ -1,5 +1,3 @@
-import { range } from './range';
-
 /** Returns the larger of two values. Same as `Math.max(a, b)`. */
 export const max = (a: number) => (b: number) => Math.max(a, b);
 
@@ -8,6 +6,28 @@ export const min = (a: number) => (b: number) => Math.min(a, b);
 
 /** Returns a number between `min` and `max` values. */
 export const clamp = (min: number) => (max: number) => (val: number): number => Math.max(min, Math.min(val, max));
+
+/**
+ * Returns an array of numbers between `min` and `max` values.
+ * 
+ * Values are inclusive.
+ * 
+ * Returns all values between `min` and `max` by default. Pass in a `step` to
+ * change the granularity. 
+ * 
+ * @example
+ * 
+ * ```ts
+ * range({ min: 0, max: 6 });
+ * // => [0, 1, 2, 3, 4, 5, 6]
+ * 
+ * range({ min: 0, max: 6, step: 2 });
+ * // => [0, 2, 4, 6] 
+ * ```
+ */
+export const range = ({ min, max, step = 1 }: { min: number, max: number, step?: number }): readonly number[] => {
+  return (min > max) ? [] : [min, ...range({ min: min + 1, max, step })].filter(x => x % step === 0)
+}
 
 /** Returns the next number in the range bewteen `min` and `max` values. */
 export const wrap = (min: number) => (max: number) => (val: number): number => 
