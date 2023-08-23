@@ -1,3 +1,5 @@
+import { range } from './range';
+
 /** Returns the larger of two values. Same as `Math.max(a, b)`. */
 export const max = (a: number) => (b: number) => Math.max(a, b);
 
@@ -6,6 +8,10 @@ export const min = (a: number) => (b: number) => Math.min(a, b);
 
 /** Returns a number between `min` and `max` values. */
 export const clamp = (min: number) => (max: number) => (val: number): number => Math.max(min, Math.min(val, max));
+
+/** Returns the next number in the range bewteen `min` and `max` values. */
+export const wrap = (min: number) => (max: number) => (val: number): number => 
+  (min <= val && val <= max) ? val : range({min, max})[(val % max) - 1];
 
 /** Increments a value by one. */
 export const inc = (x: number) => x + 1;
@@ -39,4 +45,3 @@ export const mult = (a: number) => (b: number): number => b * a;
 
 /** Divides two numbers. Same as `b / a`. */
 export const div = (a: number) => (b: number): number => b / a;
-
