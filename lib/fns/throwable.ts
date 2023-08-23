@@ -15,7 +15,6 @@
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const throwable = <F extends (...args: any) => any>(fn: F) => (fallback: ReturnType<F>) => (...args: Parameters<F>): ReturnType<F> => {
-  // eslint-disable-next-line functional/no-try-statement
   try {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return fn(args) as ReturnType<F>;

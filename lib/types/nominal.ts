@@ -11,9 +11,9 @@
  * // => false
  * ```
  */
-export type Nominal<K, T> = T & {
-  readonly __flavor?: K;
-};
+export type Nominal<K, T> = T & Readonly<{
+  __flavor?: K;
+}>;
 
 /**
  * Creates a strict [nominal type](https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/).
@@ -27,6 +27,6 @@ export type Nominal<K, T> = T & {
  * // => Error: Type 'number' is not assignable to type 'Foo'.
  * ```
  */
-export type NominalStrict<K, T> = T & {
-  readonly __brand: K;
-};
+export type NominalStrict<K, T> = T & Readonly<{
+  __brand: K;
+}>;
