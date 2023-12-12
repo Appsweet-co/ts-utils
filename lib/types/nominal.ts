@@ -1,3 +1,9 @@
+/** Symbol used to declare a {@linkcode Nominal} type. */
+export const FLAVOR = Symbol('FLAVOR');
+
+/** Symbol used to declare a {@linkcode NominalStrict} type. */
+export const BRAND = Symbol('BRAND');
+
 /**
  * Creates a flexible [nominal type](https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/).
  *
@@ -11,9 +17,9 @@
  * // => false
  * ```
  */
-export type Nominal<K, T> = T & Readonly<{
-  __flavor?: K;
-}>;
+export type Nominal<K, T> = T & {
+  readonly [FLAVOR]: K;
+};
 
 /**
  * Creates a strict [nominal type](https://spin.atomicobject.com/2018/01/15/typescript-flexible-nominal-typing/).
@@ -27,6 +33,6 @@ export type Nominal<K, T> = T & Readonly<{
  * // => Error: Type 'number' is not assignable to type 'Foo'.
  * ```
  */
-export type NominalStrict<K, T> = T & Readonly<{
-  __brand: K;
-}>;
+export type NominalStrict<K, T> = T & {
+  readonly [BRAND]: K;
+};
