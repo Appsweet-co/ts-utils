@@ -19,10 +19,10 @@ import { isNil } from './predicate';
  * // => "fallback"
  * ```
  */
-export const pipe2 = <R2>(fallback: R2) => <T, R1>(fns: [Unary<T, R1>, Unary<R1, R2>]) => (x: T): R2 => {
+export const pipe2 = <C>(fallback: C) => <A, B>(fns: [Unary<A, B>, Unary<B, C>]) => (x: A): C => {
   return isNil(x) ? fallback : (() => {
-    const [fn1, fn2] = fns;
-    return fn2(fn1(x));
+    const [ab, bc] = fns;
+    return bc(ab(x));
   })();
 };
 
@@ -44,10 +44,10 @@ export const pipe2 = <R2>(fallback: R2) => <T, R1>(fns: [Unary<T, R1>, Unary<R1,
  * // => ["fallback"]
  * ```
  */
-export const pipe3 = <R3>(fallback: R3) => <T, R1, R2>(fns: [Unary<T, R1>, Unary<R1, R2>, Unary<R2, R3>]) => (x: T): R3 => {
+export const pipe3 = <D>(fallback: D) => <A, B, C>(fns: [Unary<A, B>, Unary<B, C>, Unary<C, D>]) => (x: A): D => {
   return isNil(x) ? fallback : (() => {
-    const [fn1, fn2, fn3] = fns;
-    return fn3(fn2(fn1(x)));
+    const [ab, bc, cd] = fns;
+    return cd(bc(ab(x)));
   })();
 };
 
@@ -69,9 +69,9 @@ export const pipe3 = <R3>(fallback: R3) => <T, R1, R2>(fns: [Unary<T, R1>, Unary
  * // => "fallback"
  * ```
  */
-export const pipe4 = <R4>(fallback: R4) => <T, R1, R2, R3>(fns: [Unary<T, R1>, Unary<R1, R2>, Unary<R2, R3>, Unary<R3, R4>]) => (x: T): R4 => {
+export const pipe4 = <E>(fallback: E) => <A, B, C, D>(fns: [Unary<A, B>, Unary<B, C>, Unary<C, D>, Unary<D, E>]) => (x: A): E => {
   return isNil(x) ? fallback : (() => {
-    const [fn1, fn2, fn3, fn4] = fns;
-    return fn4(fn3(fn2(fn1(x))));
+    const [ab, bc, cd, de] = fns;
+    return de(cd(bc(ab(x))));
   })();
 };
