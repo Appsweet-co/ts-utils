@@ -73,4 +73,4 @@ export const nearest = (base: number) => (x: number): number => Math.round(x / b
 export const up = (base: number) => (x: number): number => Math.ceil(x / base) * base;
 
 /** Rounds a number down to the nearest multiple of `base`. */
-export const up = (base: number) => (x: number): number => Math.floor(x / base) * base;
+export const down = (base: number) => (x: number): number => Math.floor(x / base) * base;
