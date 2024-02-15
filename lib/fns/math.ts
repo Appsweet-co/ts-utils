@@ -65,3 +65,12 @@ export const mult = (a: number) => (b: number): number => b * a;
 
 /** Divides two numbers. Same as `b / a`. */
 export const div = (a: number) => (b: number): number => b / a;
+
+/** Rounds a number to the nearest multiple of `base`. */
+export const nearest = (base: number) => (x: number): number => Math.round(x / base) * base;
+
+/** Rounds a number up to the nearest multiple of `base`. */
+export const up = (base: number) => (x: number): number => Math.ceil(x / base) * base;
+
+/** Rounds a number down to the nearest multiple of `base`. */
+export const up = (base: number) => (x: number): number => Math.floor(x / base) * base;
