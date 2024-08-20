@@ -29,6 +29,24 @@ export const range = ({ min, max, step = 1 }: { min: number, max: number, step?:
   return (min > max) ? [] : [min, ...range({ min: min + 1, max, step })].filter(x => x % step === 0)
 }
 
+/**
+ * Returns a cryptographically secure integer bewteen `min` and `max` values.
+ * 
+ * Values are inclusive.
+ * 
+ * @example
+ * 
+ * ```ts
+ * between({ min: -10, max: 6 });
+ * // => 3;
+ * ```
+ */
+export const between = ({ min, max }: { min: number, max: number }): number => {
+  const random = new Uint32Array(1);
+  window.crypto.getRandomValues(random);
+  return Math.floor((random[0] / 0xffffffff) * (max - min + 1) + min);
+}
+
 /** Returns the next number in the range bewteen `min` and `max` values. */
 export const wrap = (min: number) => (max: number) => (val: number): number => 
   (min <= val && val <= max) ? val : range({min, max})[(val % max) - 1];
