@@ -43,7 +43,7 @@ export const range = ({ min, max, step = 1 }: { min: number, max: number, step?:
  */
 export const between = ({ min, max }: { min: number, max: number }): number => {
   const random = new Uint32Array(1);
-  window.crypto.getRandomValues(random);
+  globalThis.crypto.getRandomValues(random);
   return Math.floor((random[0] / 0xffffffff) * (max - min + 1) + min);
 }
 
