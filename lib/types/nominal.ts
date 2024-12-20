@@ -18,7 +18,7 @@ export const BRAND = Symbol('BRAND');
  * ```
  */
 export type Nominal<K, T> = T & {
-  readonly [FLAVOR]?: K;
+  [FLAVOR]?: Readonly<K>;
 };
 
 /**
@@ -34,5 +34,5 @@ export type Nominal<K, T> = T & {
  * ```
  */
 export type NominalStrict<K, T> = T & {
-  readonly [BRAND]: K;
+  [BRAND]: Readonly<K>;
 };
