@@ -23,13 +23,7 @@ npm i @appsweet-co/ts-utils
 Import utilities directly into your files as needed.
 
 ```ts
-import { clamp, isNil, type ISOTimestamp } from '@appsweet-co/ts-utils';
-
-// OR
-
-import { clamp } from '@appsweet-co/ts-utils/fns/math';
-import { isNil } from '@appsweet-co/ts-utils/fns/predicate';
-import type { isNil } from '@appsweet-co/ts-utils/types/iso';
+import { clamp, map, sub } from '@appsweet-co/ts-utils';
 ```
 
 ### Deno
